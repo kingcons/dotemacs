@@ -8,7 +8,6 @@
 
 (expand-and-load '("automode"
                    "browser"
-                   "clojure"
                    "color-theme"
                    "display"
                    "elisp"
@@ -21,9 +20,10 @@
                    "ocaml"
                    "paredit"
                    "scheme"
-                   "slime"
                    "whitespace"
                    ; Load order actually matters now...
+                   "slime"
+                   "clojure"
                    "notify"
                    "erc"
                    "jabber"))

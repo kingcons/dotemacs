@@ -4,3 +4,15 @@
 [submodule "site-lisp/magit"]
 	path = site-lisp/magit
 	url = git://github.com/philjackson/magit.git
+[submodule "site-lisp/swank-clojure"]
+	path = site-lisp/swank-clojure
+	url = git://github.com/technomancy/swank-clojure.git
+[submodule "site-lisp/swank-js"]
+	path = site-lisp/swank-js
+	url = git://github.com/ivan4th/swank-js.git
+[submodule "site-lisp/clojure-mode"]
+	path = site-lisp/clojure-mode
+	url = git://github.com/technomancy/clojure-mode.git
+[submodule "site-lisp/slime"]
+	path = site-lisp/slime
+	url = git://github.com/nablaone/slime.git

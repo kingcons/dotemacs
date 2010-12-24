@@ -1,6 +1,6 @@
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/clojure-mode")
+(add-to-list 'load-path "~/emacs/site-lisp/clojure-mode")
 (require 'clojure-mode)
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/swank-clojure")
+(add-to-list 'load-path "~/emacs/site-lisp/swank-clojure")
 (require 'swank-clojure)
 
 (add-hook 'clojure-mode-hook
@@ -16,6 +16,6 @@
      (setq swank-clojure-classpath
            (list "/usr/share/clojure/clojure.jar"
                  "/usr/share/clojure/clojure-contrib.jar"
-                 "/usr/share/emacs/site-lisp/swank-clojure/src"))
+                 "~/emacs/site-lisp/swank-clojure/src"))
      (aput 'slime-lisp-implementations 'clojure
            (list (swank-clojure-cmd) :init 'swank-clojure-init))))

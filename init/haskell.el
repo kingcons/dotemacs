@@ -1,4 +1,4 @@
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/haskell-mode")
+(add-to-list 'load-path "~/emacs/site-lisp/haskell-mode")
 (require 'haskell-mode)
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
