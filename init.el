@@ -22,11 +22,14 @@
                    "scheme"
                    "slime"
                    "w3m"
-                   "whitespace"))
+                   "whitespace"
+                   ; Load order actually matters now...
+                   "notify"
+                   "erc"
+                   "jabber"))
 
-; let's not load chat clients on my servers...
-; even though it would be cute to lurk on channels 24 hours a day.
-(when (eq window-system 'x)
-  (expand-and-load '("notify"
-                     "erc"
-                     "jabber")))
+(defun start-chat ()
+   "Connect to IRC and Jabber accounts."
+   (interactive)
+   (erc :server "irc.freenode.net" :port 6667 :nick erc-nick :password erc-pass)
+   (jabber-connect-all))
