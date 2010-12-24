@@ -40,7 +40,7 @@
         ("C-r" isearch-backward-regexp)
 
         ;; web
-        ("C-c c" chrome-here)
+        ;("C-c c" chrome-here)
 
         ;; magit
         ("C-c i" magit-status)

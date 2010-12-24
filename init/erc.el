@@ -29,9 +29,10 @@
       erc-track-mode t
       erc-track-exclude-types '("JOIN" "PART" "QUIT" "NICK" "MODE"))
 
-(defun libnotify-irc-notify (matched-type nick msg)
-  "(erc hook) Notify of new IRC messages via libnotify"
+(defun xosd-irc-notify (matched-type nick msg)
+  "(erc hook) Notify of new IRC messages via xosd"
   (when (eq matched-type 'current-nick)
-    (notify-send (format "Message from %s" (car (split-string nick "!"))) text)))
+    (xosd-display-message "erc-xosd" (format "Message from %s: %s"
+                                             (car (split-string nick "!")) text))))
 
-(add-hook 'erc-text-matched-hook 'libnotify-irc-notify)
+(add-hook 'erc-text-matched-hook 'xosd-irc-notify)

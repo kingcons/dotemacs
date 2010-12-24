@@ -7,6 +7,7 @@
           files))
 
 (expand-and-load '("automode"
+                   "browser"
                    "clojure"
                    "color-theme"
                    "display"
@@ -21,7 +22,6 @@
                    "paredit"
                    "scheme"
                    "slime"
-                   "w3m"
                    "whitespace"
                    ; Load order actually matters now...
                    "notify"
