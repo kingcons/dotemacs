@@ -1,5 +1,5 @@
 (defun xosd-display-message (process-name message &key
-                            (position "top") (alignment "center")
+                            (position "top") (alignment "right")
                             (duration 10) (font "-*-courier-*-*-*-*-24"))
   "Displays a message via xosd."
   (let ((process-connection-type nil))
