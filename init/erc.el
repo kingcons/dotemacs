@@ -29,10 +29,16 @@
       erc-track-mode t
       erc-track-exclude-types '("JOIN" "PART" "QUIT" "NICK" "MODE"))
 
-(defun xosd-irc-notify (matched-type nick msg)
-  "(erc hook) Notify of new IRC messages via xosd"
-  (when (eq matched-type 'current-nick)
-    (xosd-display-message "erc-xosd" (format "Message from %s: %s"
-                                             (car (split-string nick "!")) text))))
+(defun stump-irc-notify (matched-type nick msg)
+  "(erc hook) Notify of new IRC messages via stumpish"
+  (when (and (not (eq (window-frame (selected-window))
+                      ; KLUDGE: This is a nasty hardcoding hack.
+                      ; It works based on my use case but it ain't good!
+                      ; An alternative would be to get the frame or list of frames
+                      ; with erc buffers and use memq to check...
+                      (window-frame (get-buffer-window "#lisp" t))))
+             (eq matched-type 'current-nick))
+    (stump-add-notification
+     (format "%s:%s" (car (split-string nick "!")) text))))
 
-(add-hook 'erc-text-matched-hook 'xosd-irc-notify)
+(add-hook 'erc-text-matched-hook 'stump-irc-notify)

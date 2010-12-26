@@ -21,14 +21,15 @@
 ;Notifications
 (setq jabber-message-alert-same-buffer nil)
 
-(defun xosd-jabber-notify (from buf text proposed-alert)
-  "(jabber.el hook) Notify of new Jabber chat messages via xosd"
-  (when (or jabber-message-alert-same-buffer
-            (not (memq (selected-window) (get-buffer-window-list buf))))
-    (xosd-display-message "jabber-xosd" (format "Message from %s: %s"
-                                                (jabber-jid-displayname from) text))))
+(defun stump-jabber-notify (from buf text proposed-alert)
+  "(jabber.el hook) Notify of new Jabber chat messages via stumpish"
+  (unless (eq (window-frame (get-buffer-window buf t))
+              (window-frame (selected-window)))
+    (let ((name (jabber-jid-displayname from)))
+      (stump-add-notification
+       (format "%s:%s" name text)))))
 
-(add-hook 'jabber-alert-message-hooks 'xosd-jabber-notify)
+(add-hook 'jabber-alert-message-hooks 'stump-jabber-notify)
 
 ; Misc
 (add-hook 'jabber-chat-mode-hook 'goto-address)
