@@ -23,11 +23,16 @@
 
 (defun stump-jabber-notify (from buf text proposed-alert)
   "(jabber.el hook) Notify of new Jabber chat messages via stumpish"
-  (unless (eq (window-frame (get-buffer-window buf t))
-              (window-frame (selected-window)))
-    (let ((name (jabber-jid-displayname from)))
-      (stump-add-notification
-       (format "%s:%s" name text)))))
+  (let ((name (jabber-jid-displayname from)))
+    ; Should read as "Unless an emacs frame is in focus and it's the chatting frame..."
+    ; this is closer to correct but behavior is still unpredictable.
+    ; TODO: Figure out what (selected-frame) returns in case I'm on a
+    ; stumpwm group/virtual desktop with no emacs frames.
+    ; Make sure that jabber-alert-message-hooks behaves as we expect.
+    (unless (and (selected-frame)
+                 (eq (window-frame (get-buffer-window buf t))
+                     (selected-frame)))
+      (stump-add-notification (format "%s:%s" name text)))))
 
 (add-hook 'jabber-alert-message-hooks 'stump-jabber-notify)
 
