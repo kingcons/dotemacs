@@ -8,10 +8,10 @@
 
 (expand-and-load '("automode"
                    "browser"
-                   "color-theme"
+                   ;"color-theme"
                    "display"
                    "elisp"
-                   "factor"
+                   ;"factor"
                    "haskell"
                    "keybindings"
                    "magit"
@@ -25,8 +25,9 @@
                    "slime"
                    "clojure"
                    "notify"
-                   "erc"
-                   "jabber"))
+                   ;"erc"
+                   ;"jabber"
+                   ))
 
 (defun start-chat ()
    "Connect to IRC and Jabber accounts."
