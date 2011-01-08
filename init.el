@@ -19,6 +19,7 @@
                    "modeline"
                    "ocaml"
                    "paredit"
+                   "pgp"
                    "scheme"
                    "whitespace"
                    ; Load order actually matters now...
