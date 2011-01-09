@@ -18,8 +18,11 @@
       jabber-use-global-history nil
       jabber-history-dir "~/docs/logs/jabber")
 
-;Notifications
+; Notifications
 (setq jabber-message-alert-same-buffer nil)
+
+; Display
+(setq jabber-show-offline-contacts nil)
 
 (defun stump-jabber-notify (from buf text proposed-alert)
   "(jabber.el hook) Notify of new Jabber chat messages via stumpish"
