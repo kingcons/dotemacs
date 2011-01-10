@@ -7,7 +7,8 @@
 
 (add-hook 'write-file-hooks 'delete-trailing-whitespace)
 
-(setq whitespace-style '(tabs trailing))
+(setq whitespace-style '(tabs trailing lines-tail)
+      whitespace-line-column 80)
 
 (add-hook 'lisp-mode-hook 'whitespace-mode)
 (add-hook 'clojure-mode-hook 'whitespace-mode)
