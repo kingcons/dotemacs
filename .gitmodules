@@ -16,3 +16,6 @@
 [submodule "site-lisp/slime"]
 	path = site-lisp/slime
 	url = git://github.com/nablaone/slime.git
+[submodule "site-lisp/swank-chicken"]
+	path = site-lisp/swank-chicken
+	url = http://github.com/nickg/swank-chicken.git
