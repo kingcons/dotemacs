@@ -1,0 +1,4 @@
+(type egg)
+(signature "srfi-60 egg")
+(timestamp 1277272876.0)
+(sxml ((section 2 "SRFI 60: Integers as Bits" (p "See " (link "http://srfi.schemers.org/srfi-60/") "."))))

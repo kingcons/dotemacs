@@ -1,0 +1,2 @@
+(index ("define-record-type/primitive" 0))
+(def (sig (syntax "(define-record-type/primitive TAG CTOR PRED FIELDSPEC...)" (id define-record-type/primitive))) (p "SRFI 9 workalike w/o record type checking & immediate reference.") (p "Needs (include \"chicken-primitive-object-inlines\")"))

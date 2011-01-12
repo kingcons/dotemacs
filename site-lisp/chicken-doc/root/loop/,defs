@@ -1,0 +1,2 @@
+(index ("loop" 0))
+(def (sig (syntax "(loop CLAUSE ...)" (id loop))) (p "Executes the forms in CLAUSE ... repeatedly. Most loop features of CLtL2 (Common Lisp the Language, 2nd Edition) are provided. For more information see the " (link "http://www.lisp.org/HyperSpec/Body/sec_6-1-1.html" "Common Lisp Hyperspec") "."))

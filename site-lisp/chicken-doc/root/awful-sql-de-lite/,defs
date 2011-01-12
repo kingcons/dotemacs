@@ -1,0 +1,2 @@
+(index ("enable-db" 0))
+(def (sig (procedure "(enable-db)" (id enable-db))) (p "Enable Sqlite3 support for " (link "http://wiki.call-cc.org/eggref/4/awful" "awful") ".  This procedure basically sets up awful to use the connection, disconnection, query and query escaping procedures for Sqlite3 databases.") (p "See the " (link "http://wiki.call-cc.org/eggref/4/awful-sql-de-lite" "awful-sql-de-lite") " egg for Sqlite3 support using the " (link "http://wiki.call-cc.org/eggref/4/sqlite3" "sqlite3") " egg."))

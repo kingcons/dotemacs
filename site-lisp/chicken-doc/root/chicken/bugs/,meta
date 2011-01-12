@@ -1,0 +1,4 @@
+(type unit)
+(signature "Bugs and limitations")
+(timestamp 1290930062.0)
+(sxml ((tags "manual") (section 2 "Bugs and limitations" (ul (li "Compiling large files takes too much time.") (li "If a known procedure has unused arguments, but is always called without those parameters, then the optimizer " (i "repairs") " the procedure in certain situations and removes the parameter from the lambda-list.") (li (tt "port-position") " currently works only for input ports.") (li "Leaf routine optimization can theoretically result in code that thrashes, if tight loops perform excessively many mutations.")) (hr) (p "Previous: " (int-link "Data representation")) (p "Next: " (int-link "faq" "FAQ")))))

@@ -1,0 +1,2 @@
+(index ("parser" 0))
+(def (sig (procedure "(parser TEXT) => VALUE" (id parser))) (p "Parses a JSON text and returns a corresponding Scheme value. JSON vectors and objects are represented as Scheme vectors and alists, respectively. JSON numbers, strings, and booleans are represented as Scheme numbers and strings. The JSON " (tt "null") " constant is represented as the empty list in Scheme."))

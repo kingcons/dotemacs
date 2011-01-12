@@ -1,0 +1,3 @@
+(index ("let-once" 0) ("let*-once" 339))
+(def (sig (syntax "(let-once ((IDENTIFIER EXPR) ...) BODY ...)" (id let-once))) (p "Binds " (tt "IDENTIFIER") " to the result of evaluating " (tt "EXPR") " and evaluates " (tt "BODY") ". On any subsequent evaluation of the " (tt "let-once") " form, the result of " (tt "EXPR") " is re-used and evaluation of " (tt "EXPR") " is skipped."))
+(def (sig (syntax "(let*-once ((IDENTIFIER EXPR) ...) BODY ...)" (id let*-once))) (p "Like " (tt "let-once") ", but binds sequentially (just like " (tt "let*") ")."))

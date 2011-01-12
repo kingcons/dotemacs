@@ -1,0 +1,7 @@
+(index ("linenoise" 0) ("history-add" 168) ("set-history-length!" 282) ("save-history-to-file" 471) ("load-history-from-file" 607) ("make-linenoise-port" 730))
+(def (sig (procedure "(linenoise prompt)" (id linenoise))) (p "Prompts the user for a line of input. Returns the entered line as a string or #f if the user aborted."))
+(def (sig (procedure "(history-add line)" (id history-add))) (p "Adds the string line to the internal history."))
+(def (sig (procedure "(set-history-length! number)" (id set-history-length!))) (p "Sets the number of maximum entries in the history. Linenoise is initialised with 100 lines of history."))
+(def (sig (procedure "(save-history-to-file filename)" (id save-history-to-file))) (p "Saves the current history buffer to filename."))
+(def (sig (procedure "(load-history-from-file filename)" (id load-history-from-file))) (p "Loads the history from file."))
+(def (sig (procedure "(make-linenoise-port)" (id make-linenoise-port))) (p "Returns an input port connected to a linenoise prompt. Useful for inserting it into CSI (see below)."))

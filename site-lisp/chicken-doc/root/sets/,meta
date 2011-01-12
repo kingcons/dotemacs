@@ -1,0 +1,4 @@
+(type egg)
+(signature "sets egg")
+(timestamp 1278780066.0)
+(sxml ((tags "egg") (p "Please see:") (ul (li "http://azul.freaks-unidos.net/sets"))))

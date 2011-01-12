@@ -1,0 +1,4 @@
+(index ("md5-primitive" 0) ("md5-digest" 114) ("md5-binary-digest" 249))
+(def (sig (procedure "(md5-primitive)" (id md5-primitive))) (p "Returns the 128-bit checksum primitive object."))
+(def (sig (procedure "(md5-digest SOURCE)" (id md5-digest))) (p "Returns the 128-bit checksum of " (tt "SOURCE") " as a hex string."))
+(def (sig (procedure "(md5-binary-digest SOURCE)" (id md5-binary-digest))) (p "Returns the 128-bit checksum of " (tt "SOURCE") " as a string."))

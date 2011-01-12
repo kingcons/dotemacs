@@ -1,0 +1,4 @@
+(index ("sha1-primitive" 0) ("sha1-digest" 120) ("sha1-binary-digest" 254))
+(def (sig (procedure "(sha1-primitive)" (id sha1-primitive))) (p "Returns the SHA1 checksum digest primitive object."))
+(def (sig (procedure "(sha1-digest SOURCE)" (id sha1-digest))) (p "Returns the SHA1 checksum of " (tt "SOURCE") " as a hex string."))
+(def (sig (procedure "(sha1-binary-digest SOURCE)" (id sha1-binary-digest))) (p "Returns the SHA1 checksum of " (tt "SOURCE") " as a string."))

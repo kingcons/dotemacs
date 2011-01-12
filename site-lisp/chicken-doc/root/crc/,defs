@@ -1,0 +1,2 @@
+(index ("crc32" 0))
+(def (sig (procedure "(crc32 STRING [LENGTH]) => integer" (id crc32))) (p "Returns the 32-bit checksum of the " (tt "STRING") ". " (tt "LENGTH") " is " (tt "(string-length STRING)") " when missing.") (p (tt "STRING") " may also be a " (tt "blob") "."))

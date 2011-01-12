@@ -1,0 +1,4 @@
+(type unit)
+(signature "Other support procedures")
+(timestamp 1277272841.0)
+(sxml ((tags "manual") (toc) (section 2 "Other support procedures" (section 3 "argc+argv" (def (sig (procedure "(argc+argv)" (id argc+argv))) (p "Returns two values: an integer and a foreign-pointer object representing the " (tt "argc") " and " (tt "argv") " arguments passed to the current process.")) (hr) (p "Previous: " (int-link "Locations")) (p "Next: " (int-link "C interface"))))))

@@ -1,0 +1,2 @@
+(index ("graph-scc-fold" 0))
+(def (sig (procedure "graph-scc-fold:: G F INITIAL -> STATE" (id graph-scc-fold))) (p "SCC graph iterator; every SCC is represented as a list of nodes.  the nodes in each SCC are folded together using the user-supplied  function " (tt "F") ", which is of the form " (tt "LAMBDA SCC STATE")))

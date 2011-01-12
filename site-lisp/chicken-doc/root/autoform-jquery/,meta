@@ -1,0 +1,4 @@
+(type egg)
+(signature "autoform-jquery egg")
+(timestamp 1281220976.0)
+(sxml ((section 2 "autoform-jquery" (section 3 "Description" (p (link "http://jquery.org" "JQuery") "-based Javascript form validators for " (link "http://wiki.call-cc.org/eggref/4/autoform" "autoform") ".") (p "This extension just sets some " (link "http://wiki.call-cc.org/eggref/4/autoform" "autoform") " parameters to implement the javascript form validators.") (p "The JQuery code is tested with JQuery version 1.4.2.") (p "Warning: this is alpha code.")) (section 3 "Author" (p (link "http://wiki.call-cc.org/users/mario-domenech-goulart" "Mario Domenech Goulart"))) (section 3 "Requirements" (ul (li (link "http://wiki.call-cc.org/eggref/4/autoform" "autoform")))) (section 3 "License" (p "BSD")) (section 3 "Version history" (dl (dt "0.1") (dd "Initial release"))))))

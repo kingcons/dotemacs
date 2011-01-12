@@ -1,0 +1,3 @@
+(index ("GDBM_READER" 0) ("GDBM_WRITER" 0) ("GDBM_WRCREAT" 0) ("GDBM_NEWDB" 0) ("GDBM_SYNC" 0) ("GDBM_NOLOCK" 0) ("GDBM_INSERT" 260) ("GDBM_REPLACE" 260))
+(def (sig (constant "GDBM_READER" (id GDBM_READER)) (constant "GDBM_WRITER" (id GDBM_WRITER)) (constant "GDBM_WRCREAT" (id GDBM_WRCREAT)) (constant "GDBM_NEWDB" (id GDBM_NEWDB)) (constant "GDBM_SYNC" (id GDBM_SYNC)) (constant "GDBM_NOLOCK" (id GDBM_NOLOCK))))
+(def (sig (constant "GDBM_INSERT" (id GDBM_INSERT)) (constant "GDBM_REPLACE" (id GDBM_REPLACE))))

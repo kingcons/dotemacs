@@ -1,0 +1,8 @@
+(index ("add-breadcrumb!" 0) ("get-breadcrumb" 172) ("breadcrumbs-home-path" 407) ("breadcrumbs-home-label" 578) ("breadcrumbs-separator" 765) ("breadcrumbs-link" 931) ("debug-breadcrumbs" 1275))
+(def (sig (procedure "(add-breadcrumb! path title)" (id add-breadcrumb!))) (p "Adds a breadcrumb for path " (tt "path") " (string) with title " (tt "title") " (string)."))
+(def (sig (procedure "(get-breadcrumb path)" (id get-breadcrumb))) (p "Return the formatted breadcrumbs for path " (tt "path") " (a string).  The breadcrumbs are formatted by " (tt "breadcrumb-link") " (see the Parameters section)."))
+(def (sig (parameter "(breadcrumbs-home-path [string])" (id breadcrumbs-home-path))) (p "The home path for the breadcrumbs chain. The defaul value is " (tt "\"/\"") "."))
+(def (sig (parameter "(breadcrumbs-home-label [string])" (id breadcrumbs-home-label))) (p "The label to be used for the home path breadcrumb. The default value is " (tt "\"Home\"") "."))
+(def (sig (parameter "(breadcrumbs-separator [string])" (id breadcrumbs-separator))) (p "The separator for breadcrumbs.  The default value is " (tt "\"&gt;\"") "."))
+(def (sig (parameter "(breadcrumbs-link [procedure])" (id breadcrumbs-link))) (p "A two-arguments procedure to make breadcrumbs links. The first argument is the breadcrumb URI and the second one the breadcrumb label.  The default value is:") (highlight scheme "(lambda (uri text)\n  (string-append \"<a href='\" uri \"'>\" text \"</a>\"))))"))
+(def (sig (parameter "(debug-breadcrumbs [boolean])" (id debug-breadcrumbs))) (p "When " (tt "#t") " prints to stdout debugging information about breadcrumbs internals.  The default value is " (tt "#f") "."))

@@ -1,0 +1,2 @@
+(index ("mbox-messages->tree" 0))
+(def (sig (procedure "mbox-messages->tree:: [MESSAGE] -> TREE" (id mbox-messages->tree))) (p "Given a list of messages created by the " (tt "mbox-file->messages") " procedure in the " (int-link "mbox") " library, this procedure returns an ordered dictionary structure, where the key is the email address of the form sender, and the value is the list of all forms submitted by that sender. The API of the dictionary object follows that of the " (int-link "rb-tree") " library."))

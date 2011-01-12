@@ -1,0 +1,5 @@
+(index ("make-disjoint-set" 0) ("disjoint-set:make" 149) ("disjoint-set:find" 353) ("disjoint-set:union" 536))
+(def (sig (procedure "(make-disjoint-set hash-function equality-test)" (id make-disjoint-set))) (p "Returns a reference to a disjoint-set object."))
+(def (sig (procedure "(disjoint-set:make disjoint-set item)" (id disjoint-set:make))) (p "Converts the given item into a disjoint set item, and adds it to the disjoint set.  There is no usable output."))
+(def (sig (procedure "(disjoint-set:find disjoint-set item)" (id disjoint-set:find))) (p "Returns a reference to the representative item of the set that the given item appears in."))
+(def (sig (procedure "(disjoint-set:union disjoint-set item-1 item-2)" (id disjoint-set:union))) (p "Modifies the disjoint set, merging the sets represented by the given items.  There is no usable output."))

@@ -1,0 +1,3 @@
+(index ("list->vector" 0) ("reverse-list->vector" 495))
+(def (sig (procedure "(list->vector LIST [START END])" (id list->vector))) (p "Produce a vector containing the elements in " (tt "LIST") ", which must be a proper list, between " (tt "START") ", whose default is 0, and " (tt "END") ", whose default is the length of " (tt "LIST") ".  It is suggested that if the length of " (tt "LIST") " is known in advance, the " (tt "START") " and " (tt "END") " arguments be passed, so that " (tt "list->vector") " need not call " (tt "length") " itself."))
+(def (sig (procedure "(reverse-list->vector LIST [START END])" (id reverse-list->vector))) (p "Produces the same output as " (tt "list->vector") ", but in reverse order."))

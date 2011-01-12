@@ -1,0 +1,3 @@
+(type egg)
+(signature "check-errors egg")
+(timestamp 1292107261.0)

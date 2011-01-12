@@ -1,0 +1,3 @@
+(index ("jsmin-string" 0) ("jsmin-file" 144))
+(def (sig (procedure "(jsmin-string str)" (id jsmin-string))) (p "Return a minified string from the given string containing javascript code."))
+(def (sig (procedure "(jsmin-file file)" (id jsmin-file))) (p "Return a minified string from the contents of the given javascript file."))

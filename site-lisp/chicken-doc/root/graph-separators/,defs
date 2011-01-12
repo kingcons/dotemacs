@@ -1,0 +1,2 @@
+(index ("graph-separation-vertices" 0))
+(def (sig (procedure "graph-separation-vertices:: G -> SEPARATORS * COMPONENTS" (id graph-separation-vertices))) (p "Computes the separation vertices of the given graph. Returns a list of separation vertices and a list of graph components that contain a separation vertex."))
