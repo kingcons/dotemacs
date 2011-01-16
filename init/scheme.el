@@ -5,7 +5,7 @@
 
 ;; Swank and SLIME for Chicken
 (add-to-list 'load-path "~/emacs/site-lisp/swank-chicken")
-(autoload 'chicken-slime "chicken-slime" "SWANK backend for Chicken" t)
+(require 'chicken-slime)
 (setq swank-chicken-path "~/emacs/site-lisp/swank-chicken/swank-chicken.scm")
 (add-hook 'scheme-mode-hook
           (lambda ()
