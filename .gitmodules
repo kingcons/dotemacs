@@ -19,3 +19,12 @@
 [submodule "site-lisp/swank-chicken"]
 	path = site-lisp/swank-chicken
 	url = http://github.com/nickg/swank-chicken.git
+[submodule "site-lisp/ensime"]
+	path = site-lisp/ensime
+	url = http://github.com/aemoncannon/ensime.git
+[submodule "site-lisp/jabber-mode"]
+	path = site-lisp/jabber-mode
+	url = git://emacs-jabber.git.sourceforge.net/gitroot/emacs-jabber/emacs-jabber
+[submodule "site-lisp/scala-mode"]
+	path = site-lisp/scala-mode
+	url = http://github.com/Yasushi/scala-mode.git
