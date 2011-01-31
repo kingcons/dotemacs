@@ -23,7 +23,8 @@
 (setq jabber-message-alert-same-buffer nil)
 
 ; Display
-(setq jabber-show-offline-contacts nil)
+(setq jabber-show-offline-contacts nil
+      jabber-roster-line-format " %c %-25n %u %-8s  %S")
 
 (defun stump-jabber-notify (from buf text proposed-alert)
   "(jabber.el hook) Notify of new Jabber chat messages via stumpish"
