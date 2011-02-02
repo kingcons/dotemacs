@@ -6,7 +6,7 @@
 	url = git://github.com/philjackson/magit.git
 [submodule "site-lisp/swank-clojure"]
 	path = site-lisp/swank-clojure
-	url = git://github.com/technomancy/swank-clojure.git
+	url = git://github.com/redline6561/swank-clojure.git
 [submodule "site-lisp/swank-js"]
 	path = site-lisp/swank-js
 	url = git://github.com/ivan4th/swank-js.git

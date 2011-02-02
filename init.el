@@ -21,6 +21,7 @@
                    "paredit"
                    "pgp"
                    "scala"
+                   "tramp"
                    "whitespace"
                    ; Load order actually matters now...
                    "slime"

@@ -70,6 +70,9 @@
         ("M-SPC" fixup-whitespace)
         ("C-c u" untabify-buffer)
 
+        ;; tramp
+        ("C-x t" tramp-cleanup-connection)
+
         ))
 
 
