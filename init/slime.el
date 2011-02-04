@@ -36,6 +36,30 @@
 ;; I've got the HyperSpec locally, why aren't I using it?
 (setq common-lisp-hyperspec-root "/home/redline/builds/HyperSpec/")
 
+;; Old code removed by Helmut in 2008-03-14. I use it to run multiple
+;; inferior-lisps for different langs (i.e. clj, scm, cl) concurrently.
+(defun slime-find-connection-by-name (name)
+  (find name slime-net-processes
+        :test #'string= :key #'slime-connection-name))
+
+(defun slime-select-connection-by-ext (extension-name)
+  `((string= type ,(first extension-name))
+    (setq slime-buffer-connection
+          (slime-find-connection-by-name ,(second extension-name)))))
+
+(defun slime-map-connections-by-name (extension-names)
+  `(cond ,@(mapcar #'slime-select-connection-by-ext extension-names)))
+
+(setq slime-connections-map '(("lisp" "sbcl")
+                              ("clj" "clojure")
+                              ("scm" "chicken")))
+
+(defmacro assign-correct-connection ()
+  `(let ((type ,(file-name-extension (buffer-name))))
+    ,(slime-map-connections-by-name slime-connections-map)))
+
+(add-hook 'slime-mode-hook (lambda () (assign-correct-connection)))
+
 ; Everybody loves Parenscript...
 ;(load "js-expander.el")
 

@@ -7,7 +7,6 @@
       erc-pass "like-i'd-commit-that..."
       erc-user-full-name "Brit Butler"
       erc-autojoin-mode t)
-(erc :server "irc.freenode.net" :port 6667 :nick erc-nick :password erc-pass)
 
 ; Highlighting and Matches
 (setq erc-current-nick-highlight-type 'nick
