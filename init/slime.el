@@ -55,7 +55,11 @@
   `(let ((type ,(file-name-extension (buffer-name))))
      (cond ,@(mapcar #'slime-select-connection-by-ext slime-connections-map))))
 
-(add-hook 'slime-mode-hook (lambda () (assign-correct-connection)))
+(add-hook 'slime-mode-hook
+          (lambda ()
+            (assign-correct-connection)
+            (when (string= "scm" (file-name-extension (buffer-name)))
+              (slime-autodoc-mode -1))))
 
 ; Everybody loves Parenscript...
 ;(load "js-expander.el")
