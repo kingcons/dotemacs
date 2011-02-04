@@ -1,5 +1,5 @@
 ; Quicklisp is awesome...but let's manage this ourselves...
-(add-to-list 'load-path "~/emacs/site-lisp/slime")
+(add-to-list 'load-path "~/emacs/site-lisp/slime-clj")
 (require 'slime-autoloads)
 
 ;; Set implementations and character encoding
