@@ -40,4 +40,8 @@
     (stump-add-notification
      (format "%s:%s" (car (split-string nick "!")) text))))
 
-(add-hook 'erc-text-matched-hook 'stump-irc-notify)
+;; This is temporarily disabled as stump-irc-notify was passing nil as an
+;; argument to window-live-p further down the call chain and the beeping and
+;; errors are annoying as hell. The nofitications code needs a good working
+;; over at some point anyway. At least jabber notifications half work.
+; (add-hook 'erc-text-matched-hook 'stump-irc-notify)
