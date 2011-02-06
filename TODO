@@ -1,0 +1,8 @@
+** Fix notifications
+--- For jabber (first messages)
+--- For erc (window-live-p type error from stump-irc-notify).
+** Enable ido-mode or anything.el. Smex?
+** Install markdown/textile/etc modes?
+** flyspell everywhere I might "compose" (nxml, markdown, fundamental, erc, jabber-chat, etc)
+** REALLY get into org-mode?
+** Enable flymake if I ever start playing with C/C++

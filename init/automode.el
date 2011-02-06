@@ -8,5 +8,7 @@
                        ("\\.hs$" . haskell-mode)
                        ("\\.lhs$" . literate-haskell-mode)
                        (".stumpwmrc" . lisp-mode)
+                       ("\\README$" . text-mode)
+                       ("\\TODO$" . text-mode)
                        )
                      auto-mode-alist))

@@ -20,3 +20,9 @@
                (setq length (current-column))
                (setq longest-line line)))))
     (goto-line (1+ longest-line))))
+
+;; Answer y or n instead of yes or no at minibar prompts.
+; (defalias 'yes-or-no-p 'y-or-n-p)
+
+;; Change C-x C-b behavior so it uses bs; shows only interesting buffers.
+; (global-set-key "\C-x\C-b" 'bs-show)

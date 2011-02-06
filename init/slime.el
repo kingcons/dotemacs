@@ -48,6 +48,7 @@
           (slime-find-connection-by-name ,(second extension-name)))))
 
 (setq slime-connections-map '(("lisp" "sbcl")
+                              ("asd" "sbcl")
                               ("clj" "clojure")
                               ("scm" "chicken")))
 
