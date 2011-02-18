@@ -18,8 +18,9 @@
 
 (mapc (lambda (mode)
         (let ((hook (intern (concat (symbol-name mode) "-mode-hook"))))
-          ;; TODO: Maybe add highlighting of special words like TODO
-          ;; and FIXME, etc in these modes.
+          (add-hook hook (lambda ()
+                           (font-lock-add-keywords
+                            nil '(("\\<\\(BUG\\|FIXME\\|KLUDGE\\|TODO\\):")))))
           ;(add-hook hook 'flyspell-prog-mode)
           (add-hook hook 'whitespace-mode)))
       '(lisp emacs-lisp clojure scheme haskell factor tuareg sh

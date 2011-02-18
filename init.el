@@ -13,6 +13,7 @@
                    "elisp"
                    "factor"
                    "haskell"
+                   "ido"
                    "keybindings"
                    "magit"
                    "misc"
@@ -21,6 +22,8 @@
                    "paredit"
                    "pgp"
                    "scala"
+                   "spelling"
+                   "stats"
                    "tramp"
                    "whitespace"
                    ; Load order actually matters now...
