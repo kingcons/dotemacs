@@ -21,6 +21,7 @@
                    "ocaml"
                    "paredit"
                    "pgp"
+                   "python"
                    "scala"
                    "spelling"
                    "stats"

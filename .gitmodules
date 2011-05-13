@@ -31,3 +31,18 @@
 [submodule "site-lisp/slime-clj"]
 	path = site-lisp/slime-clj
 	url = https://github.com/technomancy/slime.git
+[submodule "site-lisp/emms"]
+	path = site-lisp/emms
+	url = git://git.sv.gnu.org/emms.git
+[submodule "site-lisp/writegood-mode"]
+	path = site-lisp/writegood-mode
+	url = https://github.com/bnbeckwith/writegood-mode.git
+[submodule "site-lisp/python-mode"]
+	path = site-lisp/python-mode
+	url = https://github.com/emacsmirror/python-mode.git
+[submodule "site-lisp/pylint"]
+	path = site-lisp/pylint
+	url = https://github.com/emacsmirror/python-pylint.git
+[submodule "site-lisp/pep8"]
+	path = site-lisp/pep8
+	url = https://github.com/emacsmirror/python-pep8.git

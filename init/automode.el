@@ -7,6 +7,8 @@
                        (".factor" . factor-mode)
                        ("\\.hs$" . haskell-mode)
                        ("\\.lhs$" . literate-haskell-mode)
+                       ("\\.py$" . python-mode)
+                       ("\\.py\\'" . python-mode)
                        (".stumpwmrc" . lisp-mode)
                        ("\\README$" . text-mode)
                        ("\\TODO$" . text-mode)

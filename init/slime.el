@@ -12,6 +12,7 @@
 (setq slime-default-lisp 'sbcl)
 (setq inhibit-splash-screen t)
 (setq slime-net-coding-system 'utf-8-unix)
+(setq font-lock-verbose nil)
 (set-language-environment "utf-8")
 
 ;;;; What slime modules shall we use? Keep it simple for now...
