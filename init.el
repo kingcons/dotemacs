@@ -11,7 +11,7 @@
                    "color-theme"
                    "display"
                    "elisp"
-                   "factor"
+                   ;"factor"
                    "haskell"
                    "ido"
                    "keybindings"
@@ -20,7 +20,7 @@
                    "modeline"
                    "ocaml"
                    "paredit"
-                   "pgp"
+                   ;"pgp"
                    "python"
                    "scala"
                    "spelling"
@@ -29,11 +29,12 @@
                    "whitespace"
                    ; Load order actually matters now...
                    "slime"
-                   "clojure"
-                   "scheme"
+                   ;"clojure"
+                   ;"scheme"
                    "notify"
                    "erc"
-                   "jabber"))
+                   ;"jabber"
+                   ))
 
 (defun start-chat ()
    "Connect to IRC and Jabber accounts."

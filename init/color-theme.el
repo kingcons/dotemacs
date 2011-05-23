@@ -1,4 +1,5 @@
 ;; Color Theme. Colors matter...
+(add-to-list 'load-path "~/emacs/site-lisp/color-theme")
 (require 'color-theme)
 
 (defun color-theme-dark-bliss ()
@@ -24,7 +25,7 @@
      (font-lock-keyword-face ((t (:foreground "#ccffaa"))))
      (font-lock-preprocessor-face ((t (:foreground "#aaffee"))))
      (font-lock-string-face ((t (:foreground "#bbbbff")))))))
-(color-theme-dark-bliss)
+;(color-theme-dark-bliss)
 
 (require 'ansi-color)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)

@@ -11,6 +11,7 @@
 (add-to-list 'load-path "~/emacs/site-lisp/pep8/")
 
 (require 'compile)
+(require 'python-mode)
 (require 'python-pylint)
 (require 'python-pep8)
 (require 'ipython)
