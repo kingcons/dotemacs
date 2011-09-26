@@ -1,5 +1,9 @@
+;;;; In *most* regrettable fashion, there is still a great divide
+;;;; between Common Lisp swank/slime and every other implementation.
+;;;; Will these atrocities ever end?
+(add-to-list 'load-path "~/emacs/site-lisp/slime")
+
 ; Quicklisp is awesome...but let's manage this ourselves...
-(add-to-list 'load-path "~/emacs/site-lisp/slime-clj")
 (require 'slime-autoloads)
 
 ;; Set implementations and character encoding
@@ -14,6 +18,7 @@
 (setq slime-net-coding-system 'utf-8-unix)
 (setq font-lock-verbose nil)
 (set-language-environment "utf-8")
+(eval-after-load 'slime '(setq slime-protocol-version 'ignore))
 
 ;;;; What slime modules shall we use? Keep it simple for now...
 (slime-setup '(slime-fancy
@@ -50,18 +55,13 @@
 
 (setq slime-connections-map '(("lisp" "sbcl")
                               ("asd" "sbcl")
-                              ("clj" "clojure")
-                              ("scm" "chicken")))
+                              ("clj" "clojure")))
 
 (defmacro assign-correct-connection ()
   `(let ((type ,(file-name-extension (buffer-name))))
      (cond ,@(mapcar #'slime-select-connection-by-ext slime-connections-map))))
 
-(add-hook 'slime-mode-hook
-          (lambda ()
-            (assign-correct-connection)
-            (when (string= "scm" (file-name-extension (buffer-name)))
-              (slime-autodoc-mode -1))))
+(add-hook 'slime-mode-hook (lambda () (assign-correct-connection)))
 
 ; Everybody loves Parenscript...
 ;(load "js-expander.el")
