@@ -1,4 +1,0 @@
-(index ("tiger192-primitive" 0) ("tiger192-digest" 126) ("tiger192-binary-digest" 273))
-(def (sig (procedure "(tiger192-primitive)" (id tiger192-primitive))) (p "Returns the 192-bit Tiger hash primitive object."))
-(def (sig (procedure "(tiger192-digest OBJECT)" (id tiger192-digest))) (p "Returns the 192-bit Tiger hash of " (tt "OBJECT") " as a hex string."))
-(def (sig (procedure "(tiger192-binary-digest OBJECT)" (id tiger192-binary-digest))) (p "Returns the 192-bit Tiger hash of " (tt "OBJECT") " as a string."))

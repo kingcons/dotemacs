@@ -1,7 +1,0 @@
-(index ("syslog" 0) ("openlog" 202) ("closelog" 763) ("setlogmask" 864) ("log-up-to" 1079) ("log-mask" 1199))
-(def (sig (procedure "(syslog priority fmt . args)" (id syslog))) (p "Write a message to the syslogdaemon with the given priority. See " (b "priorities") " for a list of provided priority-constants."))
-(def (sig (procedure "(openlog identity options facility)" (id openlog))) (p "Open a connection to the system logger. Identity is prepended to every message. The option-argument specify flags which control the operation of openlog and subsequent calls to syslog. See " (b "options") " for a list of provided option-constants. Options can be or'ed together. Facility sets the facility the logmessages will have. See " (b "facilities") " for a list of provided facilities. The use of openlog is optional. You can use syslog right away without calling openlog."))
-(def (sig (procedure "(closelog)" (id closelog))) (p "Closes the connection to the system logger."))
-(def (sig (procedure "(setlogmask maskpriority)" (id setlogmask))) (p "This procedure sets the logmask for the calling process and returns the old logmask. You can use log-up-to to log upto a specified priority."))
-(def (sig (procedure "(log-up-to priority)" (id log-up-to))) (p "Returns a logmask that can be passed to setlogmask."))
-(def (sig (procedure "(log-mask priority)" (id log-mask))))

@@ -1,2 +1,0 @@
-(index ("declare" 0))
-(def (sig (syntax "(declare DECLSPEC ...)" (id declare))) (p "Process declaration specifiers. Declarations always override any command-line settings.  Declarations are valid for the whole compilation-unit (source file), the position of the declaration in the source file can be arbitrary. Declarations are ignored in the interpreter but not in code evaluated at compile-time (by " (tt "eval-when") " or in syntax extensions loaded via " (tt "require-extension") "). " (tt "DECLSPEC") " may be any of the following:"))

@@ -1,2 +1,0 @@
-(index ("enable-ssl" 0))
-(def (sig (procedure "(enable-ssl #!key certificate-file private-key-file)" (id enable-ssl))) (p "Enable SSL support for " (link "http://wiki.call-cc.org/eggref/4/awful" "awful") ".  The following keyword parameters can be used:") (dl (dt (tt "certificate-file") " (string)") (dd "Path to the certificate file (PEM format).") (dt (tt "private-key-file") " (string)") (dd "Path to the private key file (PEM format).")))

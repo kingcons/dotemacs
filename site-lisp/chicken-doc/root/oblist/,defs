@@ -1,3 +1,0 @@
-(index ("oblist" 0) ("oblist-search" 143))
-(def (sig (procedure "(oblist)" (id oblist))) (p "Returns a list of all globally interned symbols including all visible toplevel variables."))
-(def (sig (procedure "(oblist-search REGEX)" (id oblist-search))) (p "Returns a list of all those globally interned symbols that match the regular expression " (tt "REGEX") " (a string or a regular expression object)."))

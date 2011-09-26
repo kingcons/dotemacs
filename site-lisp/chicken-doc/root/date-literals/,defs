@@ -1,3 +1,0 @@
-(index ("read-date-literal" 0) ("write-date-literal" 385))
-(def (sig (procedure "(read-date-literal [PORT])" (id read-date-literal))) (p "Reads a date/time literal from " (tt "PORT") ", which defaults to the value of " (tt "(current-input-port)") ". The literal is converted to an SRFI-19 date using the first matching format template as follows:") (ul (li (tt "#@~Y-~m-~dT~H:~M:~S~z")) (li (tt "#@~Y-~m-~dT~H:~M:~S")) (li (tt "#@~Y-~m-~d"))))
-(def (sig (procedure "(write-date-literal DATE [PORT])" (id write-date-literal))) (p "Writes the SRFI-19 date object " (tt "DATE") " in " (tt "#@~Y-~m-~dT~H:~M:~S~z") " format to " (tt "PORT") ", which defaults to the value of " (tt "(current-output-port)") "."))

@@ -1,6 +1,0 @@
-(index ("TAGvector-fold" 0) ("TAGvector-map" 157) ("TAGvector-foldi" 246) ("TAGvector-mapi" 410) ("TAGvector-quick-sort!" 559))
-(def (sig (procedure "TAGvector-fold :: F * X0 * V [* V1 ... VN] -> XN" (id TAGvector-fold))) (p "where " (tt "F :: V(I) [ * V1(I) ... VN(I)] * AX -> AX")))
-(def (sig (procedure "TAGvector-map  :: F * V [ * V1 ... VN] -> V" (id TAGvector-map))))
-(def (sig (procedure "TAGvector-foldi :: F * X0 * V [ * V1 ... VN] -> XN" (id TAGvector-foldi))) (p "where " (tt "F :: I * V(I) [ * V1(I) ... VN(I)] * AX -> AX")))
-(def (sig (procedure "TAGvector-mapi  :: F * V [* V1 ... VN] -> V" (id TAGvector-mapi))) (p "where " (tt "F :: I * V(I) [* V1(I) ... VN(I)] -> V")))
-(def (sig (procedure "TAGvector-quick-sort!  :: V * ELT< [ * START * END] -> V" (id TAGvector-quick-sort!))) (p "where " (tt "F :: i1 * V(i1) * i2 * V(i2) -> boolean")))

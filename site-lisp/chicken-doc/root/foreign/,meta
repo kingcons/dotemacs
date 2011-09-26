@@ -1,4 +1,0 @@
-(type unit)
-(signature "Interface to external functions and variables")
-(timestamp 1277272841.0)
-(sxml ((tags "manual") (section 2 "Interface to external functions and variables" (p "The macros in this section, such as " (tt "define-foreign-type") " and " (tt "define-external") ", are available in the " (tt "foreign") " import library.  To access them:") (pre "(import foreign)") (ul (li (int-link "Accessing external objects")) (li (int-link "Foreign type specifiers") "  ") (li (int-link "Embedding") "                ") (li (int-link "Callbacks") "                   ") (li (int-link "Locations") "                   ") (li (int-link "Other support procedures") "    ") (li (int-link "C interface") "                 ")) (hr) (p "Previous: " (int-link "Supported language")) (p "Next: " (int-link "Extensions")))))

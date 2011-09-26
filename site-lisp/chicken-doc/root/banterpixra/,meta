@@ -1,4 +1,0 @@
-(type egg)
-(signature "banterpixra egg")
-(timestamp 1281631262.0)
-(sxml ((p "banterpixra takes a BNF-style syntax description and generates SVG syntax diagrams from it. It's documented more fully at " (link "http://www.kitten-technologies.co.uk/project.php?project=banterpixra") ".")))

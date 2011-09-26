@@ -1,2 +1,0 @@
-(index ("color" 0))
-(def (sig (procedure "(color COLOR)" (id color))) (p "Returns a vector containing the red, green and blue values for the given named color value. " (tt "COLOR") " may be a 3-element list, a 3-element vector, a string or a symbol.  RGB values are in the range 0 to 255. If a name is given as argument and no color can be found, " (tt "COLOR") " returns " (tt "#f") ". Color name comparisons are case-insensitive."))

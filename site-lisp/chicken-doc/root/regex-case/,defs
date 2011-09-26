@@ -1,2 +1,0 @@
-(index ("regex-case" 0))
-(def (sig (syntax "(regex-case EXPRESSION CLAUSE ...)" (id regex-case))) (p "Evaluates " (tt "EXPRESSION") " and executes the body of the first " (tt "CLAUSE") " that matches. Each " (tt "CLAUSE") " should be of the form:") (pre " (REGEX LAMBDA-LIST BODY ...)") (p "The variables in " (tt "LAMBDA-LIST") " are bound to the results of evaluating the expression") (pre " (string-match REGEX STRING)") (p "The last " (tt "CLAUSE") " may also be") (pre " (else BODY ...)") (p "If no " (tt "CLAUSE") " matches, the form returns an undefined result."))

@@ -1,4 +1,0 @@
-(type egg)
-(signature "iup egg")
-(timestamp 1286743262.0)
-(sxml ((section 2 "Iup" (section 3 "Description" (p "Bindings to the IUP GUI library")) (section 3 "Author" (p (link "http://www.chust.org/" "Thomas Chust"))) (section 3 "Requirements" (ul (li (int-link "srfi-42")))) (section 3 "Documentation" (p "See " (link "http://www.chust.org/fossils/iup/doc/trunk/api/main.wiki" "the official API docs") ".")) (section 3 "License" (p (link "http://www.chust.org/fossils/iup/doc/trunk/LICENSE.txt" "BSD license"))))))

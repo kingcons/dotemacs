@@ -1,7 +1,0 @@
-(index ("parse" 0) ("tree-empty?" 273) ("tree-level" 431) ("tree-child" 584) ("tree-sibling" 706) ("tree->list" 834))
-(def (sig (procedure "(parse LOC STRING-OR-PORT) => TREE" (id parse))) (p "Parses I-expression text and returns a tree object with the parsed content. " (tt "LOC") " is a symbol that indicates the name of the current entity being parsed. It is used for error reporting."))
-(def (sig (procedure "(tree-empty? TREE) => BOOL" (id tree-empty?))) (p "Returns " (tt "#t") " is the given tree object is empty, " (tt "#f") " otherwise."))
-(def (sig (procedure "(tree-level TREE) => INTEGER" (id tree-level))) (p "Returns the indentation level of the text contained in the given tree node."))
-(def (sig (procedure "(tree-child TREE) => TREE" (id tree-child))) (p "Returns the first child of the given tree node."))
-(def (sig (procedure "(tree-sibling TREE) => TREE" (id tree-sibling))) (p "Returns the first sibling of the given tree node."))
-(def (sig (procedure "(tree->list TREE) => LIST" (id tree->list))) (p "Converts the given tree to a list structure."))

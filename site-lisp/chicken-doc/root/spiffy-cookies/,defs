@@ -1,4 +1,0 @@
-(index ("read-cookie" 0) ("set-cookie!" 147) ("delete-cookie!" 397))
-(def (sig (procedure "(read-cookie name)" (id read-cookie))) (p "Return the value for cookie " (tt "name") " or " (tt "#f") " if it is not set."))
-(def (sig (procedure "(set-cookie! name value #!key comment max-age domain path secure)" (id set-cookie!))) (p "Set cookie named " (tt "name") " with value " (tt "value") ".  The keyword parameters can be used to set optional cookie's attributes."))
-(def (sig (procedure "(delete-cookie! name #!key domain path)" (id delete-cookie!))) (p "Delete cookie " (tt "name") " by setting its " (tt "max-age") " to 0."))

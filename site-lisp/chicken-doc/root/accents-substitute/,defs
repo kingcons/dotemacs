@@ -1,2 +1,0 @@
-(index ("accents-substitute" 0))
-(def (sig (procedure "(accents-substitute str #!key mode)" (id accents-substitute))) (p "Substitute accented characters in " (tt "str") " by non accented ASCII characters (if " (tt "mode") " is not given or is given as " (tt "'ascii") ") or by HTML entities (if mode is given as " (tt "'html") ")."))
