@@ -6,7 +6,10 @@
                         (format "%s/%s.el" "~/emacs/init" name))))
           files))
 
-(expand-and-load '("automode"
+(expand-and-load '(; make sure all the libraries we know
+                   ; and love are installed first
+                   "packages"
+                   "automode"
                    "browser"
                    "color-theme"
                    "display"
@@ -22,7 +25,6 @@
                    "paredit"
                    "pgp"
                    "python"
-                   "scala"
                    "spelling"
                    "stats"
                    "tramp"
@@ -34,9 +36,3 @@
                    "notify"
                    "erc"
                    "jabber"))
-
-(defun start-chat ()
-   "Connect to IRC and Jabber accounts."
-   (interactive)
-   (erc :server "irc.freenode.net" :port 6667 :nick erc-nick :password erc-pass)
-   (jabber-connect-all))

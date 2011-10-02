@@ -1,17 +1,23 @@
 ; Load it up
 (require 'erc)
-
-; Connections/Basics
-(setq erc-autojoin-channels-alist '((".*\\.freenode.net" "#lisp" "#sbcl" "#concatenative"))
-      erc-nick "redline6561"
-      erc-pass "like-i'd-commit-that..."
+; Set some SSL stuff up...
+(require 'tls)
+(setq tls-program '("gnutls-cli --priority secure256 -p %p %h")
+      autojoin-channels-alist '((".*\\.freenode.net" "#lisp" "#sbcl" "#concatenative" "#paktahn")
+                                ("ircs.cmgdigital.com" "#all" "#clug" "#team6"))
+      erc-autojoin-mode t
       erc-user-full-name "Brit Butler"
-      erc-autojoin-mode t)
+      znc-userpass "yeahright!:tryagainjerks"
+      cmg-userpass "believe:everythingyouread"
+      znc-serv "redlinernotes.com"
+      znc-port 6561)
 
 ; Highlighting and Matches
 (setq erc-current-nick-highlight-type 'nick
       erc-pals '("persi" "lpolzer" "xach" "nyef"
-                 "antifuchs" "nikodemus" "pkhuong")
+                 "antifuchs" "nikodemus" "pkhuong"
+                 "slava" "littledan")
+      erc-keywords '("\\blunch\\b" "\\bcodereview\\b")
       erc-fools '())
 
 ; Logging
@@ -45,3 +51,18 @@
 ;; errors are annoying as hell. The nofitications code needs a good working
 ;; over at some point anyway. At least jabber notifications half work.
 ; (add-hook 'erc-text-matched-hook 'stump-irc-notify)
+
+(defun irc-work ()
+  (interactive)
+  (erc-tls :server znc-serv :port znc-port :password cmg-userpass))
+
+(defun irc-home ()
+  (interactive)
+  (erc-tls :server znc-serv :port znc-port :password znc-userpass))
+
+(defun start-chat ()
+   "Connect to IRC and Jabber accounts."
+   (interactive)
+   (erc-tls :server znc-serv :port znc-port :password znc-userpass)
+   (erc-tls :server znc-serv :port znc-port :password cmg-userpass)
+   (jabber-connect-all))

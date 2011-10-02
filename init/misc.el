@@ -1,6 +1,3 @@
-;; Htmlize, just because it's handy
-(load "htmlize")
-
 ;; http://www.splode.com/~friedman/software/emacs-lisp/src/motion-fns.el
 (defun goto-longest-line ()
   "Go to longest line in buffer."
@@ -45,10 +42,6 @@
 ;; Change C-x C-b behavior so it uses bs; shows only interesting buffers.
 ; (global-set-key "\C-x\C-b" 'bs-show)
 
-;; remote shell! Hooray!
-; (require 'ssh)
-; (add-hook 'ssh-mode-hook 'ssh-directory-tracking-mode)
-
 ;; Taking advice from Yegge...
 ;; (defun backward-kill-word-or-kill-region (&optional arg)
 ;;   (interactive "p")
@@ -63,3 +56,4 @@
 ;;   (let ((dir default-directory))
 ;;     (eshell arg)
 ;;     (eshell/cd dir)))
+
