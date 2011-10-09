@@ -24,7 +24,7 @@
 (pushnew 'log erc-modules)
 (erc-update-modules)
 (setq erc-log-channels t
-      erc-log-channels-directory "~/docs/logs/irc"
+      erc-log-channels-directory "~/Documents/logs/irc"
       erc-log-write-after-send t
       erc-log-write-after-insert t)
 

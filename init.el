@@ -14,7 +14,7 @@
                    "color-theme"
                    "display"
                    "elisp"
-                   "factor"
+                   ;"factor"
                    "haskell"
                    "ido"
                    "keybindings"

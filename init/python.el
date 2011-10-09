@@ -1,11 +1,11 @@
 ;; pdb setup
-(setq pdb-path "/usr/lib/python2.7/pdb.py")
+(setq pdb-path "/usr/bin/pdb")
+(setq py-python-command "python")
 
 ;; Modes setup and loading
 (autoload 'python-mode "python-mode" "Python Mode." t)
 (autoload 'python-mode "python" "Python editing mode." t)
 
-(require 'compile)
 (require 'python-pylint)
 (require 'python-pep8)
 (require 'ipython)
@@ -16,4 +16,3 @@
 (define-key py-mode-map (kbd "<f1>") 'pylint)
 (define-key py-mode-map (kbd "<f2>") 'pep8)
 (define-key py-mode-map (kbd "C-M-d") 'pdb)
-

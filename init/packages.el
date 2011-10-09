@@ -17,9 +17,9 @@
                      elein
                      ipython
                      python-mode
-                     pylint
+                     python-pylint
+                     python-pep8
                      pyflakes
-                     pep8
                      c-eldoc
                      cppcheck
                      tuareg

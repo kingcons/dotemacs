@@ -17,7 +17,7 @@
 ; Logging
 (setq jabber-history-enabled t
       jabber-use-global-history nil
-      jabber-history-dir "~/docs/logs/jabber")
+      jabber-history-dir "~/Documents/logs/jabber")
 
 ; Notifications
 (setq jabber-message-alert-same-buffer nil)
