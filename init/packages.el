@@ -1,3 +1,6 @@
+(when (< emacs-major-version 24)
+  (load "~/emacs/site-lisp/package-23.el"))
+
 (require 'package)
 (setq package-archives '(("marmalade" . "http://marmalade-repo.org/packages/")
                          ("ELPA" . "http://tromey.com/elpa/")
