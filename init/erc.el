@@ -36,21 +36,13 @@
 
 (defun stump-irc-notify (matched-type nick msg)
   "(erc hook) Notify of new IRC messages via stumpish"
-  (when (and (not (eq (window-frame (selected-window))
-                      ; KLUDGE: This is a nasty hardcoding hack.
-                      ; It works based on my use case but it ain't good!
-                      ; An alternative would be to get the frame or list of frames
-                      ; with erc buffers and use memq to check...
-                      (window-frame (get-buffer-window "#lisp" t))))
-             (eq matched-type 'current-nick))
+  (when (eq matched-type 'current-nick)
+    ;; I wish there was a good way to tell what buffer the message was coming from
+    ;; but I haven't seen one. Is there a good way to check if I'm *in* that buffer?
     (stump-add-notification
-     (format "%s:%s" (car (split-string nick "!")) text))))
+     (format "%s:%s" (car (split-string nick "!")) msg))))
 
-;; This is temporarily disabled as stump-irc-notify was passing nil as an
-;; argument to window-live-p further down the call chain and the beeping and
-;; errors are annoying as hell. The nofitications code needs a good working
-;; over at some point anyway. At least jabber notifications half work.
-; (add-hook 'erc-text-matched-hook 'stump-irc-notify)
+(add-hook 'erc-text-matched-hook 'stump-irc-notify)
 
 (defun irc-work ()
   (interactive)
