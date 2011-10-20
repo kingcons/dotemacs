@@ -36,7 +36,9 @@
                      color-theme-solarized
                      color-theme-zenburn
                      color-theme-github
-                     full-ack))
+                     full-ack
+                     browse-kill-ring
+                     smex))
 
 ;; new goodies to consider:
 ;; markdown-mode
@@ -46,4 +48,4 @@
 
 ;; what about org and org-magit?
 ;; notify or notifications?
-;; what are we using for: tags, flymake-ish, flyspell, gud?
+;; what are we using for: tags, flymake-ish, flyspell, gud/gdb?

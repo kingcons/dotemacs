@@ -23,6 +23,7 @@
 ;;;; What slime modules shall we use? Keep it simple for now...
 (slime-setup '(slime-fancy
                slime-tramp
+               slime-asdf
                ; slime-highlight-edits
                ; slime-sprof
                ; slime-indentation
@@ -31,12 +32,22 @@
                ; holy crap there is a lot of stuff in contrib...
                ))
 
+(defun slime-find-current-system ()
+  (slime-eval `(cl:let ((cl:*package*
+                         (cl:find-package ,(slime-current-package))))
+                       (swank::find-current-system))))
+
+(defun slime-test-current-system ()
+  (interactive)
+  (slime-oos (slime-find-current-system) "TEST-OP"))
+
 ; Change a few keybindings
 (setq slime-complete-symbol-function 'slime-fuzzy-complete-symbol)
 (add-hook 'slime-repl-mode-hook
 	  (lambda ()
 	    (local-unset-key ",")
 	    (local-set-key "\M-," 'slime-handle-repl-shortcut)
+            (local-set-key (kbd "C-c t") 'slime-test-current-system)
             (setq slime-complete-symbol*-fancy t)))
 
 ;; I've got the HyperSpec locally, why aren't I using it?
