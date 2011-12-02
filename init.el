@@ -14,6 +14,7 @@
                    "color-theme"
                    "display"
                    "elisp"
+                   "c"
                    ;"factor"
                    "haskell"
                    "ido"
