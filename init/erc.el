@@ -2,7 +2,7 @@
 (require 'erc)
 ; Set some SSL stuff up...
 (require 'tls)
-(setq tls-program '("gnutls-cli --priority secure256 -p %p %h")
+(setq tls-program '("openssl s_client -connect %h:%p -no_ssl2 -ign_eof")
       autojoin-channels-alist '((".*\\.freenode.net" "#lisp" "#sbcl" "#concatenative" "#paktahn")
                                 ("ircs.cmgdigital.com" "#all" "#clug" "#team6"))
       erc-autojoin-mode t
