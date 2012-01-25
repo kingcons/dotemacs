@@ -23,6 +23,8 @@
                      python-pylint
                      python-pep8
                      pyflakes
+                     flymake
+                     flymake-cursor
                      c-eldoc
                      cppcheck
                      tuareg

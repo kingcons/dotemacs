@@ -17,7 +17,8 @@
       erc-pals '("persi" "lpolzer" "xach" "nyef"
                  "antifuchs" "nikodemus" "pkhuong"
                  "slava" "littledan")
-      erc-keywords '("\\blunch\\b" "\\bcodereview\\b")
+      erc-keywords '("\\blunch\\b" "\\bcodereview\\b"
+                     "\\bbrit\\b" "\\bredline\\b")
       erc-fools '())
 
 ; Logging

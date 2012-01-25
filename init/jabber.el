@@ -33,7 +33,6 @@
     ; this is closer to correct but behavior is still unpredictable.
     ; TODO: Figure out what (selected-frame) returns in case I'm on a
     ; stumpwm group/virtual desktop with no emacs frames.
-    ; Make sure that jabber-alert-message-hooks behaves as we expect.
     (unless (and (selected-frame)
                  (eq (window-frame (get-buffer-window buf t))
                      (selected-frame)))
