@@ -18,6 +18,10 @@
                (setq longest-line line)))))
     (goto-line (1+ longest-line))))
 
+;; Clone of Vim's Undo Tree
+(require 'undo-tree)
+; C-x u to invoke.
+
 ;; Answer y or n instead of yes or no at minibar prompts.
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -56,4 +60,4 @@
 ;;   (let ((dir default-directory))
 ;;     (eshell arg)
 ;;     (eshell/cd dir)))
-
+;; And a global keybinding for this... C-c s?

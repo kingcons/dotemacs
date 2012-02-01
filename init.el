@@ -24,6 +24,7 @@
                    "modeline"
                    "ocaml"
                    "paredit"
+                   "pastes"
                    "pgp"
                    "python"
                    "spelling"

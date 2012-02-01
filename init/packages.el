@@ -29,22 +29,27 @@
                      cppcheck
                      tuareg
                      haskell-mode
+                     lua-mode
                      magit
-                     magithub
                      gist
                      dpaste
                      lisppaste
+                     refheap
                      color-theme
                      color-theme-solarized
                      color-theme-zenburn
                      color-theme-github
                      full-ack
                      browse-kill-ring
-                     smex))
+                     smex
+                     undo-tree
+                     regex-tool))
 
+;; can't wait for emacs 24 + vc-annotate
 ;; new goodies to consider:
 ;; markdown-mode
 ;; perspectives or workgroups?
+;; multi-term?
 ;; find-file-in-project?
 ;; highlight-80+ ... didn't I have something for this, in whitespace.el maybe?
 

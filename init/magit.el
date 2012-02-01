@@ -15,6 +15,3 @@
   (magit-log-edit-commit))
 
 (define-key magit-log-edit-mode-map (kbd "C-c C-c") 'do-commit)
-
-;; For some reason this messed up flymake over tramp... (setq debug-on-quit t) is awesome
-(remove-hook 'find-file-hook 'magithub-try-enabling-minor-mode)
