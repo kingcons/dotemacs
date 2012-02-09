@@ -8,3 +8,5 @@
 (add-to-list 'term-bind-key-alist '("M-<backspace>" . term-send-backward-kill-word))
 
 (global-set-key (kbd "C-c t") 'multi-term)
+(global-set-key (kbd "C-<tab>") 'multi-term-next)
+
