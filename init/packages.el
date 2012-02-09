@@ -43,16 +43,16 @@
                      browse-kill-ring
                      smex
                      undo-tree
-                     regex-tool))
+                     regex-tool
+                     multi-term))
 
 ;; can't wait for emacs 24 + vc-annotate
 ;; new goodies to consider:
 ;; markdown-mode
 ;; perspectives or workgroups?
-;; multi-term?
 ;; find-file-in-project?
 ;; highlight-80+ ... didn't I have something for this, in whitespace.el maybe?
 
-;; what about org and org-magit?
+;; what about org and org-magit, org-pomodoro, etc?
 ;; notify or notifications?
-;; what are we using for: tags, flymake-ish, flyspell, gud/gdb?
+;; what are we using for: tags, flyspell, gud/gdb?

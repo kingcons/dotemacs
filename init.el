@@ -29,6 +29,7 @@
                    "python"
                    "spelling"
                    "stats"
+                   "terminal"
                    "tramp"
                    "whitespace"
                    ; Load order actually matters now...

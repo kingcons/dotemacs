@@ -37,9 +37,12 @@
                          (cl:find-package ,(slime-current-package))))
                        (swank::find-current-system))))
 
-(defun slime-test-current-system ()
+(defun slime-test-current-system (&optional path)
   (interactive)
-  (slime-oos (slime-find-current-system) "TEST-OP"))
+  (slime-oos (if path
+                 (slime-find-current-system path)
+                 (slime-find-current-system))
+             "TEST-OP"))
 
 ; Change a few keybindings
 (setq slime-complete-symbol-function 'slime-fuzzy-complete-symbol)
@@ -49,6 +52,12 @@
 	    (local-set-key "\M-," 'slime-handle-repl-shortcut)
             (local-set-key (kbd "C-c t") 'slime-test-current-system)
             (setq slime-complete-symbol*-fancy t)))
+
+(add-hook 'slime-mode-hook
+          (lambda ()
+            (local-set-key (kbd "C-c t")
+                           (lambda ()
+                             (slime-test-current-system buffer-file-name)))))
 
 ;; I've got the HyperSpec locally, why aren't I using it?
 (setq common-lisp-hyperspec-root "/home/redline/builds/HyperSpec/")
