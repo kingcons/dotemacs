@@ -43,6 +43,12 @@
 ;; Make browsing the kill ring easy
 (global-set-key (kbd "C-c k") 'browse-kill-ring)
 
+(defun flip-this ()
+  (interactive)
+  (insert "(╯°□°）╯︵ ┻━┻) "))
+
+(global-set-key (kbd "C-c f t") 'flip-this)
+
 ;; Change C-x C-b behavior so it uses bs; shows only interesting buffers.
 ; (global-set-key "\C-x\C-b" 'bs-show)
 
