@@ -3,14 +3,14 @@
 (require 'jabber)
 
 ; Connections/Basics
-(setq jabber-account-list '(("redline6561@gmail.com"
+(setq jabber-account-list `(("redline6561@gmail.com"
                              (:network-server . "talk.google.com")
                              (:connection-type . ssl)
-                             (:password . "oh-snap-it's-on-github-now!"))
+                             (:password . ,jabber-gt))
                             ("redline6561@chat.facebook.com"
                              (:network-server . "chat.facebook.com")
                              (:connection-type . network)
-                             (:password . "yeah-right!")
+                             (:password . ,jabber-fb)
                              (:disabled . t)))
       jabber-nickname "Brit Butler")
 

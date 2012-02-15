@@ -7,8 +7,6 @@
                                 ("ircs.cmgdigital.com" "#all" "#clug" "#team6"))
       erc-autojoin-mode t
       erc-user-full-name "Brit Butler"
-      znc-userpass "yeahright!:tryagainjerks"
-      cmg-userpass "believe:everythingyouread"
       znc-serv "redlinernotes.com"
       znc-port 6561)
 

@@ -1,4 +1,4 @@
-(autoload 'multi-term "multi-term" nil t)
+(require 'multi-term)
 (autoload 'multi-term-next "multi-term" nil t)
 
 (setq multi-term-program "/bin/bash")
@@ -9,4 +9,4 @@
 
 (global-set-key (kbd "C-c t") 'multi-term)
 (global-set-key (kbd "C-<tab>") 'multi-term-next)
-
+(global-set-key (kbd "<backtab>") 'multi-term-prev)

@@ -23,6 +23,7 @@
                    "misc"
                    "modeline"
                    "ocaml"
+                   ;"org"
                    "paredit"
                    "pastes"
                    "pgp"
@@ -36,6 +37,7 @@
                    "slime"
                    "clojure"
                    "scheme"
+                   "credentials"
                    "notify"
                    "erc"
                    "jabber"))
