@@ -1,5 +1,6 @@
 (require 'magit)
 
+(setq magit-git-executable "/usr/local/bin/git")
 (set-face-attribute 'magit-diff-add nil :foreground "Green")
 (set-face-attribute 'magit-diff-del nil :foreground "brightred")
 (set-face-attribute 'magit-item-highlight nil :background "gray10")

@@ -12,7 +12,7 @@
 (setq slime-lisp-implementations
   '((ccl  ("ccl64" "-K utf-8"))
     (ecl  ("ecl"))
-    (sbcl ("sbcl"))))
+    (sbcl ("/usr/local/bin/sbcl"))))
 (setq slime-default-lisp 'sbcl)
 (setq inhibit-splash-screen t)
 (setq slime-net-coding-system 'utf-8-unix)
