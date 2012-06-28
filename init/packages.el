@@ -36,9 +36,6 @@
                      lisppaste
                      refheap
                      color-theme
-                     color-theme-solarized
-                     color-theme-zenburn
-                     color-theme-github
                      full-ack
                      browse-kill-ring
                      smex

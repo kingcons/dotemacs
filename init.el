@@ -39,4 +39,5 @@
                    "credentials"
                    "notify"
                    "erc"
-                   "jabber"))
+;                   "jabber"
+                   ))

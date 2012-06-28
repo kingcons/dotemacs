@@ -1,20 +1,10 @@
-;; pdb setup
-(setq pdb-path "/usr/bin/pdb")
-(setq py-python-command "python")
-
-(defadvice pdb (before gud-query-cmdline activate)
-  "Provide a better default command line when called interactively."
-  (interactive
-   (list (gud-query-cmdline pdb-path
-	 		    (file-name-nondirectory buffer-file-name)))))
-
 ;; Modes setup and loading
 (autoload 'python-mode "python-mode" "Python Mode." t)
 
 (require 'python-pylint)
 (require 'python-pep8)
+(require 'python-mode)
 (require 'compile)
-(require 'ipython)
 (require 'flymake-cursor)
 
 (add-to-list 'interpreter-mode-alist '("ipython" . python-mode))
