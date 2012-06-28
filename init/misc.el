@@ -1,6 +1,3 @@
-;; Htmlize, just because it's handy
-(load "htmlize")
-
 ;; http://www.splode.com/~friedman/software/emacs-lisp/src/motion-fns.el
 (defun goto-longest-line ()
   "Go to longest line in buffer."
@@ -20,6 +17,10 @@
                (setq length (current-column))
                (setq longest-line line)))))
     (goto-line (1+ longest-line))))
+
+;; Clone of Vim's Undo Tree
+(require 'undo-tree)
+; C-x u to invoke.
 
 ;; Answer y or n instead of yes or no at minibar prompts.
 (defalias 'yes-or-no-p 'y-or-n-p)
@@ -42,12 +43,14 @@
 ;; Make browsing the kill ring easy
 (global-set-key (kbd "C-c k") 'browse-kill-ring)
 
+(defun flip-this ()
+  (interactive)
+  (insert "(╯°□°）╯︵ ┻━┻) "))
+
+(global-set-key (kbd "C-c f t") 'flip-this)
+
 ;; Change C-x C-b behavior so it uses bs; shows only interesting buffers.
 ; (global-set-key "\C-x\C-b" 'bs-show)
-
-;; remote shell! Hooray!
-; (require 'ssh)
-; (add-hook 'ssh-mode-hook 'ssh-directory-tracking-mode)
 
 ;; Taking advice from Yegge...
 ;; (defun backward-kill-word-or-kill-region (&optional arg)
@@ -63,3 +66,4 @@
 ;;   (let ((dir default-directory))
 ;;     (eshell arg)
 ;;     (eshell/cd dir)))
+;; And a global keybinding for this... C-c s?

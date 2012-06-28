@@ -1,24 +1,29 @@
 ; Load it up
 (require 'erc)
-
-; Connections/Basics
-(setq erc-autojoin-channels-alist '((".*\\.freenode.net" "#lisp" "#sbcl" "#concatenative"))
-      erc-nick "redline6561"
-      erc-pass "like-i'd-commit-that..."
+; Set some SSL stuff up...
+(require 'tls)
+(setq tls-program '("openssl s_client -connect %h:%p -no_ssl2 -ign_eof")
+      autojoin-channels-alist '((".*\\.freenode.net" "#lisp" "#sbcl" "#concatenative" "#paktahn")
+                                ("ircs.cmgdigital.com" "#all" "#clug" "#team6"))
+      erc-autojoin-mode t
       erc-user-full-name "Brit Butler"
-      erc-autojoin-mode t)
+      znc-serv "redlinernotes.com"
+      znc-port 6561)
 
 ; Highlighting and Matches
 (setq erc-current-nick-highlight-type 'nick
       erc-pals '("persi" "lpolzer" "xach" "nyef"
-                 "antifuchs" "nikodemus" "pkhuong")
+                 "antifuchs" "nikodemus" "pkhuong"
+                 "slava" "littledan")
+      erc-keywords '("\\blunch\\b" "\\bcodereview\\b"
+                     "\\bbrit\\b" "\\bredline\\b")
       erc-fools '())
 
 ; Logging
 (pushnew 'log erc-modules)
 (erc-update-modules)
 (setq erc-log-channels t
-      erc-log-channels-directory "~/docs/logs/irc"
+      erc-log-channels-directory "~/Documents/logs/irc"
       erc-log-write-after-send t
       erc-log-write-after-insert t)
 
@@ -30,18 +35,25 @@
 
 (defun stump-irc-notify (matched-type nick msg)
   "(erc hook) Notify of new IRC messages via stumpish"
-  (when (and (not (eq (window-frame (selected-window))
-                      ; KLUDGE: This is a nasty hardcoding hack.
-                      ; It works based on my use case but it ain't good!
-                      ; An alternative would be to get the frame or list of frames
-                      ; with erc buffers and use memq to check...
-                      (window-frame (get-buffer-window "#lisp" t))))
-             (eq matched-type 'current-nick))
+  (when (eq matched-type 'current-nick)
+    ;; I wish there was a good way to tell what buffer the message was coming from
+    ;; but I haven't seen one. Is there a good way to check if I'm *in* that buffer?
     (stump-add-notification
-     (format "%s:%s" (car (split-string nick "!")) text))))
+     (format "%s:%s" (car (split-string nick "!")) msg))))
 
-;; This is temporarily disabled as stump-irc-notify was passing nil as an
-;; argument to window-live-p further down the call chain and the beeping and
-;; errors are annoying as hell. The nofitications code needs a good working
-;; over at some point anyway. At least jabber notifications half work.
-; (add-hook 'erc-text-matched-hook 'stump-irc-notify)
+(add-hook 'erc-text-matched-hook 'stump-irc-notify)
+
+(defun irc-work ()
+  (interactive)
+  (erc-tls :server znc-serv :port znc-port :password cmg-userpass))
+
+(defun irc-home ()
+  (interactive)
+  (erc-tls :server znc-serv :port znc-port :password znc-userpass))
+
+(defun start-chat ()
+   "Connect to IRC and Jabber accounts."
+   (interactive)
+   (erc-tls :server znc-serv :port znc-port :password znc-userpass)
+   (erc-tls :server znc-serv :port znc-port :password cmg-userpass)
+   (jabber-connect-all))

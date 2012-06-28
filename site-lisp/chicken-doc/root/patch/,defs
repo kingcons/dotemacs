@@ -1,4 +1,0 @@
-(index ("make-patch" 0) ("apply-patch" 148) ("reverse-patch" 457))
-(def (sig (procedure "(make-patch)" (id make-patch))) (p "Read GNU diff output on " (tt "(current-input-port)") " and return a patch definition."))
-(def (sig (procedure "(apply-patch PATCH-DEFINITION)" (id apply-patch))) (p "Apply a patch definition to the text stream on " (tt "(standard-input-port)") " and write the result to " (tt "(current-output-port)") ".") (dl (dt (tt "PATCH-DEFINITION")) (dd "A patch definition produced by " (tt "make-patch"))))
-(def (sig (procedure "(reverse-patch PATCH-DEFINITION)" (id reverse-patch))) (p "Produce a patch definition that undoes the patch definition given."))

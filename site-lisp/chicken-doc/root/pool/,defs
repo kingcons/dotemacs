@@ -1,4 +1,0 @@
-(index ("make-pool" 0) ("call-with-value-from-pool" 121) ("call-with-value-from-pool-in-thread" 385))
-(def (sig (procedure "(make-pool values)" (id make-pool))) (p "Returns a pool of the given list of " (tt "values") "."))
-(def (sig (procedure "(call-with-value-from-pool pool proc)" (id call-with-value-from-pool))) (p "Locks one value in the given " (tt "pool") " (possibly waiting in case all values are currently locked) and calls " (tt "proc") " with this value as its argument."))
-(def (sig (procedure "(call-with-value-from-pool-in-thread pool proc)" (id call-with-value-from-pool-in-thread))) (p "Does the same as " (tt "call-with-value-from-pool") " but runs " (tt "proc") " in a new thread and returns the respective thread."))

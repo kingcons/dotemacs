@@ -1,4 +1,0 @@
-(index ("emit" 0) ("ref" 210) ("log" 441))
-(def (sig (procedure "(emit key value)" (id emit))) (p "Just like in the default JavaScript view server, " (tt "emit") " is implicitly available and is used to emit results from the " (tt "map") " function."))
-(def (sig (procedure "(ref key doc)" (id ref))) (p "Allows accessing values in avectors by key (" (int-link "json") " uses these to represent JSON objects).") (p "Example:") (highlight scheme "(ref 'foo '#((foo . bar)))\n=> bar"))
-(def (sig (procedure "(log message)" (id log))) (p "Can be used to make the  CouchDB server log a message."))

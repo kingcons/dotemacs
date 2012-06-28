@@ -1,2 +1,0 @@
-(index ("return-to-host" 0))
-(def (sig (procedure "(return-to-host)" (id return-to-host))) (p "Exits the Scheme code and returns to the invoking context that called " (tt "CHICKEN_run") " or " (tt "CHICKEN_continue") ".") (p "After " (tt "return-to-host") " has been executed and once " (tt "CHICKEN_run") " returns, you can invoke callbacks which have been defined with " (tt "define-external") ". The " (tt "eval") " library unit also provides " (i "boilerplate") " callbacks, that simplify invoking Scheme code embedded in a C or C++ application a lot."))

@@ -1,3 +1,0 @@
-(index ("expand*" 0) ("pretty-print-expand*" 107))
-(def (sig (procedure "(expand* FORM)" (id expand*))) (p "Returns the full expansion of " (tt "FROM") "."))
-(def (sig (procedure "(pretty-print-expand* FORM)" (id pretty-print-expand*))) (p "Pretty-prints the full expansion of " (tt "FROM") ".") (p (tt "ppexpand*") " is a synonym."))

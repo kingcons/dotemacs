@@ -1,7 +1,0 @@
-(index ("parse-easy-ffi" 0) ("register-ffi-macro" 214) ("check-c-syntax" 412) ("foreign-parse" 598) ("foreign-parse/declare" 734) ("foreign-include-path" 885))
-(def (sig (procedure "(parse-easy-ffi STRING)" (id parse-easy-ffi))) (p "Parses the C/C++ code in STRING and returns a list of top-level expressions representing compilable bindings to the defintions contained."))
-(def (sig (procedure "(register-ffi-macro STRING)" (id register-ffi-macro))) (p "Defines a preprocessor macro named STRING for allowing conditional processing using " (tt "#ifdef ... #endif") "."))
-(def (sig (procedure "(check-c-syntax STRING)" (id check-c-syntax))) (p "Perform a superficial C/C++ syntax check and signal an error if any lexical or syntactic errors are detected."))
-(def (sig (syntax "(foreign-parse STRING ...)" (id foreign-parse))) (p "Parse given strings and generate foreign-interface bindings."))
-(def (sig (syntax "(foreign-parse/declare STRING ...)" (id foreign-parse/declare))) (pre "") (p "Parse and include strings into the generated code."))
-(def (sig (syntax "(foreign-include-path STRING ...)" (id foreign-include-path))) (p "Appends the paths given in " (tt "STRING ...") " to the list of available include paths to be searched when an " (tt "#include ...") " form is processed by " (tt "foreign-parse") "."))

@@ -1,4 +1,0 @@
-(type unit)
-(signature "Bibliography")
-(timestamp 1277272841.0)
-(sxml ((tags "manual") (section 2 "Bibliography" (p "Henry Baker: " (i "CONS Should Not CONS Its Arguments, Part II: Cheney on the M.T.A.") " " (link "http://home.pipeline.com/~hbaker1/CheneyMTA.html")) (p (i "Revised^5 Report on the Algorithmic Language Scheme") " " (link "http://www.schemers.org/Documents/Standards/R5RS")) (hr) (p "Previous: " (int-link "Acknowledgements")))))

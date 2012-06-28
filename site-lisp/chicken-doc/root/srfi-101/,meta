@@ -1,4 +1,0 @@
-(type egg)
-(signature "srfi-101 egg")
-(timestamp 1277272876.0)
-(sxml ((section 2 "SRFI 101: Purely Functional Random-Access Pairs and Lists" (p "See " (link "http://srfi.schemers.org/srfi-101/")))))

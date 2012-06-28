@@ -3,21 +3,21 @@
 (require 'jabber)
 
 ; Connections/Basics
-(setq jabber-account-list '(("redline6561@gmail.com"
+(setq jabber-account-list `(("redline6561@gmail.com"
                              (:network-server . "talk.google.com")
                              (:connection-type . ssl)
-                             (:password . "oh-snap-it's-on-github-now!"))
+                             (:password . ,jabber-gt))
                             ("redline6561@chat.facebook.com"
                              (:network-server . "chat.facebook.com")
                              (:connection-type . network)
-                             (:password . "yeah-right!")
+                             (:password . ,jabber-fb)
                              (:disabled . t)))
       jabber-nickname "Brit Butler")
 
 ; Logging
 (setq jabber-history-enabled t
       jabber-use-global-history nil
-      jabber-history-dir "~/docs/logs/jabber")
+      jabber-history-dir "~/Documents/logs/jabber")
 
 ; Notifications
 (setq jabber-message-alert-same-buffer nil)
@@ -33,7 +33,6 @@
     ; this is closer to correct but behavior is still unpredictable.
     ; TODO: Figure out what (selected-frame) returns in case I'm on a
     ; stumpwm group/virtual desktop with no emacs frames.
-    ; Make sure that jabber-alert-message-hooks behaves as we expect.
     (unless (and (selected-frame)
                  (eq (window-frame (get-buffer-window buf t))
                      (selected-frame)))

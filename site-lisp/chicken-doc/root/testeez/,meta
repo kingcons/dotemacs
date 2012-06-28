@@ -1,4 +1,0 @@
-(type egg)
-(signature "testeez egg")
-(timestamp 1277272876.0)
-(sxml ((section 2 "testeez" (p "See http://www.neilvandyke.org/testeez/ for the full documentation."))))

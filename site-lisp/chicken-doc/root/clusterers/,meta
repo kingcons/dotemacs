@@ -1,4 +1,0 @@
-(type egg)
-(signature "clusterers egg")
-(timestamp 1289583662.0)
-(sxml ((section 2 "Clusterers" (p "Some algorithms for " (link "http://en.wikipedia.org/wiki/Cluster_analysis" "cluster analysis") " of data.  This library uses " (int-link "dataset-utils") ".") (section 3 "Exported Procedures") (section 3 "Author" (p (link "http://wiki.call-cc.org/users/peter-lane" "Peter Lane") ".")) (section 3 "License" (p "GPL version 3.0.")) (section 3 "Version History" (p "in progress.")))))

@@ -1,2 +1,0 @@
-(index ("argc+argv" 0))
-(def (sig (procedure "(argc+argv)" (id argc+argv))) (p "Returns two values: an integer and a foreign-pointer object representing the " (tt "argc") " and " (tt "argv") " arguments passed to the current process."))

@@ -1,2 +1,0 @@
-(index ("scss->css" 0))
-(def (sig (procedure "(scss->css scss [port])" (id scss->css))) (p "Write the CSS translation of " (tt "scss") " (which is a list following the syntax described under " (int-link "#syntax" "Syntax") ") to " (tt "port") "."))

@@ -5,7 +5,7 @@
 (mapc (lambda (mode)
         (let ((hook (intern (concat (symbol-name mode) "-mode-hook"))))
           (add-hook hook (lambda () (paredit-mode +1)))))
-      '(emacs-lisp lisp inferior-lisp slime clojure))
+      '(emacs-lisp lisp slime clojure))
 
 ;; Stop SLIME's REPL from grabbing DEL,
 ;; which is annoying when backspacing over a '('

@@ -1,39 +1,12 @@
 [submodule "site-lisp/geiser"]
 	path = site-lisp/geiser
 	url = git://gitorious.org/geiser/mainline.git
-[submodule "site-lisp/magit"]
-	path = site-lisp/magit
-	url = git://github.com/philjackson/magit.git
-[submodule "site-lisp/swank-clojure"]
-	path = site-lisp/swank-clojure
-	url = git://github.com/redline6561/swank-clojure.git
 [submodule "site-lisp/swank-js"]
 	path = site-lisp/swank-js
 	url = git://github.com/ivan4th/swank-js.git
-[submodule "site-lisp/clojure-mode"]
-	path = site-lisp/clojure-mode
-	url = git://github.com/technomancy/clojure-mode.git
-[submodule "site-lisp/slime"]
-	path = site-lisp/slime
-	url = git://github.com/nablaone/slime.git
-[submodule "site-lisp/swank-chicken"]
-	path = site-lisp/swank-chicken
-	url = http://github.com/nickg/swank-chicken.git
-[submodule "site-lisp/ensime"]
-	path = site-lisp/ensime
-	url = http://github.com/aemoncannon/ensime.git
 [submodule "site-lisp/jabber-mode"]
 	path = site-lisp/jabber-mode
 	url = git://emacs-jabber.git.sourceforge.net/gitroot/emacs-jabber/emacs-jabber
-[submodule "site-lisp/scala-mode"]
-	path = site-lisp/scala-mode
-	url = http://github.com/Yasushi/scala-mode.git
-[submodule "site-lisp/slime-clj"]
-	path = site-lisp/slime-clj
-	url = https://github.com/technomancy/slime.git
-[submodule "site-lisp/emms"]
-	path = site-lisp/emms
-	url = git://git.sv.gnu.org/emms.git
 [submodule "site-lisp/writegood-mode"]
 	path = site-lisp/writegood-mode
 	url = https://github.com/bnbeckwith/writegood-mode.git
@@ -49,3 +22,6 @@
 [submodule "site-lisp/color-theme"]
 	path = site-lisp/color-theme
 	url = git://github.com/emacsmirror/color-theme.git
+[submodule "site-lisp/slime"]
+	path = site-lisp/slime
+	url = https://github.com/technomancy/slime

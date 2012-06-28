@@ -1,3 +1,0 @@
-(index ("compress" 0) ("decompress" 252))
-(def (sig (procedure "(compress BLOB) => BLOB" (id compress))) (p "Given a blob, returns a blob that's hopefully smaller, and contains all the entropy of the original blob. Returns #f in the event of failure (typically, an out-of-memory condition)."))
-(def (sig (procedure "(decompress BLOB) => BLOB" (id decompress))) (p "Given a blob returned by " (tt "compress") ", returns the original blob. Returns #f in the event of failure (typically, an out-of-memory condition or an invalid input)."))

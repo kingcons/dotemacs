@@ -6,7 +6,10 @@
                         (format "%s/%s.el" "~/emacs/init" name))))
           files))
 
-(expand-and-load '("automode"
+(expand-and-load '(; make sure all the libraries we know
+                   ; and love are installed first
+                   "packages"
+                   "automode"
                    "browser"
                    "color-theme"
                    "display"
@@ -19,25 +22,21 @@
                    "misc"
                    "modeline"
                    "ocaml"
+                   ;"org"
                    "paredit"
-                   ;"pgp"
+                   "pastes"
+                   "pgp"
                    "python"
-                   "scala"
                    "spelling"
                    "stats"
+                   "terminal"
                    "tramp"
                    "whitespace"
                    ; Load order actually matters now...
                    "slime"
-                   ;"clojure"
-                   ;"scheme"
+                   "clojure"
+                   "scheme"
+                   "credentials"
                    "notify"
                    "erc"
-                   ;"jabber"
-                   ))
-
-(defun start-chat ()
-   "Connect to IRC and Jabber accounts."
-   (interactive)
-   (erc :server "irc.freenode.net" :port 6667 :nick erc-nick :password erc-pass)
-   (jabber-connect-all))
+                   "jabber"))

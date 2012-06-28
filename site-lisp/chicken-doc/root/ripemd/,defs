@@ -1,3 +1,0 @@
-(index ("ripemd128-primitive" 0) ("ripemd160-primitive" 176))
-(def (sig (procedure "(ripemd128-primitive) => message-digest-primitive" (id ripemd128-primitive))) (p "Returns the 128-bit RIPE " (tt "message-digest-primitive") " object."))
-(def (sig (procedure "(ripemd160-primitive) => message-digest-primitive" (id ripemd160-primitive))) (p "Returns the 160-bit RIPE " (tt "message-digest-primitive") " object."))

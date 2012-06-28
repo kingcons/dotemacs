@@ -1,3 +1,0 @@
-(index ("parser" 0) ("ts->list" 280))
-(def (sig (procedure "(parser <InetTimestamp) => (LAMBDA TEXT) => TS" (id parser))) (p "Once applied to an instance of the " (tt "InetTimestamp") " typeclass, " (tt "parser") " returns a procedure that parses Internet timestamp text and returns a record of type " (tt "ts") "."))
-(def (sig (procedure "(ts->list TS) => LIST" (id ts->list))) (p "Returns an alist representation of a timestamp:") (pre " ((date (YEAR MONTH DAY)) (time (HOUR MINUTE SECOND FRAC)) (offset (OFFSET)))"))
