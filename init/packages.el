@@ -17,6 +17,7 @@
 (activate-packages '(paredit
                      clojure-mode
                      clojurescript-mode
+                     nrepl
                      elein
                      ipython
                      python-mode

@@ -12,4 +12,4 @@
 	url = https://github.com/bnbeckwith/writegood-mode.git
 [submodule "site-lisp/slime"]
 	path = site-lisp/slime
-	url = https://github.com/technomancy/slime
+	url = https://github.com/nablaone/slime.git

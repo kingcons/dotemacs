@@ -56,7 +56,7 @@
                '("\\.py\\'" flymake-pylint-init)))
 
 ;; Use flymake but not on non-file buffers
-(add-hook 'python-mode-hook
-          (lambda ()
-            (unless (eq buffer-file-name nil)
-              (flymake-mode 1))))
+;(add-hook 'python-mode-hook
+;          (lambda ()
+;            (unless (eq buffer-file-name nil)
+;              (flymake-mode 1))))
