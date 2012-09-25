@@ -45,11 +45,11 @@
                      smex
                      undo-tree
                      regex-tool
-                     multi-term))
+                     multi-term
+                     markdown-mode))
 
 ;; can't wait for emacs 24 + vc-annotate
 ;; new goodies to consider:
-;; markdown-mode
 ;; perspectives or workgroups?
 ;; find-file-in-project?
 ;; highlight-80+ ... didn't I have something for this, in whitespace.el maybe?
