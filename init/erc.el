@@ -4,6 +4,8 @@
 (require 'tls)
 (setq tls-program '("openssl s_client -connect %h:%p -no_ssl2 -ign_eof")
       autojoin-channels-alist '((".*\\.freenode.net" "#lisp" "#sbcl" "#concatenative" "#paktahn")
+                                ("irc.shoutcast.com" "#nesdev")
+                                ("irc.mozilla.org" "#rust")
                                 ("ircs.cmgdigital.com" "#all" "#clug" "#team6"))
       erc-autojoin-mode t
       erc-user-full-name "Brit Butler"
@@ -43,10 +45,6 @@
 
 (add-hook 'erc-text-matched-hook 'stump-irc-notify)
 
-(defun irc-work ()
-  (interactive)
-  (erc-tls :server znc-serv :port znc-port :password cmg-userpass))
-
 (defun irc-home ()
   (interactive)
   (erc-tls :server znc-serv :port znc-port :password znc-userpass))
@@ -55,5 +53,6 @@
    "Connect to IRC and Jabber accounts."
    (interactive)
    (erc-tls :server znc-serv :port znc-port :password znc-userpass)
-   (erc-tls :server znc-serv :port znc-port :password cmg-userpass)
+   (erc-tls :server znc-serv :port znc-port :password moz-userpass)
+   (erc-tls :server znc-serv :port znc-port :password efnet-userpass)
    (jabber-connect-all))
