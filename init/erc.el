@@ -47,12 +47,12 @@
 
 (defun irc-home ()
   (interactive)
-  (erc-tls :server znc-serv :port znc-port :password znc-userpass))
+  (erc-tls :server znc-serv :port znc-port :password znc-userpass)
+  (erc-tls :server znc-serv :port znc-port :password moz-userpass)
+  (erc-tls :server znc-serv :port znc-port :password efnet-userpass))
 
 (defun start-chat ()
    "Connect to IRC and Jabber accounts."
    (interactive)
-   (erc-tls :server znc-serv :port znc-port :password znc-userpass)
-   (erc-tls :server znc-serv :port znc-port :password moz-userpass)
-   (erc-tls :server znc-serv :port znc-port :password efnet-userpass)
+   (irc-home)
    (jabber-connect-all))
