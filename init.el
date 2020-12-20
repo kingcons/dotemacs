@@ -6,20 +6,13 @@
   (error "This config is designed for the Guix System."))
 
 ;; Define a few helpers
-(defun init-file-p (filename)
-  (equal (file-name-extension filename) "el"))
-
-(defun load-init-file (name &optional dir)
-  (let ((file (expand-file-name (format "%s/%s.el" (or dir "~/.emacs.d") name))))
+(defun load-init-file (name)
+  (let ((file (expand-file-name (format "~/.emacs.d/%s.el" name))))
     (load-file file)))
 
 (defun initialize-config! ()
   (load-init-file "builtins")
-  (load-init-file "packages")
-  (let* ((config-dir "~/.emacs.d/init")
-	 (files (directory-files config-dir))
-	 (elisp (seq-filter #'init-file-p files)))
-    (mapcar #'load-init-file elisp)))
+  (load-init-file "packages"))
 
 ;; Liftoff...
 (initialize-config!)
