@@ -1,43 +1,25 @@
-(add-to-list 'load-path "~/emacs/site-lisp")
+;; Preflight checks
+(when (< emacs-major-version 26)
+  (error "Emacs version is too old for this config."))
 
-(defun expand-and-load (files)
-  (mapcar (lambda (name)
-            (load-file (expand-file-name
-                        (format "%s/%s.el" "~/emacs/init" name))))
-          files))
+(unless (zerop (shell-command "which guix"))
+  (error "This config is designed for the Guix System."))
 
-(expand-and-load '(; make sure all the libraries we know
-                   ; and love are installed first
-                   "packages"
-                   "automode"
-                   "browser"
-                   "color-theme"
-                   "display"
-                   "elisp"
-                   "c"
-                   ;"factor"
-                   "haskell"
-                   "ido"
-                   "keybindings"
-                   "magit"
-                   "misc"
-                   "modeline"
-                   "ocaml"
-                   ;"org"
-                   "paredit"
-                   "pastes"
-                   "pgp"
-                   "python"
-                   "spelling"
-                   "stats"
-                   "terminal"
-                   "tramp"
-                   "whitespace"
-                   ; Load order actually matters now...
-                   "slime"
-                   "clojure"
-                   "scheme"
-                   "credentials"
-                   "notify"
-                   "erc"
-                   "jabber"))
+;; Define a few helpers
+(defun init-file-p (filename)
+  (equal (file-name-extension filename) "el"))
+
+(defun load-init-file (name &optional dir)
+  (let ((file (expand-file-name (format "%s/%s.el" (or dir "~/.emacs.d") name))))
+    (load-file file)))
+
+(defun initialize-config! ()
+  (load-init-file "builtins")
+  (load-init-file "packages")
+  (let* ((config-dir "~/.emacs.d/init")
+	 (files (directory-files config-dir))
+	 (elisp (seq-filter #'init-file-p files)))
+    (mapcar #'load-init-file elisp)))
+
+;; Liftoff...
+(initialize-config!)
