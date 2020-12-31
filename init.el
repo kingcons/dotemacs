@@ -1,18 +1,48 @@
 ;; Preflight checks
-(when (< emacs-major-version 26)
+(when (version< emacs-version "26.1")
   (error "Emacs version is too old for this config."))
 
-(unless (zerop (shell-command "which guix"))
+(unless (executable-find "guix")
   (error "This config is designed for the Guix System."))
 
-;; Define a few helpers
-(defun load-init-file (name)
-  (let ((file (expand-file-name (format "~/.emacs.d/%s.el" name))))
-    (load-file file)))
+;; Be Lispier
+(require 'subr-x)
+(require 'cl-lib)
 
-(defun initialize-config! ()
-  (load-init-file "builtins")
-  (load-init-file "packages"))
+;; Use-package is a vast improvement over the old fashioned ways.
+(require 'use-package)
 
-;; Liftoff...
-(initialize-config!)
+(defun initialize-config! (modules)
+  (dolist (module modules)
+    (let ((file-name (format "~/.emacs.d/init/%s.el" module)))
+      (load-file (expand-file-name file-name)))))
+
+(let ((modules '("aesthetics"
+                 "builtins"
+                 "core"
+                 "documents"
+                 "git"
+                 "help"
+                 "lisp")))
+  (initialize-config! modules))
+
+(message "Initialized in %s" (emacs-init-time))
+
+;; NOTES:
+;;; Still need to configure at least whitespace for builtins.
+;;; * something for ruby? something for ocaml and c?
+
+;; Nice to have:
+;;; w3m/eww stuff?
+;;; mpc/emms?
+;;; emacs-guix
+;;; org-roam
+;;; notmuch
+;;; elfeed
+
+;; Under Consideration:
+;;; hydras/hercules/general.el
+;;; browse-kill-ring
+;;; slack/discord
+;;; youtube-dl
+;;; undo-tree
