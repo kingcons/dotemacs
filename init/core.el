@@ -18,3 +18,8 @@
   :init (selectrum-mode 1))
 
 ;;; TODO: What about consult + embark?
+
+(use-package ws-butler
+  :config
+  (ws-butler-global-mode)
+  (setq ws-butler-keep-whitespace-before-point nil))
