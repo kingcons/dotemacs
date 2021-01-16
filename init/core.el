@@ -20,6 +20,9 @@
 
 (bsb/use-package! company
   :hook (after-init . global-company-mode)
+  :bind (:map company-active-map
+              ("C-n" . company-select-next)
+              ("C-p" . company-select-previous))
   :init
   (setq company-tooltip-align-annotations t
         company-idle-delay 0.2))

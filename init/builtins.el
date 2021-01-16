@@ -45,3 +45,7 @@
 (global-set-key (kbd "s-a") 'windmove-left)
 (global-set-key (kbd "s-s") 'windmove-down)
 (global-set-key (kbd "s-d") 'windmove-right)
+
+;; Add some helpers for navigating a large project
+(global-set-key (kbd "C-c p f") 'project-find-file)
+(global-set-key (kbd "C-c p g") 'vc-git-grep)
