@@ -16,7 +16,25 @@
 (bsb/use-package! avy
   :bind (("C-c j" . avy-goto-char-timer)))
 
+;;; Use company for autocompletion
+
+(bsb/use-package! company
+  :hook (after-init . global-company-mode)
+  :init
+  (setq company-tooltip-align-annotations t
+        company-idle-delay 0.2))
+
+(bsb/use-package! company-prescient
+  :config (company-prescient-mode))
+
+;;; If collaborating with others, conform to their standards.
+
 (bsb/use-package! ws-butler
   :config
   (ws-butler-global-mode)
   (setq ws-butler-keep-whitespace-before-point nil))
+
+(bsb/use-package! editorconfig
+  :config
+  (editorconfig-mode 1)
+  (setq editorconfig-trim-whitespaces-mode 'ws-butler-mode))
