@@ -1,6 +1,6 @@
 ;;; Add pdf-tools to gracefully handle pdfs.
 
-(use-package pdf-tools
+(bsb/use-package! pdf-tools
   :mode ("\\.pdf\\'" . pdf-view-mode)
   :config
   (pdf-tools-install)

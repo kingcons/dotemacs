@@ -2,27 +2,38 @@
 (when (version< emacs-version "26.1")
   (error "Emacs version is too old for this config."))
 
-(unless (executable-find "guix")
-  (error "This config is designed for the Guix System."))
+(defvar bsb/guix-system-p (executable-find "guix"))
+
+(unless bsb/guix-system-p
+  (message "No Guix installation found. Defaulting to use-package :ensure!"))
+
+;; Raise GC threshold to 24MB
+(setq gc-cons-threshold (* 1024 1024 24))
 
 ;; Be Lispier
 (require 'subr-x)
 (require 'cl-lib)
 
+;; Ensure we have MELPA in our list of package archives
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+
 ;; Use-package is a vast improvement over the old fashioned ways.
 (require 'use-package)
 
-;; TODO: Running guix package -I per package was killing our startup
-;; time to the tune of about ~.25 seconds per package. What we could
-;; do though is run it once, capture the output to string, and check
-;; for every item from the manifest, throwing a warning if any are
-;; not present.
+(defmacro bsb/use-package! (name &rest body)
+  `(use-package ,name
+     :ensure ,(null bsb/guix-system-p)
+     ,@body))
+
+(put 'bsb/use-package! 'lisp-indent-function 'defun)
 
 (defun initialize-config! (modules)
   (dolist (module modules)
     (let ((file-name (format "~/.emacs.d/init/%s.el" module)))
       (load-file (expand-file-name file-name)))))
 
+;; Let 'er rip
 (let ((modules '("appearance"
                  "builtins"
                  "core"
@@ -30,6 +41,7 @@
                  "email"
                  "git"
                  "help"
+                 "irc"
                  "lang-js"
                  "lang-lisp"
                  "system")))
@@ -40,9 +52,9 @@
 ;; NOTES:
 ;; Nice to have:
 ;;; w3m/eww stuff?
+;;; company-mode?
 ;;; mpc/emms?
 ;;; org-roam
-;;; notmuch
 ;;; elfeed
 
 ;; Under Consideration:

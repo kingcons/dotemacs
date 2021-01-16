@@ -9,3 +9,5 @@
       smtpmail-servers-requiring-authorization smtpmail-smtp-server
       message-send-mail-function 'smtpmail-send-it
       message-kill-buffer-on-exit t)
+
+;; TODO: Configure notmuch and add a helper for calling mbsync.

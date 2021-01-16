@@ -35,3 +35,9 @@
 ;; Require less typing
 (defalias 'yes-or-no-p 'y-or-n-p) ; y, not yes
 (setq kill-whole-line t) ; C-k once, not twice
+
+;; Use windmove to jump around more easily
+(global-set-key (kbd "s-w") 'windmove-up)
+(global-set-key (kbd "s-a") 'windmove-left)
+(global-set-key (kbd "s-s") 'windmove-down)
+(global-set-key (kbd "s-d") 'windmove-right)
