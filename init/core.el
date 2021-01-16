@@ -1,12 +1,15 @@
 ;;; Use selectrum + prescient for better selection interfaces
 
-(bsb/use-package! prescient
-  :config
-  (selectrum-prescient-mode)
-  (prescient-persist-mode 1))
-
 (bsb/use-package! selectrum
   :init (selectrum-mode 1))
+
+(bsb/use-package! prescient
+  :config
+  (prescient-persist-mode 1))
+
+(bsb/use-package! selectrum-prescient
+  :config
+  (selectrum-prescient-mode))
 
 ;;; Use avy for more pleasant navigation
 

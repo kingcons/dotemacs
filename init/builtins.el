@@ -1,5 +1,9 @@
 ;;; Adjust built-in settings
 
+;; Be Lispier
+(require 'subr-x)
+(require 'cl-lib)
+
 ;; Store non-config data outside ~/.emacs.d
 (setq user-emacs-directory "~/.cache/emacs")
 
