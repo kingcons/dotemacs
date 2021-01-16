@@ -6,5 +6,5 @@ At some point, I'll do a nice org-mode writeup but not yet.
 
 ### Requirements
 
-* Emacs: Tested with 27.1 but should work with 26+.
-* OS: Linux with guix preferred, should gracefully use-package ensure otherwise.
+* Emacs: 27.1 or later.
+* OS: Linux with guix preferred, gracefully falls back to use-package otherwise.

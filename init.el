@@ -10,13 +10,14 @@
 ;; Raise GC threshold to 24MB
 (setq gc-cons-threshold (* 1024 1024 24))
 
-;; Ensure we have MELPA in our list of package archives
+;; Ensure MELPA is available and our .emacs.d won't become cluttered
 (require 'package)
 (setq custom-file "~/.cache/emacs/custom.el")
 (setq package-user-dir "~/.cache/emacs/packages")
 (setq package-gnupghome-dir "~/.cache/emacs/gnupg")
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'load-path (expand-file-name "packages" "~/.cache/emacs"))
+(package-initialize)
 
 ;; Use-package is a vast improvement over the old fashioned ways.
 (unless (require 'use-package nil t)
