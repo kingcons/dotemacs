@@ -5,7 +5,9 @@
 (horizontal-scroll-bar-mode -1)
 
 ;; Use a nice color scheme
-(load-theme 'zenburn t)
+(bsb/use-package! zenburn-theme
+  :config
+  (load-theme 'zenburn t))
 
 ;; Use a nice font
 (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-12"))
