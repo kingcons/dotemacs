@@ -1,5 +1,5 @@
 ;; Preflight checks
-(when (version< emacs-version "26.1")
+(when (version< emacs-version "27.1")
   (error "Emacs version is too old for this config."))
 
 (defvar bsb/guix-system-p (executable-find "guix"))
@@ -16,7 +16,6 @@
 (setq package-user-dir "~/.cache/emacs/packages")
 (setq package-gnupghome-dir "~/.cache/emacs/gnupg")
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(add-to-list 'load-path (expand-file-name "packages" "~/.cache/emacs"))
 (package-initialize)
 
 ;; Use-package is a vast improvement over the old fashioned ways.
@@ -57,7 +56,6 @@
 ;; NOTES:
 ;; Nice to have:
 ;;; w3m/eww stuff?
-;;; company-mode?
 ;;; mpc/emms?
 ;;; org-roam
 ;;; elfeed
