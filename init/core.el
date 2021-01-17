@@ -11,7 +11,21 @@
   :config
   (selectrum-prescient-mode))
 
-;;; Use avy for more pleasant navigation
+;;; Use consult for improved isearch, buffer switching, etc
+
+(defun bsb/find-project-root ()
+  (cdr (project-try-vc default-directory)))
+
+(bsb/use-package! consult
+  :bind (("C-c p g" . consult-git-grep)
+         ("C-x b" . consult-buffer)
+         ("C-s" . consult-line))
+  :init (fset 'multi-occur #'consult-multi-occur)
+  :config
+  (setq consult-narrow-key "<")
+  (setq consult-project-root-function #'bsb/find-project-root))
+
+;;; use avy for more pleasant navigation
 
 (bsb/use-package! avy
   :bind (("C-c j" . avy-goto-char-timer)))
