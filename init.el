@@ -48,6 +48,7 @@
                  "irc"
                  "lang-js"
                  "lang-lisp"
+                 "lang-ruby"
                  "system")))
   (initialize-config! modules))
 
