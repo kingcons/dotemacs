@@ -25,6 +25,21 @@
   (setq consult-narrow-key "<")
   (setq consult-project-root-function #'bsb/find-project-root))
 
+;;; Use embark for context-aware actions
+
+(bsb/use-package! embark
+  :bind (("C-c a" . embark-act))
+  :config
+  (setq embark-action-indicator
+        (lambda (map)
+          (which-key--show-keymap "Embark" map nil nil 'no-paging)
+          #'which-key--hide-popup-ignore-command)
+        embark-become-indicator embark-action-indicator))
+
+(bsb/use-package! embark-consult
+  :after (embark consult)
+  :hook (embark-collect-mode . embark-consult-preview-minor-mode))
+
 ;;; use avy for more pleasant navigation
 
 (bsb/use-package! avy
