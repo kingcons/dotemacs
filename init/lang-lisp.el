@@ -1,6 +1,6 @@
 ;;; First things first, edit structurally with lispy.
 
-(bsb/use-package! lispy
+(use-package lispy
   :hook ((lisp-mode . lispy-mode)
          (emacs-lisp-mode . lispy-mode)
          (scheme-mode . lispy-mode))
@@ -8,7 +8,7 @@
 
 ;;; Use sly for a delightful common lisp experience
 
-(bsb/use-package! sly
+(use-package sly
   :config
   (let ((sbcl-path (if bsb/guix-system-p
                        "sbcl"
@@ -20,10 +20,10 @@
           `((sbcl (,sbcl-path "--noinform") :coding-system utf-8-unix)
             (ccl (,ccl-path))))))
 
-(bsb/use-package! sly-macrostep)
-(bsb/use-package! sly-quicklisp)
+(use-package sly-macrostep)
+(use-package sly-quicklisp)
 
 ;;; Add support for extempore in case we want to livecode.
 
-(bsb/use-package! extempore-mode
+(use-package extempore-mode
   :mode (("\\.xtm\\'" . extempore-mode)))

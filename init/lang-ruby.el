@@ -1,8 +1,8 @@
 ;; C-c , v to run a spec
-(bsb/use-package! rspec-mode
+(use-package rspec-mode
   :mode ("*spec.rb" . rspec-mode))
 
-(bsb/use-package! robe
+(use-package robe
   :bind (:map robe-mode-map
               ("C-c C-s" . robe-start))
   :hook ((ruby-mode . robe-mode))

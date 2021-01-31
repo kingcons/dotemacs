@@ -5,7 +5,8 @@
 (defvar bsb/guix-system-p (executable-find "guix"))
 
 (unless bsb/guix-system-p
-  (message "No Guix installation found. Defaulting to use-package :ensure!"))
+  (setq use-package-always-ensure t)
+  (message "No Guix installation found. Defaulting to use-package's ensure!"))
 
 ;; Raise GC threshold to 24MB
 (setq gc-cons-threshold (* 1024 1024 24))
@@ -24,13 +25,6 @@
     (package-refresh-contents))
   (package-install 'use-package)
   (require 'use-package))
-
-(defmacro bsb/use-package! (name &rest body)
-  `(use-package ,name
-     :ensure ,(null bsb/guix-system-p)
-     ,@body))
-
-(put 'bsb/use-package! 'lisp-indent-function 'defun)
 
 (defun initialize-config! (modules)
   (dolist (module modules)

@@ -1,6 +1,6 @@
 ;; Use magit for git magic, obviously.
 
-(bsb/use-package! magit
+(use-package magit
   :bind (("C-x g" . magit-status)
          ("C-c g" . magit-file-dispatch)))
 

@@ -5,7 +5,7 @@
 (horizontal-scroll-bar-mode -1)
 
 ;; Use a nice color scheme
-(bsb/use-package! zenburn-theme
+(use-package zenburn-theme
   :config
   (load-theme 'zenburn t))
 

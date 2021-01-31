@@ -1,9 +1,9 @@
 ;;; Use which-key and marginalia to learn emacs more easily.
 
-(bsb/use-package! which-key
+(use-package which-key
   :config (which-key-mode))
 
-(bsb/use-package! marginalia
+(use-package marginalia
   :bind (:map minibuffer-local-map
               ("C-M-a" . marginalia-cycle))
   :init
@@ -14,11 +14,11 @@
                          (selectrum-exhibit)))))
 
 ;; Use Keycast to teach others more about emacs
-(bsb/use-package! keycast
+(use-package keycast
   :bind (("C-c k" . keycast-mode)))
 
 ;; Use helpful to get more details when exploring.
-(bsb/use-package! helpful
+(use-package helpful
   :bind (("C-h f" . helpful-callable)
          ("C-h v" . helpful-variable)
          ("C-h k" . helpful-key)))

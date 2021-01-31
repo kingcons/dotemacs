@@ -1,13 +1,13 @@
 ;; As long as I have to deal with it, this config does too.
-(bsb/use-package! coffee-mode
+(use-package coffee-mode
   :mode (("\\.coffee\\'" . coffee-mode)))
 
 ;; Add lsp-mode for more pleasant modern frontend dev.
 
-(bsb/use-package! add-node-modules-path
+(use-package add-node-modules-path
   :hook ((js-mode . add-node-modules-path)))
 
-(bsb/use-package! lsp-mode
+(use-package lsp-mode
   :hook ((js-mode . lsp)
          (lsp-mode . lsp-enable-which-key-integration))
   :bind (:map js-mode-map
