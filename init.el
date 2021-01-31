@@ -43,6 +43,7 @@
                  "lang-js"
                  "lang-lisp"
                  "lang-ruby"
+                 "music"
                  "system")))
   (initialize-config! modules))
 

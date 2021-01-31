@@ -1,9 +1,5 @@
 ;;; Adjust built-in settings
 
-;; Be Lispier
-(require 'subr-x)
-(require 'cl-lib)
-
 ;; Store non-config data outside ~/.emacs.d
 (setq user-emacs-directory "~/.cache/emacs")
 
@@ -42,14 +38,23 @@
 
 ;; Ensure dired reuses the current buffer
 (use-package dired
+  :ensure nil
   :bind (:map dired-mode-map
               ("RET" . 'dired-find-alternate-file)))
 
-;; Use windmove to jump around more easily
+;; Use windmove and winner-mode for better navigation
+(use-package winner
+  :ensure nil
+  :config
+  (winner-mode))
+
 (global-set-key (kbd "s-w") 'windmove-up)
 (global-set-key (kbd "s-a") 'windmove-left)
 (global-set-key (kbd "s-s") 'windmove-down)
 (global-set-key (kbd "s-d") 'windmove-right)
+(global-set-key (kbd "s-u") 'winner-undo)
+(global-set-key (kbd "s-r") 'winner-redo)
 
-;; Add some helpers for navigating a large project
+;; Add some helpers for navigating a large project until emacs 28 drops
 (global-set-key (kbd "C-c p f") 'project-find-file)
+(global-set-key (kbd "C-c p r") 'project-find-regexp)
