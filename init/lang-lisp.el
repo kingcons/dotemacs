@@ -1,4 +1,4 @@
-;;; First things first, edit structurally with lispy.
+;;; First things first, edit structurally with paredit.
 
 (use-package paredit
   :hook ((emacs-lisp-mode

@@ -9,7 +9,6 @@
   (setq selectrum-refine-candidates-function #'orderless-filter)
   (setq selectrum-highlight-candidates-function #'orderless-highlight-matches))
 
-
 ;;; Use consult for improved isearch, buffer switching, etc
 
 (defun bsb/find-project-root ()
@@ -44,6 +43,11 @@
 (use-package avy
   :bind (("C-c j" . avy-goto-char-timer)))
 
+;;; use expand-region for selecting text semantically
+
+(use-package expand-region
+  :bind (("C-=" . er/expand-region)))
+
 ;;; Use company for autocompletion
 
 (use-package company
@@ -54,9 +58,6 @@
   :init
   (setq company-tooltip-align-annotations t
         company-idle-delay 0.2))
-
-(use-package company-prescient
-  :config (company-prescient-mode))
 
 ;;; If collaborating with others, conform to their standards.
 
