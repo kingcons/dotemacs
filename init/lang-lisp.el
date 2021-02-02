@@ -1,10 +1,10 @@
 ;;; First things first, edit structurally with lispy.
 
-(use-package lispy
-  :hook ((lisp-mode . lispy-mode)
-         (emacs-lisp-mode . lispy-mode)
-         (scheme-mode . lispy-mode))
-  :config (setq lispy-close-quotes-at-end-p t))
+(use-package paredit
+  :hook ((emacs-lisp-mode
+          lisp-mode
+          lisp-interaction-mode
+          sly-mrepl-mode) . enable-paredit-mode))
 
 ;;; Use sly for a delightful common lisp experience
 
