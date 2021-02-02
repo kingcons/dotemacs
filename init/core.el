@@ -1,15 +1,14 @@
-;;; Use selectrum + prescient for better selection interfaces
+;;; Use selectrum + orderless for better narrowing and completion styles
 
 (use-package selectrum
   :init (selectrum-mode 1))
 
-(use-package prescient
+(use-package orderless
   :config
-  (prescient-persist-mode 1))
+  (setq completion-styles '(orderless))
+  (setq selectrum-refine-candidates-function #'orderless-filter)
+  (setq selectrum-highlight-candidates-function #'orderless-highlight-matches))
 
-(use-package selectrum-prescient
-  :config
-  (selectrum-prescient-mode))
 
 ;;; Use consult for improved isearch, buffer switching, etc
 
