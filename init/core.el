@@ -67,3 +67,8 @@
   :config
   (editorconfig-mode 1)
   (setq editorconfig-trim-whitespaces-mode 'ws-butler-mode))
+
+;;; On Mac, ensure that we inherit correct PATH.
+(when (memq window-system '(mac ns))
+  (use-package exec-path-from-shell
+    :init (exec-path-from-shell-initialize)))
