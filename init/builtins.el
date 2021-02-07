@@ -40,7 +40,36 @@
 (use-package dired
   :ensure nil
   :bind (:map dired-mode-map
-              ("RET" . 'dired-find-alternate-file)))
+              ("RET" . 'dired-find-alternate-file))
+  :init (put 'dired-find-alternate-file 'disabled nil))
+
+;; Easily run-or-raise shell relative to current buffer
+(defun bsb/run-or-raise (function buffer-name)
+  (if (not (get-buffer buffer-name))
+      (progn
+        (split-window-sensibly (selected-window))
+        (other-window 1)
+        (funcall function))
+    (switch-to-buffer-other-window buffer-name)))
+
+(defun bsb/go-shell ()
+  (interactive)
+  (let ((dir (file-name-directory (buffer-file-name))))
+    (bsb/run-or-raise 'shell "*shell*")
+    (insert (concat "cd " dir))
+    (comint-send-input)))
+
+(defun bsb/find-project-root ()
+  (cdr (project-try-vc default-directory)))
+
+(defun bsb/go-project-shell ()
+  (interactive)
+  (let ((dir (bsb/find-project-root)))
+    (bsb/run-or-raise 'shell "*shell*")
+    (insert (concat "cd " dir))
+    (comint-send-input)))
+
+(global-set-key (kbd "s-;") 'bsb/go-shell)
 
 ;; Use windmove and winner-mode for better navigation
 (use-package winner
@@ -58,3 +87,4 @@
 ;; Add some helpers for navigating a large project until emacs 28 drops
 (global-set-key (kbd "C-c p f") 'project-find-file)
 (global-set-key (kbd "C-c p r") 'project-find-regexp)
+(global-set-key (kbd "C-c p ;") 'bsb/go-project-shell)

@@ -11,9 +11,6 @@
 
 ;;; Use consult for improved isearch, buffer switching, etc
 
-(defun bsb/find-project-root ()
-  (cdr (project-try-vc default-directory)))
-
 (use-package consult
   :bind (("C-c p g" . consult-git-grep)
          ("C-x b" . consult-buffer)
