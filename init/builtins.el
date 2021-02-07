@@ -44,6 +44,7 @@
   :init (put 'dired-find-alternate-file 'disabled nil))
 
 ;; Easily run-or-raise shell relative to current buffer
+;; Lovingly adapted from emacsredux' start-or-switch-to
 (defun bsb/run-or-raise (function buffer-name)
   (if (not (get-buffer buffer-name))
       (progn
