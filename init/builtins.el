@@ -24,6 +24,9 @@
 ;; Load new source rather than old bytecode
 (setq load-prefer-newer t)
 
+;; Shut the bell up
+(setq ring-bell-function 'ignore)
+
 ;; Assorted formatting improvements
 (setq-default indent-tabs-mode nil) ; Spaces, not tabs
 (setq-default fill-column 80) ; Have a wider fill-column
