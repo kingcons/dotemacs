@@ -1,6 +1,7 @@
 (use-package ruby-mode
   :ensure nil
-  :init (setq ruby-insert-encoding-magic-comment nil))
+  :init (setq ruby-insert-encoding-magic-comment nil)
+  :config (subword-mode 1))
 
 ;; C-c , v to run a spec
 (use-package rspec-mode

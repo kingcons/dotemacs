@@ -1,8 +1,14 @@
 ;; As long as I have to deal with it, this config does too.
 (use-package coffee-mode
-  :mode (("\\.coffee\\'" . coffee-mode)))
+  :mode (("\\.coffee\\'" . coffee-mode))
+  :config (subword-mode 1))
 
 ;; Add lsp-mode for more pleasant modern frontend dev.
+
+(use-package js-mode
+  :defer t
+  :ensure nil
+  :config (subword-mode 1))
 
 (use-package add-node-modules-path
   :hook ((js-mode . add-node-modules-path)))

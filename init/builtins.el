@@ -3,14 +3,10 @@
 ;; Store non-config data outside ~/.emacs.d
 (setq user-emacs-directory "~/.cache/emacs")
 
-(let ((backup-path (expand-file-name "backups" user-emacs-directory))
-      (auto-save-path (expand-file-name "autosave/" user-emacs-directory))
-      (tramp-save-path (expand-file-name "tramp-autosave/" user-emacs-directory)))
-  (setq make-backup-files nil
-        backup-directory-alist `((".*" . ,backup-path))
-        tramp-backup-directory-alist backup-directory-alist
-        auto-save-list-file-prefix auto-save-path
-        tramp-auto-save-directory tramp-save-path))
+(let ((tramp-save-path (expand-file-name "tramp-autosave/" user-emacs-directory)))
+  (setq create-lockfiles nil
+        make-backup-files nil
+        auto-save-default nil))
 
 ;; Enforce Unicode
 (when (fboundp 'set-charset-priority)
@@ -34,6 +30,7 @@
 (setq-default word-wrap t) ; But if you do wrap, do it at word boundaries
 (add-hook 'text-mode-hook #'visual-line-mode) ; And soft wrap for prose
 (setq require-final-newline t) ; Always end files with newlines
+(setq sentence-end-double-space nil) ; I separate with a single space
 
 ;; Require less typing
 (defalias 'yes-or-no-p 'y-or-n-p) ; y, not yes
@@ -62,6 +59,10 @@
     (bsb/run-or-raise 'shell "*shell*")
     (insert (concat "cd " dir))
     (comint-send-input)))
+
+(defun bsb/find-project-name ()
+  (or (cdr (project-current))
+      "*global*"))
 
 (defun bsb/find-project-root ()
   (cdr (project-try-vc default-directory)))
