@@ -1,3 +1,9 @@
+;;; Get pass configured.
+
+(use-package pass
+  :config
+  (setq epa-pinentry-mode 'loopback))
+
 ;;; Get SMTP configured.
 
 (setq user-full-name "Brit Butler"
