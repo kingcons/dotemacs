@@ -1,10 +1,9 @@
 ;;;  Get ERC configured.
 
-(defun go-freenode ()
+(defun go-liberachat ()
   (interactive)
-  (erc-tls :server "kingcons.io"
+  (erc-tls :server "irc.libera.chat"
            :port 6697
-           :nick "kingcons"
-           :password (password-store-get "znc-freenode")))
+           :nick "kingcons"))
 
-(global-set-key (kbd "s-i") 'go-freenode)
+(global-set-key (kbd "s-i") 'go-liberachat)
