@@ -7,11 +7,7 @@
   :bind (:map minibuffer-local-map
               ("C-M-a" . marginalia-cycle))
   :init
-  (marginalia-mode)
-  (advice-add #'marginalia-cycle
-              :after (lambda ()
-                       (when (bound-and-true-p selectrum-mode)
-                         (selectrum-exhibit)))))
+  (marginalia-mode))
 
 ;; Use Keycast to teach others more about emacs
 (use-package keycast

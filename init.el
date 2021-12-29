@@ -8,15 +8,11 @@
   (setq use-package-always-ensure t)
   (message "No Guix installation found. Defaulting to use-package's ensure!"))
 
-;; Raise GC threshold to 24MB
-(setq gc-cons-threshold (* 1024 1024 24))
-
 ;; Ensure MELPA is available and our .emacs.d won't become cluttered
 (require 'package)
-(setq custom-file "~/.cache/emacs/custom.el")
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (setq package-user-dir "~/.cache/emacs/packages")
 (setq package-gnupghome-dir "~/.cache/emacs/gnupg")
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
 ;; Use-package is a vast improvement over the old fashioned ways.

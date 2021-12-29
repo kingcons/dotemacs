@@ -13,13 +13,13 @@
 (use-package add-node-modules-path
   :hook ((js-mode . add-node-modules-path)))
 
-(use-package lsp-mode
-  :hook ((js-mode . lsp)
-         (lsp-mode . lsp-enable-which-key-integration))
-  :bind (:map js-mode-map
-              ("M-." . #'lsp-find-definition)
-              ("M-," . #'xref-pop-marker-stack))
-  :commands lsp
-  :config
-  (setq lsp-auto-configure t
-        lsp-auto-guess-root t))
+;; (use-package lsp-mode
+;;   :hook ((js-mode . lsp)
+;;          (lsp-mode . lsp-enable-which-key-integration))
+;;   :bind (:map js-mode-map
+;;               ("M-." . #'lsp-find-definition)
+;;               ("M-," . #'xref-pop-marker-stack))
+;;   :commands lsp
+;;   :config
+;;   (setq lsp-auto-configure t
+;;         lsp-auto-guess-root t))

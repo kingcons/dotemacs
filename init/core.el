@@ -1,13 +1,13 @@
-;;; Use selectrum + orderless for better narrowing and completion styles
+;;; Use vertico + orderless for better completion
 
-(use-package selectrum
-  :init (selectrum-mode 1))
+(use-package vertico
+  :init (vertico-mode 1))
 
 (use-package orderless
   :config
-  (setq completion-styles '(orderless))
-  (setq selectrum-refine-candidates-function #'orderless-filter)
-  (setq selectrum-highlight-candidates-function #'orderless-highlight-matches))
+  (setq completion-styles '(orderless)
+        completion-category-defaults nil
+        completion-category-overrides '((file (styles partial-completion)))))
 
 ;;; Use consult for improved isearch, buffer switching, etc
 
