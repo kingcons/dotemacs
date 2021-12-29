@@ -82,18 +82,7 @@
 
 (global-set-key (kbd "s-;") 'bsb/go-shell)
 
-;; Use windmove and winner-mode for better navigation
-(use-package winner
-  :ensure nil
-  :config
-  (winner-mode))
-
-(global-set-key (kbd "s-w") 'windmove-up)
-(global-set-key (kbd "s-a") 'windmove-left)
-(global-set-key (kbd "s-s") 'windmove-down)
-(global-set-key (kbd "s-d") 'windmove-right)
-(global-set-key (kbd "s-u") 'winner-undo)
-(global-set-key (kbd "s-r") 'winner-redo)
+(global-set-key (kbd "M-o") 'other-window)
 
 ;; Add some helpers for navigating a large project until emacs 28 drops
 (global-set-key (kbd "C-c p f") 'project-find-file)
