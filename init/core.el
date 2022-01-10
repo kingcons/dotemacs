@@ -1,7 +1,7 @@
 ;;; Use vertico + orderless for better completion
 
 (use-package vertico
-  :init (vertico-mode 1))
+  :init (vertico-mode))
 
 (use-package orderless
   :config
@@ -23,7 +23,7 @@
 ;;; Use embark for context-aware actions
 
 (use-package embark
-  :bind (("C-c a" . embark-act))
+  :bind (("C-." . embark-act))
   :config
   (setq embark-action-indicator
         (lambda (map)
@@ -38,7 +38,7 @@
 ;;; use avy for more pleasant navigation
 
 (use-package avy
-  :bind (("C-c j" . avy-goto-char-timer)))
+  :bind (("M-j" . avy-goto-char-timer)))
 
 ;;; use expand-region for selecting text semantically
 
