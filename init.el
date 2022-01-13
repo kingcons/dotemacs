@@ -22,10 +22,12 @@
   (package-install 'use-package)
   (require 'use-package))
 
-(defun initialize-config! (modules)
-  (dolist (module modules)
-    (let ((file-name (format "~/.emacs.d/init/%s.el" module)))
-      (load-file (expand-file-name file-name)))))
+(defun bsb/find-init-file (name)
+  (format "%s/init/%s.el" user-emacs-directory name))
+
+(defun bsb/initialize-config! (modules)
+  (let ((files (seq-map #'bsb/find-init-file modules)))
+    (seq-each #'load-file files)))
 
 ;; Let 'er rip
 (let ((modules '("appearance"
@@ -41,7 +43,7 @@
                  "lang-ruby"
                  "music"
                  "system")))
-  (initialize-config! modules))
+  (bsb/initialize-config! modules))
 
 (message "Initialized in %s" (emacs-init-time))
 
