@@ -1,8 +1,5 @@
 ;;; Adjust built-in settings
 
-;; Raise GC threshold to 32MB
-(setq gc-cons-threshold (* 1024 1024 32))
-
 ;; Store non-config data outside ~/.emacs.d
 (setq user-emacs-directory "~/.cache/emacs")
 (setq custom-file "~/.cache/emacs/custom.el")
