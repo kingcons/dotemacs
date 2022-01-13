@@ -8,11 +8,10 @@
 (setq custom-file "~/.cache/emacs/custom.el")
 
 ;; Skip the auto-save and backup gunk
-(let ((tramp-save-path (expand-file-name "tramp-autosave/" user-emacs-directory)))
-  (setq create-lockfiles nil
-        make-backup-files nil
-        auto-save-default nil
-        auto-save-list-file-prefix nil))
+(setq create-lockfiles nil
+      make-backup-files nil
+      auto-save-default nil
+      auto-save-list-file-prefix nil)
 
 ;; Enforce Unicode
 (when (fboundp 'set-charset-priority)
