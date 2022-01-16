@@ -1,19 +1,16 @@
 ;; Preflight checks
-(when (version< emacs-version "27.1")
+(when (version< emacs-version "28")
   (error "Emacs version is too old for this config."))
 
 ;; Raise GC threshold to 32MB
 (setq gc-cons-threshold (* 1024 1024 32))
 
-;; Load some handy libraries
-(require 'cl-lib)
-
+;; Determine if we're in Guix OS or not
 (defun bsb/read-file (file)
   (with-temp-buffer
     (insert-file-contents file)
     (buffer-string)))
 
-;; Determine if we're in Guix OS or not
 (defvar bsb/guix-system-p
   (and (eq system-type 'gnu/linux)
        (string-match-p "GNU system" (bsb/read-file "/etc/issue"))))
@@ -35,7 +32,6 @@
 (setq use-package-always-ensure (not bsb/guix-system-p))
 
 ;; Add some basic utils for loading the other config files
-
 (defun bsb/find-init-file (name)
   (format "%s/init/%s.el" user-emacs-directory name))
 
@@ -45,7 +41,12 @@
 
 ;; Let 'er rip
 (let ((modules '("appearance"
-                 "builtins")))
+                 "builtins"
+                 "core"
+                 "development"
+                 "email"
+                 "files"
+                 "lang-lisp")))
   (bsb/initialize-config! modules))
 
 (message "Initialized in %s with %d garbage collections" (emacs-init-time) gcs-done)

@@ -11,18 +11,15 @@
 
 (use-package sly
   :config
-  (let ((sbcl-path (if bsb/guix-system-p
-                       "sbcl"
-                     "/usr/local/bin/sbcl"))
-        (ccl-path (if bsb/guix-system-p
-                      "ccl"
-                    "/usr/local/bin/ccl64")))
+  (let ((sbcl-path (if (eq system-type 'darwin)
+                       "/usr/local/bin/sbcl"
+                     "sbcl"))
+        (ccl-path (if (eq system-type 'darwin)
+                      "/usr/local/bin/ccl64"
+                    "ccl")))
     (setq sly-lisp-implementations
           `((sbcl (,sbcl-path "--noinform") :coding-system utf-8-unix)
             (ccl (,ccl-path))))))
-
-(use-package sly-macrostep)
-(use-package sly-quicklisp)
 
 ;;; And geiser for mischievous scheming
 

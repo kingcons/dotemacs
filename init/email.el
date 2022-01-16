@@ -9,30 +9,46 @@
 (setq user-full-name "Brit Butler"
       user-mail-address "brit@kingcons.io"
       mm-default-directory "~/Downloads"
-      smtpmail-smtp-server "smtp.migadu.com"
-      smtpmail-smtp-service 587
-      smtpmail-stream-type 'starttls
-      smtpmail-servers-requiring-authorization smtpmail-smtp-server
+      message-kill-buffer-on-exit t
       message-send-mail-function 'smtpmail-send-it
-      message-kill-buffer-on-exit t)
+      smtpmail-servers-requiring-authorization "smtp.migadu.com")
+
+;;;  Get ERC configured while we're doing e-things.
+
+(defun bsb/go-liberachat ()
+  (interactive)
+  (erc-tls :server "irc.libera.chat"
+           :port 6697
+           :nick "kingcons"))
+
+(global-set-key (kbd "s-i") 'go-liberachat)
 
 ;; Configure mu4e
 
 (defun bsb/make-context (name address folder)
-  (make-mu4e-context :name name
-                     :match-func (lambda (msg)
-                                   (when msg
-                                     (mu4e-message-contact-field-matches msg :to address)))
-                     :vars `((user-mail-address . ,address)
-                             (mu4e-sent-folder . ,(concat folder "/Sent Mail"))
-                             (mu4e-trash-folder . ,(concat folder "/Trash")))))
+  (let ((smtp-gmail '((smtpmail-smtp-server . "smtp.gmail.com")
+                      (smtpmail-stmp-service . 465)
+                      (smtpmail-stream-type . ssl)))
+        (smtp-migadu '((smtpmail-smtp-server . "smtp.migadu.com")
+                       (smtpmail-smtp-service . 587)
+                       (smtpmail-stream-type . starttls))))
+    (make-mu4e-context :name name
+                       :match-func (lambda (msg)
+                                     (when msg
+                                       (mu4e-message-contact-field-matches msg :to address)))
+                       :vars `(,@(if (string-match-p "kingcons.io" address) smtp-migadu smtp-gmail)
+                               (user-mail-address . ,address)
+                               (mu4e-sent-folder . ,(concat folder "/Sent Mail"))
+                               (mu4e-trash-folder . ,(concat folder "/Trash")))))
 
-(use-package mu4e
-  :config
-  (setq mu4e-context-policy 'pick-first
-        mu4e-get-mail-command "mbsync -a"
-        mu4e-change-filenames-when-moving t)
-  (setq mu4e-contexts `(,(bsb/make-context "calendly" "b.butler@calendly.com" "/calendly[Gmail]")
-                        ,(bsb/make-context "britton" "britton.s.butler@gmail.com" "/britton[Gmail]")
-                        ,(bsb/make-context "redline" "redline6561@gmail.com" "/redline[Gmail]")
-                        ,(bsb/make-context "kingcons" "brit@kingcons.io" "/kingcons"))))
+(unless (eq system-type 'darwin)
+  (use-package mu4e
+    :bind (("s-e" . mu4e))
+    :config
+    (setq mu4e-context-policy 'pick-first
+          mu4e-get-mail-command "mbsync -a"
+          mu4e-change-filenames-when-moving t)
+    (setq mu4e-contexts `(,(bsb/make-context "calendly" "b.butler@calendly.com" "/calendly[Gmail]")
+                          ,(bsb/make-context "britton" "britton.s.butler@gmail.com" "/britton[Gmail]")
+                          ,(bsb/make-context "redline" "redline6561@gmail.com" "/redline[Gmail]")
+                          ,(bsb/make-context "kingcons" "brit@kingcons.io" "/kingcons"))))))
