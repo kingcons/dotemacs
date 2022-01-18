@@ -11,3 +11,10 @@
   :config
   (pdf-tools-install)
   (setq-default pdf-view-display-size 'fit-page))
+
+;;; And nov.el for epub files
+
+(use-package nov
+  :mode (("\\.epub\\'" . nov-mode))
+  :init
+  (setq nov-text-width 80))

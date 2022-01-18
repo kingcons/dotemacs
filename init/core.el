@@ -1,3 +1,8 @@
+;;; use which-key in case you get lost
+
+;; (use-package which-key
+;;   :config (which-key-mode))
+
 ;;; use marginalia to ease learning
 
 (use-package marginalia
@@ -6,18 +11,17 @@
   :init
   (marginalia-mode))
 
-;;; use which-key in case you get lost
-
-;; (use-package which-key
-;;   :config (which-key-mode))
-
 ;;; use embark for context-aware actions
 
 (use-package embark
   :bind
-  (("C-." . embark-act)         ;; pick some comfortable binding
-   ("C-;" . embark-dwim)        ;; good alternative: M-.
-   ("C-h B" . embark-bindings)) ;; alternative for `describe-bindings'
+  (("C-." . embark-act)        ;; pick some comfortable binding
+   ("C-;" . embark-dwim)       ;; good alternative: M-.
+   ("C-h B" . embark-bindings) ;; alternative for `describe-bindings'
+   :map minibuffer-local-completion-map
+   ("C-." . embark-act)
+   ("C->" . embark-export)
+   ("C-<" . embark-become))
   :init
   (setq prefix-help-command #'embark-prefix-help-command))
 

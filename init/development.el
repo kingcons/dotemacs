@@ -19,4 +19,10 @@
 ;; (use-package forge
 ;;   :after magit)
 
+;;; use corfu for prettier completions
+
+(use-package corfu
+  :init
+  (corfu-global-mode))
+
 ;; TODO: Maybe add corfu, formatting tools, wsbutler, flymake, etc?

@@ -21,7 +21,7 @@
            :port 6697
            :nick "kingcons"))
 
-(global-set-key (kbd "s-i") 'go-liberachat)
+(global-set-key (kbd "s-i") 'bsb/go-liberachat)
 
 ;; Configure mu4e
 
