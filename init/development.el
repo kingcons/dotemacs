@@ -25,4 +25,12 @@
   :init
   (corfu-global-mode))
 
-;; TODO: Maybe add corfu, formatting tools, wsbutler, flymake, etc?
+;;; enhance project with project-x
+
+(use-package project-x
+  :after project
+  :config
+  (setq project-x-save-interval 600)
+  (project-x-mode 1))
+
+;; TODO: Maybe add formatting tools, wsbutler, flymake, etc?

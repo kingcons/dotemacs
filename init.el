@@ -31,6 +31,9 @@
 
 (setq use-package-always-ensure (not bsb/guix-system-p))
 
+;; Add site-lisp to the load-path for any vendored in dependencies
+(add-to-list 'load-path (expand-file-name "site-lisp/" user-emacs-directory))
+
 ;; Add some basic utils for loading the other config files
 (defun bsb/find-init-file (name)
   (format "%s/init/%s.el" user-emacs-directory name))
