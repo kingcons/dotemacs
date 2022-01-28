@@ -34,13 +34,15 @@
 ;; Add site-lisp to the load-path for any vendored in dependencies
 (add-to-list 'load-path (expand-file-name "site-lisp/" user-emacs-directory))
 
-;; Add some basic utils for loading the other config files
-(defun bsb/find-init-file (name)
-  (format "%s/init/%s.el" user-emacs-directory name))
+;; Add some basic utils for loading the other config files and track where
+;; the config root is since I use chemacs and will reset user-emacs-directory
+(defvar bsb/config-dir
+  user-emacs-directory)
 
 (defun bsb/initialize-config! (modules)
-  (let ((files (seq-map #'bsb/find-init-file modules)))
-    (seq-each #'load-file files)))
+  (dolist (module modules)
+    (let ((file (format "%s/init/%s.el" bsb/config-dir module)))
+      (load-file file))))
 
 ;; Let 'er rip
 (let ((modules '("appearance"

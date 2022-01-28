@@ -4,6 +4,12 @@
   :ensure nil
   :init (setq dired-kill-when-opening-new-dired-buffer t))
 
+;;; Use fortune for lambda.txt
+
+(use-package fortune
+  :bind (("C-c f" . fortune-message))
+  :init (setq fortune-file (concat bsb/config-dir "site-lisp/lambda.txt")))
+
 ;;; Add pdf-tools to gracefully handle pdfs.
 
 (use-package pdf-tools

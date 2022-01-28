@@ -29,6 +29,7 @@
 
 (use-package project-x
   :after project
+  :ensure nil
   :config
   (setq project-x-save-interval 600)
   (project-x-mode 1))
