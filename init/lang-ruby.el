@@ -1,19 +1,14 @@
 (use-package ruby-mode
+  :after eglot
   :ensure nil
-  :init (setq ruby-insert-encoding-magic-comment nil)
-  :config (subword-mode 1))
+  :hook (ruby-mode . eglot-ensure)
+  :init
+  (setq ruby-insert-encoding-magic-comment nil)
+  (add-to-list 'eglot-server-programs
+               '(ruby-mode . ("bundle" "exec" "solargraph" "socket" "--port" :autoport)))
+  :config
+  (subword-mode 1))
 
 ;; C-c , v to run a spec
 (use-package rspec-mode
   :mode ("*spec.rb" . rspec-mode))
-
-(use-package robe
-  :bind (:map robe-mode-map
-              ("C-c C-s" . robe-start))
-  :hook ((ruby-mode . robe-mode))
-  :config
-  (push 'company-robe company-backends)
-  (defun bsb/autostart-rails (&optional force)
-    (unless (get-buffer "*rails*")
-      (call-interactively 'inf-ruby-console-rails)))
-  (add-function :before (symbol-function 'robe-start) #'bsb/autostart-rails))

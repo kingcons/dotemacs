@@ -43,6 +43,7 @@
 
 (unless (eq system-type 'darwin)
   (use-package mu4e
+    :ensure nil
     :bind (("s-e" . mu4e))
     :config
     (setq mu4e-context-policy 'pick-first
