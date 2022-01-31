@@ -5,7 +5,7 @@
   :init
   (setq ruby-insert-encoding-magic-comment nil)
   (add-to-list 'eglot-server-programs
-               '(ruby-mode . ("bundle" "exec" "solargraph" "socket" "--port" :autoport)))
+               '(ruby-mode . ("solargraph" "socket" "--port" :autoport)))
   :config
   (subword-mode 1))
 

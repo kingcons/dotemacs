@@ -1,7 +1,6 @@
 (use-package tuareg
   :after eglot
-  :hook ((tuareg-mode . merlin-mode)
-         (tuareg-mode . eglot))
+  :hook (tuareg-mode . eglot-ensure)
   :mode (("\\.ml[ily]?$" . tuareg-mode)
          ("\\.topml$" . tuareg-mode))
   :config
