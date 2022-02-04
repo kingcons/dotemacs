@@ -39,15 +39,6 @@
 (defalias 'yes-or-no-p 'y-or-n-p) ; y, not yes
 (setq kill-whole-line t) ; C-k once, not twice
 
-;;; Use icomplete-vertical with fido for completions
-(use-package icomplete
-  :ensure nil
-  :init (fido-vertical-mode)
-  :config (setq completion-styles '(initials partial-completion flex)
-                completion-cycle-threshold 10
-                completion-category-overrides '((file (styles partial-completion))
-                                                (command (styles initials)))))
-
 ;; Add friendlier keybinding for navigation
 (global-set-key (kbd "M-o") 'other-window)
 

@@ -11,6 +11,19 @@
   :init
   (marginalia-mode))
 
+;;; use vertico for a fast and pleasant minibuffer
+
+(use-package vertico
+  :init (vertico-mode))
+
+;;; use orderless for elegant, flexible completions
+
+(use-package orderless
+  :init
+  (setq completion-styles '(orderless)
+        completion-category-defaults nil
+        completion-category-overrides '((file (styles partial-completion)))))
+
 ;;; use embark for context-aware actions
 
 (use-package embark
