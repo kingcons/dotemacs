@@ -11,27 +11,37 @@
   :init
   (marginalia-mode))
 
-;;; use vertico for a fast and pleasant minibuffer
+;;; use vertico for a quick and pleasant minibuffer
 
 (use-package vertico
   :init (vertico-mode))
 
 ;;; use orderless for elegant, flexible completions
 
+(defun bsb/ignoring-dispatcher (pattern _index _total)
+  (when (string-prefix-p "!" pattern)
+    `(orderless-without-literal . ,(substring pattern 1))))
+
+(defun bsb/initials-dispatcher (pattern _index _total)
+  (when (string-suffix-p "~" pattern)
+    `(orderless-initialism . ,(substring pattern 0 -1))))
+
 (use-package orderless
   :init
-  (setq completion-styles '(orderless)
+  (setq completion-styles '(orderless partial-completion)
         completion-category-defaults nil
-        completion-category-overrides '((file (styles partial-completion)))))
+        orderless-style-dispatchers '(bsb/ignoring-dispatcher
+                                      bsb/initials-dispatcher)))
 
 ;;; use embark for context-aware actions
 
 (use-package embark
   :bind
-  (("C-." . embark-act)        ;; pick some comfortable binding
-   ("C-;" . embark-dwim)       ;; good alternative: M-.
+  (("C-." . embark-act)  ;; pick some comfortable binding
+   ("M-." . embark-dwim) ;; safe since for code this will call xref
+
    ("C-h B" . embark-bindings) ;; alternative for `describe-bindings'
-   :map minibuffer-local-completion-map
+   :map vertico-map
    ("C-." . embark-act)
    ("C->" . embark-export)
    ("C-<" . embark-become))
