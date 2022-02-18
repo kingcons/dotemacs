@@ -10,3 +10,5 @@
 (use-package merlin
   :hook (tuareg-mode . merlin-mode)
   :config (setq merlin-completion-with-doc t))
+
+(use-package utop)

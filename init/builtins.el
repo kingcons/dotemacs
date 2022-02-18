@@ -35,11 +35,18 @@
 (setq require-final-newline t) ; Always end files with newlines
 (setq sentence-end-double-space nil) ; I separate with a single space
 
+;; Narrowers gonna narrow
+(put 'narrow-to-region 'disabled nil)
+
 ;; Require less typing
 (defalias 'yes-or-no-p 'y-or-n-p) ; y, not yes
 (setq kill-whole-line t) ; C-k once, not twice
 
 ;; Add friendlier keybinding for navigation
 (global-set-key (kbd "M-o") 'other-window)
+
+(use-package ibuffer
+  :bind ("C-x C-b" . ibuffer)
+  :hook (ibuffer-mode . hl-line-mode))
 
 ;; TODO: Consider project.el tweaks, tab-mode, etc.

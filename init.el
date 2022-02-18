@@ -50,6 +50,7 @@
                  "core"
                  "development"
                  "email"
+                 "feeds"
                  "files"
                  "lang-cc"
                  "lang-lisp"
