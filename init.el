@@ -1,14 +1,21 @@
 ;; Preflight checks
-(when (version< emacs-version "27.1")
+(when (version< emacs-version "28")
   (error "Emacs version is too old for this config."))
 
-(defvar bsb/guix-system-p (executable-find "guix"))
+;; Raise GC threshold to 32MB
+(setq gc-cons-threshold (* 1024 1024 32))
 
-(unless bsb/guix-system-p
-  (setq use-package-always-ensure t)
-  (message "No Guix installation found. Defaulting to use-package's ensure!"))
+;; Determine if we're in Guix OS or not
+(defun bsb/read-file (file)
+  (with-temp-buffer
+    (insert-file-contents file)
+    (buffer-string)))
 
-;; Ensure MELPA is available and our .emacs.d won't become cluttered
+(defvar bsb/guix-system-p
+  (and (eq system-type 'gnu/linux)
+       (string-match-p "GNU system" (bsb/read-file "/etc/issue"))))
+
+;; Add MELPA and a nice place outside the config for packages to live
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (setq package-user-dir "~/.cache/emacs/packages")
@@ -22,42 +29,33 @@
   (package-install 'use-package)
   (require 'use-package))
 
-(defun bsb/find-init-file (name)
-  (format "%s/init/%s.el" user-emacs-directory name))
+(setq use-package-always-ensure (not bsb/guix-system-p))
+
+;; Add site-lisp to the load-path for any vendored in dependencies
+(add-to-list 'load-path (expand-file-name "site-lisp/" user-emacs-directory))
+
+;; Add some basic utils for loading the other config files and track where
+;; the config root is since I use chemacs and will reset user-emacs-directory
+(defvar bsb/config-dir
+  user-emacs-directory)
 
 (defun bsb/initialize-config! (modules)
-  (let ((files (seq-map #'bsb/find-init-file modules)))
-    (seq-each #'load-file files)))
+  (dolist (module modules)
+    (let ((file (format "%s/init/%s.el" bsb/config-dir module)))
+      (load-file file))))
 
 ;; Let 'er rip
 (let ((modules '("appearance"
                  "builtins"
                  "core"
-                 "documents"
+                 "development"
                  "email"
-                 "git"
-                 "help"
-                 "irc"
-                 "lang-js"
+                 "feeds"
+                 "files"
+                 "lang-cc"
                  "lang-lisp"
-                 "lang-ruby"
-                 "music"
-                 "system")))
+                 "lang-ocaml"
+                 "lang-ruby")))
   (bsb/initialize-config! modules))
 
-(message "Initialized in %s" (emacs-init-time))
-
-;; NOTES:
-;; Nice to have:
-;;; w3m/eww stuff?
-;;; mpc/emms?
-;;; org-roam
-;;; elfeed
-
-;; Under Consideration:
-;;; browse-kill-ring / expand-region
-;;; undo-tree / undo-fu
-;;; hydras/hercules
-;;; slack/discord
-;;; emacs-emojify
-;;; youtube-dl
+(message "Initialized in %s with %d garbage collections" (emacs-init-time) gcs-done)
