@@ -44,6 +44,8 @@
 (unless (eq system-type 'darwin)
   (use-package mu4e
     :ensure nil
+    ;; KLUDGE: This can be removed when I use emacs28 from apt.
+    :load-path "/usr/share/emacs/site-lisp/mu4e/"
     :bind (("s-e" . mu4e))
     :config
     (setq mu4e-context-policy 'pick-first
