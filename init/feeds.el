@@ -15,6 +15,7 @@
     "http://journal.stuffwithstuff.com/rss.xml"
     "https://eli.thegreenplace.net/feeds/all.atom.xml"
     "http://feeds.akkartik.name/kartiks-scrapbook"
+    "https://hyperthings.garden/rss/all-posts.xml"
     ;; Podcasts and other media
     "https://feeds.simplecast.com/L9810DOa"
     "https://link.chtbl.com/corecursive?platform=rss"))

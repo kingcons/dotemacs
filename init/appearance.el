@@ -54,7 +54,7 @@
   (find-font (font-spec :name font-name)))
 
 (defun bsb/activate-font (font-name)
-  (let ((font-with-size (concat font-name "-12")))
+  (let ((font-with-size (concat font-name "-14")))
     (add-to-list 'default-frame-alist (cons 'font font-with-size))
     (set-frame-font font-with-size)))
 

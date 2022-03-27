@@ -19,13 +19,20 @@
 
 ;;;  Get ERC configured while we're doing e-things.
 
-(defun bsb/go-liberachat ()
+(defun bsb/go-libera ()
   (interactive)
   (erc-tls :server "irc.libera.chat"
            :port 6697
            :nick "kingcons"))
 
-(global-set-key (kbd "s-i") 'bsb/go-liberachat)
+(defun bsb/go-twitch ()
+  (interactive)
+  (erc-tls :server "irc.chat.twitch.tv"
+           :port 6697
+           :nick "king_cons"))
+
+(global-set-key (kbd "s-l") 'bsb/go-libera)
+(global-set-key (kbd "s-i") 'bsb/go-twitch)
 
 ;; Configure mu4e
 
