@@ -29,7 +29,8 @@
   (interactive)
   (erc-tls :server "irc.chat.twitch.tv"
            :port 6697
-           :nick "king_cons"))
+           :nick "king_cons"
+           :password (password-store-get "twitch/king_cons")))
 
 (global-set-key (kbd "s-l") 'bsb/go-libera)
 (global-set-key (kbd "s-i") 'bsb/go-twitch)
