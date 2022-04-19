@@ -16,6 +16,8 @@
     "https://eli.thegreenplace.net/feeds/all.atom.xml"
     "http://feeds.akkartik.name/kartiks-scrapbook"
     "https://hyperthings.garden/rss/all-posts.xml"
+    "https://loophole-letters.vercel.app/rss.xml"
+    "https://mikelevins.github.io/index.xml"
     ;; Podcasts and other media
     "https://feeds.simplecast.com/L9810DOa"
     "https://link.chtbl.com/corecursive?platform=rss"))

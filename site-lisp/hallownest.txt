@@ -1,0 +1,162 @@
+This is the file HALLOWNEST.TXT, version 1.
+Last Edit: 2022-Mar-08
+
+To install on systems using BSD fortune(6), rename this file "hallownest" and
+store it in the appropriate fortunes directory, usually /usr/games/fortune
+or /usr/share/fortune or something like that. Then in that directory run
+strfile(8) on the "hallownest" file which should produce a "hallownest.dat".
+To test, go to some other directory with no file called "hallownest" in it, and
+say "fortune hallownest". If you get a hollow fortune you win. If not you lose.
+To install on other systems simply find a fortune program, install it, and
+then install this file. Or write your own fortune program in Lisp.
+
+The newest version of this file can usually be found at
+  https://redlinernotes.com/docs/hallownest.txt
+If the version at that URL has not changed signifigantly in some time or
+if you have contributions you wish to make to this file then please email
+the maintainer, Brit Butler at <brit at kingcons dot io>.
+
+If you are using this file in a fortune(6)-like program and you see this
+text then your program is borken. It shouldn't display the first fortune in
+the file. You lose. Use Lisp instead.
+%
+In wilds beyond they speak your name with reverence and regret,
+For none could tame our savage souls yet you the challenge met,
+Under palest watch, you taught, we changed, base instincts were redeemed,
+A world you gave to bug and beast as they had never dreamed.
+
+- From 'Elegy for Hallownest' by Monomon the Teacher
+%
+Higher beings, these words are for you alone.
+These blasted plains stretch never-ending. There is no world beyond.
+Those foolish enough to traverse this void must pay the toll and relinquish the precious mind this kingdom grants.
+%
+Higher beings, these words are for you alone.
+Your great strength marks you amongst us. Focus your soul and you shall achieve feats of which others can only dream.
+%
+Higher beings, these words are for you alone.
+Within our lands do not hide your true form. Let all bask in your majesty, for only this kingdom could produce ones such as you.
+%
+Higher beings, these words are for you alone.
+Beyond this point you enter the land of King and Creator.
+Step across this threshold and obey our laws.
+Bear witness to the last and only civilisation, the eternal Kingdom.
+Hallownest
+%
+Vessel. Though bound, you shall know the state of the world.
+Hallownest will be whole again.
+%
+The Pilgrim's Way
+Travellers of Hallownest, descend through verdant wilds and fungal groves to the city at this kingdom's heart.
+There all wishes shall be granted, all truths revealed.
+%
+From moss and leaf our life is drawn.
+While it grows upon the path we shall never wilt.
+%
+The greater mind once dreamed of leaf and cast these caverns so.
+In every bush and every vine the mind of Unn reveals itself to us.
+%
+The Green Children walked from the dream unto these lands.
+Here we now shall wait, patient, for the call to return.
+%
+Though once our lands, a pale being lays claim to the caverns ahead.
+It may appear benevolent but it does not share our dream.
+Be wary to wander that place.
+%
+Those who stray from the White King's roads shall face the law of Unn.
+%
+Hidden Unn, we need you now.
+We grow tired away from you.
+Our leaves are falling.
+%
+Wanderers seeking death, welcome.
+May you find swift end upon our claws.
+%
+The truce remains.
+Our vigil holds.
+The beasts are kept at bay.
+%
+This border bounds the twisting, scratching things.
+Their dead sire, once of honoured caste.
+Their sealed mother, but the common beast.
+No peace with them we make.
+%
+Strength in the shared self.
+Strength in the mind united.
+In every bug that would pass upon our roads,
+only the melancholy of disparity.
+%
+Warily shall we accept the will of the Wyrm.
+Its prescience shields us.
+Fate and Future we shall entwine.
+%
+Here ends the Pilgrim's Way.
+Hallownest's Heart lays open before you.
+Proceed onward to share in its glory.
+%
+The great gates have been sealed.
+None shall enter.
+None shall leave.
+%
+MEMORIAL TO THE HOLLOW KNIGHT
+In the Black Vault far above.
+Through its sacrifice Hallownest lasts eternal.
+%
+The mind still limits us so.
+How to break past its constraints?
+To attain a pure focus, is it even possible?
+%
+Spare thought for those consumed.
+Through their grace we are evolved.
+No plague of mind shall overcome us now.
+%
+Sleep beckons eternal and these words become my last.
+Though my gaze shall no longer fall upon this city, I will act forever in its protection.
+For King, for bug, for Hallownest, I head now to my rest.
+%
+To protect the Vessel, the Dreamers lay sleeping.
+
+Monomon the Teacher
+In her Archive, surrounded by fog and mist.
+
+Lurien the Watcher
+In his Spire, looking over the city.
+
+Herrah the Beast
+In her Den, amidst the deep darkness beyond the kingdom.
+
+Through their devotion, Hallownest lasts eternal.
+%
+Pity those bugs.
+Minds locked. Thoughts trapped in solitude.
+Faint shadow of an idea are the words that attempt its utterance.
+%
+A true servant gives all for the Kingdom.
+Let Hallownest's Pale King relieve you of your burden.
+%
+Higher beings, these words are for you alone.
+Our pure Vessel has ascended.
+Beyond lies only the refuse and regret of its creation.
+We shall enter that place no longer.
+%
+No blazing kin. Only one light shall shine against the dark.
+The Wyrm becomes beacon, minds expanded, to yield, to devote.
+Eternity in promise and charge in progeny cursed.
+%
+We speak the path of the Master Herald, he who would signal an Age's end.
+Spawn of self, their minds unite,
+Aside the source of acid blight,
+Aglow in darkest, winding depths,
+Winds all howl above fossilstone steps,
+Monarchflys in airs set still,
+To Root's domain and snail once shrill,
+Path of Wyrm, at new lands entered
+There journeys end. The kingdom ventured.
+%
+I have no offspring, nor subjects, nor worshippers. The sum of my being, my learning, my instincts...
+I leave it all to you. Good luck, Hunter.
+%
+Being back in my old home... I feel the weight of my long life bearing down on me.
+
+I carry it proudly, though. Wherever I travel, the memories of my family and my kind come with me.
+%
