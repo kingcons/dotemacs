@@ -1,4 +1,4 @@
-(defvar kingcons/vinyl-collection
+(defvar bsb/vinyl-collection
   '((:artist "Amble" :album "Drip" :genre "Electronic" :label "Repeatle")
     (:artist "Amon Tobin" :album "Bricolage" :genre "Electronic" :label "Ninja Tune")
     (:artist "Amon Tobin" :album "Permutation" :genre "Electronic" :label "Ninja Tune")
@@ -207,7 +207,7 @@
     (:artist "Teebs" :album "Ardour" :genre "Futurebeats")
     (:artist "The Avalanches" :album "Since I Left You" :genre "Futurebeats")))
 
-(defun kingcons/discogs-search (artist album)
+(defun bsb/discogs-search (artist album)
   (let* ((token (password-store-get "discogs/kingcons"))
          (auth-header (format "Discogs token=%s" token))
          (url-request-extra-headers `(("Authorization" . ,auth-header)))
@@ -223,7 +223,7 @@
         (kill-buffer (current-buffer))
         data))))
 
-(defun kingcons/show-cover-art (response)
+(defun bsb/show-cover-art (response)
   (let ((results (cdr (assoc 'results response))))
     (if (zerop (length results))
       (message "No matching album found!")
@@ -232,21 +232,28 @@
         (browse-web cover-art-url)
         (message (format "Now Playing: %s" (cdr (assoc 'title first-match))))))))
 
-(defun kingcons/filter-vinyl (attribute value)
-  (let ((results (seq-copy kingcons/vinyl-collection)))
+(defun bsb/filter-vinyl (attribute value)
+  (let ((results (seq-copy bsb/vinyl-collection)))
     (cl-flet ((match? (plist) (string= (plist-get plist attribute) value)))
       (seq-filter #'match? results))))
 
-(defun kingcons/choose-record (attribute value)
-  (let* ((candidates (kingcons/filter-vinyl attribute value))
-         (record (seq-random-elt candidates))
+(defun bsb/choose-record (attribute value)
+  (let ((candidates (bsb/filter-vinyl attribute value)))
+    (bsb/show-random-album candidates)))
+
+(defun bsb/show-random-album (candidates)
+  (let* ((record (seq-random-elt candidates))
          (artist (plist-get record :artist))
          (album (plist-get record :album))
-         (response (kingcons/discogs-search artist album)))
-    (kingcons/show-cover-art response)))
+         (response (bsb/discogs-search artist album)))
+    (bsb/show-cover-art response)))
 
-(defun kingcons/gimme-techno ()
+(defun bsb/gimme-techno ()
   (interactive)
-  (kingcons/choose-record :genre "Electronic"))
+  (bsb/choose-record :genre "Electronic"))
 
-(global-set-key (kbd "s-t") 'kingcons/gimme-techno)
+(defun bsb/gimme-music ()
+  (interactive)
+  (bsb/show-random-album bsb/vinyl-collection))
+
+(global-set-key (kbd "s-m") 'bsb/gimme-music)
