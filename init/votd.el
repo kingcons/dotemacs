@@ -207,15 +207,46 @@
     (:artist "Teebs" :album "Ardour" :genre "Futurebeats")
     (:artist "The Avalanches" :album "Since I Left You" :genre "Futurebeats")))
 
-(defun kingcons/random-by (attribute)
-  (cl-flet ((get-attr (x) (plist-get x attribute)))
-    (seq-random-elt (seq-uniq (seq-map #'get-attr kingcons/vinyl-collection)))))
+(defun kingcons/discogs-search (artist album)
+  (let* ((token (password-store-get "discogs/kingcons"))
+         (auth-header (format "Discogs token=%s" token))
+         (url-request-extra-headers `(("Authorization" . ,auth-header)))
+         (base-url "https://api.discogs.com/")
+         (base-params "?type=release&format=vinyl")
+         (params (format "%s&artist=%s&release_title=%s" base-params artist album))
+         (request-url (format "%s/database/search?%s" base-url params)))
+    (with-current-buffer
+        (url-retrieve-synchronously request-url)
+      (goto-char (point-min))
+      (let ((data (when (re-search-forward "\r?\n\r?\n" nil t)
+                    (json-read))))
+        (kill-buffer (current-buffer))
+        data))))
 
-(defun kingcons/choose-record (&rest filters)
-  ;(apply-filters filters collection) -> collection
-  ;(seq-random-elt collection) -> record
-  ;(get-record-metadata record) -> metadata
-  ;(create-image-from-metadata metadata) -> image
-  ;(render-result image) creates popup buffer and displays album
-  (let ((record (seq-random-elt kingcons/vinyl-collection)))
-    record))
+(defun kingcons/show-cover-art (response)
+  (let ((results (cdr (assoc 'results response))))
+    (if (zerop (length results))
+      (message "No matching album found!")
+      (let* ((first-match (aref results 0))
+             (cover-art-url (cdr (assoc 'cover_image first-match))))
+        (browse-web cover-art-url)
+        (message (format "Now Playing: %s" (cdr (assoc 'title first-match))))))))
+
+(defun kingcons/filter-vinyl (attribute value)
+  (let ((results (seq-copy kingcons/vinyl-collection)))
+    (cl-flet ((match? (plist) (string= (plist-get plist attribute) value)))
+      (seq-filter #'match? results))))
+
+(defun kingcons/choose-record (attribute value)
+  (let* ((candidates (kingcons/filter-vinyl attribute value))
+         (record (seq-random-elt candidates))
+         (artist (plist-get record :artist))
+         (album (plist-get record :album))
+         (response (kingcons/discogs-search artist album)))
+    (kingcons/show-cover-art response)))
+
+(defun kingcons/gimme-techno ()
+  (interactive)
+  (kingcons/choose-record :genre "Electronic"))
+
+(global-set-key (kbd "s-t") 'kingcons/gimme-techno)
