@@ -224,13 +224,15 @@
         data))))
 
 (defun bsb/show-cover-art (response)
-  (let ((results (cdr (assoc 'results response))))
-    (if (zerop (length results))
-      (message "No matching album found!")
-      (let* ((first-match (aref results 0))
-             (cover-art-url (cdr (assoc 'cover_image first-match))))
-        (browse-web cover-art-url)
-        (message (format "Now Playing: %s" (cdr (assoc 'title first-match))))))))
+  (cl-labels ((cover-art (x) (cdr (assoc 'cover_image x)))
+              (blank-art? (x) (string-match-p "spacer.gif" (cover-art x))))
+    (let* ((results (cdr (assoc 'results response)))
+           (record (car (seq-remove #'blank-art? results))))
+      (if (null record)
+          (message "No matching album found!")
+        (let ((cover-art-url (cover-art record)))
+          (browse-web cover-art-url)
+          (message (format "Now Playing: %s" (cdr (assoc 'title record)))))))))
 
 (defun bsb/filter-vinyl (attribute value)
   (let ((results (seq-copy bsb/vinyl-collection)))
@@ -256,4 +258,5 @@
   (interactive)
   (bsb/show-random-album bsb/vinyl-collection))
 
+(global-set-key (kbd "s-n") 'bsb/gimme-techno)
 (global-set-key (kbd "s-m") 'bsb/gimme-music)
