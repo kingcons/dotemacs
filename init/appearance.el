@@ -21,11 +21,7 @@
 
 ;; Use nice themes
 
-(use-package zenburn-theme) ;; whether dark
-
-(use-package modus-themes ;; or light
-  :init
-  (setq modus-themes-diffs 'desaturated))
+(use-package zenburn-theme)
 
 (defvar bsb/color-scheme 'dark)
 
@@ -39,7 +35,7 @@
 
 (defun bsb/switch-color-scheme ()
   (interactive)
-  (setq bsb/color-scheme (car (remove bsb/color-scheme '(dark light))))
+  (setq bsb/color-scheme (if (eq bsb/color-scheme 'light) 'dark 'light))
   (bsb/init-color-scheme))
 
 (bsb/init-color-scheme)

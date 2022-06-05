@@ -55,7 +55,8 @@
                  "lang-cc"
                  "lang-lisp"
                  "lang-ocaml"
-                 "lang-ruby")))
+                 "lang-ruby"
+                 "votd")))
   (bsb/initialize-config! modules))
 
 (message "Initialized in %s with %d garbage collections" (emacs-init-time) gcs-done)
