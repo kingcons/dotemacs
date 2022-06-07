@@ -46,6 +46,7 @@
                                        (mu4e-message-contact-field-matches msg :to address)))
                        :vars `(,(if (string-match-p "kingcons.io" address) smtp-migadu smtp-gmail)
                                (user-mail-address . ,address)
+                               (smtpmail-smtp-user . ,address)
                                (mu4e-sent-folder . ,(concat folder "/Sent Mail"))
                                (mu4e-trash-folder . ,(concat folder "/Trash"))))))
 
