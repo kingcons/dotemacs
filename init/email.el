@@ -13,8 +13,9 @@
       mm-default-directory "~/Downloads"
       message-kill-buffer-on-exit t
       message-send-mail-function 'smtpmail-send-it
-      smtpmail-smtp-service 465
       smtpmail-stream-type 'ssl
+      smtpmail-smtp-service 465
+      smtpmail-smtp-user "brit@kingcons.io"
       smtpmail-servers-requiring-authorization "smtp.migadu.com")
 
 ;;;  Get ERC configured while we're doing e-things.
