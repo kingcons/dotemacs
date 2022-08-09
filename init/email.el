@@ -15,7 +15,6 @@
       message-send-mail-function 'smtpmail-send-it
       smtpmail-stream-type 'ssl
       smtpmail-smtp-service 465
-      smtpmail-smtp-user "brit@kingcons.io"
       smtpmail-servers-requiring-authorization "smtp.migadu.com")
 
 ;;;  Get ERC configured while we're doing e-things.
