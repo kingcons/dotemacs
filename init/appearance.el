@@ -1,10 +1,11 @@
 ;; Remove aesthetic cruft
 (menu-bar-mode -1)
 (blink-cursor-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(horizontal-scroll-bar-mode -1)
+
 (when (display-graphic-p)
-  (tool-bar-mode -1)
-  (scroll-bar-mode -1)
-  (horizontal-scroll-bar-mode -1)
   (setq use-dialog-box nil
         use-file-dialog nil)
   (setq-default fringes-outside-margins t))
