@@ -39,9 +39,9 @@
     (:artist "Topdown Dialectic" :album "Vol 2" :genre "Dub" :label "Peak Oil")
     (:artist "Voices from the Lake" :album "Voices from the Lake" :genre "Dub" :label "Prologue")
     (:artist "Vril" :album "Anima Mundi" :genre "Dub" :label "Delsin")
-    (:artist "Vril & Rodhad" :album "Out of Place Artefacts" :genre "Dub" :label "WSNWG")
-    (:artist "Vril & Rodhad" :album "Out of Place Artefacts II" :genre "Dub" :label "WSNWG")
     (:artist "Vril" :album "Animist" :genre "Dub" :label "Delsin")
+    (:artist "Vril & Rodhad" :album "Out of Place Artefacts" :genre "Dub" :label "WSNWG")
+    (:artist "Vril & Rodhad" :album "Out of Place Artefacts II" :genre "Dub" :label "WSNWG")    
     ;; Experimental
     (:artist "Amon Tobin" :album "Bricolage" :genre "Experimental" :label "Ninja Tune")
     (:artist "Amon Tobin" :album "Permutation" :genre "Experimental" :label "Ninja Tune")
@@ -61,6 +61,7 @@
     (:artist "Tim Hecker" :album "Harmony in Ultraviolet" :genre "Experimental" :label "Kranky")
     ;; IDM
     (:artist "Aoki Takamasa" :album "RV8" :genre "IDM" :label "Raster-Noton")
+    (:artist "Aphex Twin" :album "Syro" :genre "IDM" :label "Warp")
     (:artist "Arovane" :album "Atol Scrap" :genre "IDM" :label "Keplar")
     (:artist "Autechre" :album "Tri Repetae" :genre "IDM" :label "Warp")
     (:artist "Autechre" :album "Chiastic Slide" :genre "IDM" :label "Warp")

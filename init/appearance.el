@@ -50,15 +50,20 @@
 (defun bsb/font-available-p (font-name)
   (find-font (font-spec :name font-name)))
 
-(defun bsb/activate-font (font-name)
-  (let ((font-with-size (concat font-name "-14")))
+(defvar bsb/default-font-size
+  (if bsb/guix-system-p
+      "-10"
+    "-14"))
+
+(cl-defun bsb/activate-font (font-name &optional (size bsb/default-font-size))
+  (let ((font-with-size (concat font-name size)))
     (add-to-list 'default-frame-alist (cons 'font font-with-size))
     (set-frame-font font-with-size)))
 
-(let ((fonts '("IBM Plex Mono"
+(let ((fonts '("Fira Mono"
                "DejaVu Sans Mono"
-               "Fira Mono"
                "Liberation Mono"
+               "IBM Plex Mono"
                "Ubuntu Mono"
                "Hack")))
   (cl-dolist (font fonts)

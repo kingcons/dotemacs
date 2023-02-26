@@ -4,8 +4,7 @@
   :hook ((emacs-lisp-mode
           lisp-mode
           lisp-interaction-mode
-          geiser-mode
-          sly-mrepl-mode) . enable-paredit-mode))
+          geiser-mode) . enable-paredit-mode))
 
 ;;; Use sly for a delightful common lisp experience
 
@@ -25,10 +24,5 @@
 
 (use-package geiser
   :init
-  (setq geiser-active-implementations '(mit guile)
+  (setq geiser-active-implementations '(guile racket mit)
         geiser-autodoc-identifier-format "%s -> %s"))
-
-;;; Add support for extempore in case we want to livecode.
-
-(use-package extempore-mode
-  :mode (("\\.xtm\\'" . extempore-mode)))

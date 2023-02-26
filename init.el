@@ -13,7 +13,7 @@
 
 (defvar bsb/guix-system-p
   (and (eq system-type 'gnu/linux)
-       (string-match-p "GNU system" (bsb/read-file "/etc/issue"))))
+       (file-directory-p "/gnu/store")))
 
 ;; Add MELPA and a nice place outside the config for packages to live
 (require 'package)
