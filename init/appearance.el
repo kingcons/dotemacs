@@ -60,12 +60,12 @@
     (add-to-list 'default-frame-alist (cons 'font font-with-size))
     (set-frame-font font-with-size)))
 
-(let ((fonts '("Fira Mono"
+(let ((fonts '("Hack"
+               "Fira Code"
                "DejaVu Sans Mono"
                "Liberation Mono"
                "IBM Plex Mono"
-               "Ubuntu Mono"
-               "Hack")))
+               "Ubuntu Mono")))
   (cl-dolist (font fonts)
     (when (bsb/font-available-p font)
       (cl-return (bsb/activate-font font)))))
