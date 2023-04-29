@@ -6,11 +6,6 @@
 (setq gc-cons-threshold (* 1024 1024 32))
 
 ;; Determine if we're in Guix OS or not
-(defun bsb/read-file (file)
-  (with-temp-buffer
-    (insert-file-contents file)
-    (buffer-string)))
-
 (defvar bsb/guix-system-p
   (and (eq system-type 'gnu/linux)
        (file-directory-p "/gnu/store")))
@@ -39,10 +34,14 @@
 (defvar bsb/config-dir
   user-emacs-directory)
 
+(defun bsb/config-file (file-name &optional extension)
+  (when (null extension)
+    (setf extension "el"))
+  (format "%s/init/%s.%s" bsb/config-dir file-name extension))
+
 (defun bsb/initialize-config! (modules)
   (dolist (module modules)
-    (let ((file (format "%s/init/%s.el" bsb/config-dir module)))
-      (load-file file))))
+    (load-file (bsb/config-file module))))
 
 ;; Let 'er rip
 (let ((modules '("appearance"
