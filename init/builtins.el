@@ -28,6 +28,7 @@
 
 ;; Assorted formatting improvements
 (setq-default indent-tabs-mode nil) ; Spaces, not tabs
+(setq-default tab-width 4) ; When tabs do appear, take less space
 (setq-default fill-column 80) ; Have a wider fill-column
 (setq-default truncate-lines t) ; Don't wrap by default
 (setq-default word-wrap t) ; But if you do wrap, do it at word boundaries

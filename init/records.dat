@@ -2,6 +2,7 @@
  ;; Ambient
  (:artist "36" :album "Symmetry Systems" :genre "Ambient" :label "Past Inside the Present")
  (:artist "Amble" :album "Drip" :genre "Ambient" :label "Repeatle")
+ (:artist "Anthony Naples" :album "Orbs" :genre "Ambient" :label "Incienso")
  (:artist "Aphex Twin" :album "Selected Ambient Works" :genre "Ambient" :label "Warp")
  (:artist "Arovane" :album "Tides" :genre "Ambient" :label "Keplar")
  (:artist "Barker" :album "Debiasing" :genre "Ambient" :label "Ostgut Ton")
@@ -12,6 +13,7 @@
  (:artist "Convextion" :album "2845" :genre "Ambient" :label "Mojuba Records")
  (:artist "Daniel Avery + Alessandro Cortini" :album "Illusion of Time" :genre "Ambient" :label "Mute Records")
  (:artist "Dialog" :album "Dialog" :genre "Ambient" :label "Astral Industries")
+ (:artist "Downstairs J" :album "Basement etc" :genre "Ambient" :label "Incienso")
  (:artist "Future Sound of London" :album "Lifeforms" :genre "Ambient" :label "Universal Music")
  (:artist "JakoJako" :album "Lux" :genre "Ambient" :label "Leisure System")
  (:artist "JakoJako" :album "Metamorphose" :genre "Ambient" :label "Bigamo")
@@ -71,6 +73,7 @@
  (:artist "Datach'i" :album "Bones" :genre "IDM" :label "Timesig")
  (:artist "Datassette" :album "Sentinel" :genre "IDM" :label "Lapsus Records")
  (:artist "Gacha Bakradze" :album "Obscure Languages" :genre "IDM" :label "Lapsus Records")
+ (:artist "Gacha Bakradze" :album "Forget" :genre "IDM" :label "Oath Records")
  (:artist "Gimmik" :album "Slow Motion Process" :genre "IDM" :label "Lapsus Records")
  (:artist "Kettel" :album "Myam James Part I" :genre "IDM" :label "Lapsus Records")
  (:artist "Kettel" :album "My Dogan" :genre "IDM" :label "Lapsus Records")
@@ -163,6 +166,7 @@
  (:artist "Stenny" :album "Stress Test" :genre "Techno" :label "Ilian Tape")
  (:artist "Stenny" :album "Upsurge" :genre "Techno" :label "Ilian Tape")
  (:artist "Surgeon" :album "Crash Recoil" :genre "Techno" :label "Ilian Tape")
+ (:artist "The Field" :album "Looping State of Mind" :genre "Techno" :label "Kompakt")
  (:artist "Thom Yorke + Four Tet + Burial" :album "Ego / Mirror" :genre "Techno" :label "Text Records")
  (:artist "Thom Yorke + Four Tet + Burial" :album "Her Revolution / His Rope" :genre "Techno" :label "Text Records")
  (:artist "Tobias" :album "1972" :genre "Techno" :label "Ostgut Ton")
@@ -186,6 +190,7 @@
  (:artist "MF Doom" :album "Operation: Doomsday" :genre "Hip Hop")
  (:artist "Outkast" :album "Aquemini" :genre "Hip Hop")
  (:artist "Teebs" :album "Ardour" :genre "Hip Hop")
+ (:artist "Teebs" :album "Anicca" :genre "Hip Hop")
  (:artist "The Avalanches" :album "Since I Left You" :genre "Hip Hop")
  ;; Jazz
  (:artist "Bill Evans" :album "The Tokyo Concert" :genre "Jazz")
@@ -213,6 +218,7 @@
  (:artist "The Comet is Coming" :album "Death to the Planet" :genre "Jazz")
  (:artist "The Comet is Coming" :album "Hyper-Dimensional Expansion Beam" :genre "Jazz")
  (:artist "Work Money Death" :album "Thought, Action, Reaction, Interaction" :genre "Jazz")
+ (:artist "Cymande" :album "Cymande" :genre "Funk")
  (:artist "Marvin Gaye" :album "What's Going On" :genre "Soul")
  ;; Soundtracks
  (:artist "Lena Raine" :album "Celeste" :genre "Soundtrack")
