@@ -203,6 +203,7 @@
  (:artist "John Coltrane" :album "Blue Train" :genre "Jazz")
  (:artist "John Coltrane" :album "Live at the Village Vanguard" :genre "Jazz")
  (:artist "Kamasi Washington" :album "Harmony of Difference" :genre "Jazz")
+ (:artist "Koroko" :album "Koroko" :genre "Jazz")
  (:artist "Lee Morgan" :album "The Sidewinder" :genre "Jazz")
  (:artist "Makaya McCraven" :album "In These Times" :genre "Jazz")
  (:artist "Miles Davis" :album "Kind of Blue" :genre "Jazz")

@@ -53,8 +53,10 @@
                  "files"
                  "lang-cc"
                  "lang-lisp"
+                 "lang-lua"
                  "lang-ocaml"
                  "lang-ruby"
+                 "norns"
                  "votd")))
   (bsb/initialize-config! modules))
 
