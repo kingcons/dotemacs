@@ -46,6 +46,14 @@
 ;; Add friendlier keybinding for navigation
 (global-set-key (kbd "M-o") 'other-window)
 
+(defun bsb/run-in-shell (buffer-name command)
+  "Run the supplied COMMAND in an interactive shell session named BUFFER-NAME.
+This seems like it ought to exist already, someone has probably done it better."
+  (shell)
+  (rename-buffer buffer-name)
+  (let ((listener (get-buffer-process buffer-name)))
+    (comint-send-string listener (concat command "\n"))))
+
 (use-package ibuffer
   :bind ("C-x C-b" . ibuffer)
   :hook (ibuffer-mode . hl-line-mode))

@@ -57,6 +57,7 @@
                  "lang-ocaml"
                  "lang-ruby"
                  "norns"
+                 "torrents"
                  "votd")))
   (bsb/initialize-config! modules))
 
