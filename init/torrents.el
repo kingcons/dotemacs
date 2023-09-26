@@ -19,7 +19,7 @@
   (bsb/run-in-shell "*rtorrent*" bsb/rtorrent-command))
 
 (defun bsb/start-flood ()
-  (bsb/run-in-shell "*flood*" "flood"))
+  (bsb/run-in-shell "*flood*" "flood --host 0.0.0.0"))
 
 (defun bsb/start-torrents ()
   (interactive)
