@@ -1,3 +1,7 @@
+;; Garage layout:
+;; Ambient/Dub | Experimental/IDM | Techno A-J | Techno K-Z
+;; Soundtracks | Indie A-P        | Indie R-Z  | Hip hop/Jazz
+
 (
  ;; Ambient
  (:artist "36" :album "Symmetry Systems" :genre "Ambient" :label "Past Inside the Present")
@@ -15,6 +19,8 @@
  (:artist "Dialog" :album "Dialog" :genre "Ambient" :label "Astral Industries")
  (:artist "Downstairs J" :album "Basement etc" :genre "Ambient" :label "Incienso")
  (:artist "Future Sound of London" :album "Lifeforms" :genre "Ambient" :label "Universal Music")
+ (:artist "Gigi Masin & Greg Foat" :album "Dolphin" :genre "Ambient" :label "Strut")
+ (:artist "Gigi Masin & Rod Modell" :album "Red Hair Girl at the Lighthouse Beach" :genre "Ambient" :label "Silentes")
  (:artist "JakoJako" :album "Lux" :genre "Ambient" :label "Leisure System")
  (:artist "JakoJako" :album "Metamorphose" :genre "Ambient" :label "Bigamo")
  (:artist "JakoJako & Rodhad" :album "In Vere" :genre "Ambient" :label "WSNWG")
@@ -117,8 +123,6 @@
  (:artist "Djrum" :album "Hard to Say / Tournesol" :genre "Techno" :label "R&S Records")
  (:artist "Drexciya" :album "Neptune's Lair" :genre "Techno" :label "Tresor")
  (:artist "Drexciya" :album "Harnessed the Storm" :genre "Techno" :label "Tresor")
- (:artist "Earth Trax" :album "LP1" :genre "Techno" :label "Shall Not Fade")
- (:artist "Earth Trax" :album "LP2" :genre "Techno" :label "Shall Not Fade")
  (:artist "Floating Points" :album "J&W Beat" :genre "Techno" :label "Planet Mu")
  (:artist "Floating Points" :album "Shadows" :genre "Techno" :label "Eglo Records")
  (:artist "Floating Points" :album "Elaenia" :genre "Techno" :label "Luaka Bop")
@@ -194,6 +198,7 @@
  (:artist "JID" :album "Forever Story" :genre "Hip Hop")
  (:artist "Kendrick Lamar" :album "good kid, m.A.A.d City" :genre "Hip Hop")
  (:artist "MF Doom" :album "Operation: Doomsday" :genre "Hip Hop")
+ (:artist "Mr Dibbs" :album "Primitive Tracks" :genre "Hip Hop")
  (:artist "Outkast" :album "Aquemini" :genre "Hip Hop")
  (:artist "Teebs" :album "Ardour" :genre "Hip Hop")
  (:artist "Teebs" :album "Anicca" :genre "Hip Hop")
@@ -226,6 +231,7 @@
  (:artist "The Comet is Coming" :album "Death to the Planet" :genre "Jazz")
  (:artist "The Comet is Coming" :album "Hyper-Dimensional Expansion Beam" :genre "Jazz")
  (:artist "Work Money Death" :album "Thought, Action, Reaction, Interaction" :genre "Jazz")
+ (:artist "Yussef Dayes" :album "Black Classical Music" :genre "Jazz")
  (:artist "Cymande" :album "Cymande" :genre "Funk")
  (:artist "Marvin Gaye" :album "What's Going On" :genre "Soul")
  ;; Soundtracks
@@ -259,6 +265,7 @@
  (:artist "Florist" :album "Emily Alone" :genre "Indie")
  (:artist "Interpol" :album "Turn on the Bright Lights" :genre "Indie")
  (:artist "Iron & Wine" :album "Woman King" :genre "Indie")
+ (:artist "Janelle Monae" :album "The Archandroid" :genre "Indie")
  (:artist "Jay Som" :album "Everybody Works" :genre "Indie")
  (:artist "Jay Som" :album "Anak Ko" :genre "Indie")
  (:artist "Japanese Breakfast" :album "Soft Sounds from Another Planet" :genre "Indie")
@@ -266,6 +273,7 @@
  (:artist "Jimmy Eat World" :album "Bleed American" :genre "Indie")
  (:artist "Julien Baker" :album "Sprained Ankle" :genre "Indie")
  (:artist "Kelela" :album "Raven" :genre "Indie")
+ (:artist "Khruangbin" :album "Con todo el mundo" :genre "Indie")
  (:artist "Laura Veirs" :album "Saltbreakers" :genre "Indie")
  (:artist "Laura Veirs" :album "July Flame" :genre "Indie")
  (:artist "Lucy Dacus" :album "Home Video" :genre "Indie")
@@ -308,5 +316,6 @@
  (:artist "Thundercat" :album "It Is What It Is" :genre "Indie")
  (:artist "Tortoise" :album "TNT" :genre "Indie")
  (:artist "Wet Leg" :album "Wet Leg" :genre "Indie")
+ (:artist "Youth Lagoon" :album "Heaven is a Junkyard" :genre "Indie")
  (:artist "Yves Tumor" :album "Praise A Lord Who Chews But Which Does Not Consume" :genre "Indie")
 )
