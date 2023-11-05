@@ -148,15 +148,17 @@ To bind `C-.' globally:
     (global-set-key (kbd \"C-.\") 'mgl-pax-document)"
   ;; end-hijack-include
   (interactive)
-  (sly-bind-keys sly-doc-map t
-                   '((?a mgl-pax-apropos)
-                     (?z mgl-pax-apropos-all)
-                     (?p mgl-pax-apropos-package)
-                     (?d mgl-pax-document)
-                     (?f mgl-pax-document)
-                     (?c mgl-pax-current-definition-toggle-view)))
-  (sly-bind-keys sly-doc-map t
-                   '((?u mgl-pax-edit-parent-section))))
+  (let ((replaces '((sly-apropos            mgl-pax-apropos)
+                    (sly-apropos-all        mgl-pax-apropos-all)
+                    (sly-apropos-package    mgl-pax-apropos-package)
+                    (sly-describe-symbol    mgl-pax-document)
+                    (sly-describe-function  mgl-pax-document)))
+        (newbinds '(("u" mgl-pax-edit-parent-section)
+                    ("c" mgl-pax-current-definition-toggle-view))))
+    (cl-loop for (olddef newdef) in replaces
+             do (substitute-key-definition olddef newdef sly-doc-map))
+    (cl-loop for (key command) in newbinds
+             do (keymap-set sly-doc-map key command))))
 
 
 ;;;; Browser configuration
@@ -970,7 +972,7 @@ move point to the beginning of the buffer."
     (mgl-pax-doc-pax-url (w3m-anchor))))
 
 
-;;;; Make `M-.' (`slime-edit-definition') work on links in w3m PAX
+;;;; Make `M-.' (`sly-edit-definition') work on links in w3m PAX
 ;;;; doc.
 
 ;;; If over a link in a w3m buffer, then visit the source if it is a

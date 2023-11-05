@@ -22,7 +22,10 @@
 
 ;;; Add Gabor's Pax documentation and Try testing helpers
 
-(use-package mgl-pax)
+(use-package mgl-pax
+  :config
+  (mgl-pax-hijack-sly-doc-keys)
+  (global-set-key (kbd "s-.") 'mgl-pax-document))
 
 (use-package mgl-try)
 
