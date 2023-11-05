@@ -20,7 +20,9 @@
           `((sbcl (,sbcl-path "--noinform") :coding-system utf-8-unix)
             (ccl (,ccl-path))))))
 
-;;; Add Gabor's Try testing helpers
+;;; Add Gabor's Pax documentation and Try testing helpers
+
+(use-package mgl-pax)
 
 (use-package mgl-try)
 
