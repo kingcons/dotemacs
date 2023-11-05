@@ -20,6 +20,10 @@
           `((sbcl (,sbcl-path "--noinform") :coding-system utf-8-unix)
             (ccl (,ccl-path))))))
 
+;;; Add Gabor's Try testing helpers
+
+(use-package mgl-try)
+
 ;;; And geiser for mischievous scheming
 
 (use-package geiser
