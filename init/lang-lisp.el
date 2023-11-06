@@ -6,9 +6,9 @@
           lisp-interaction-mode
           geiser-mode) . enable-paredit-mode))
 
-;;; Use sly for a delightful common lisp experience
+;;; Use slime for a delightful common lisp experience
 
-(use-package sly
+(use-package slime
   :config
   (let ((sbcl-path (if (eq system-type 'darwin)
                        "/usr/local/bin/sbcl"
@@ -16,7 +16,7 @@
         (ccl-path (if (eq system-type 'darwin)
                       "/usr/local/bin/ccl64"
                     "ccl")))
-    (setq sly-lisp-implementations
+    (setq slime-lisp-implementations
           `((sbcl (,sbcl-path "--noinform") :coding-system utf-8-unix)
             (ccl (,ccl-path))))))
 
@@ -24,7 +24,7 @@
 
 (use-package mgl-pax
   :config
-  (mgl-pax-hijack-sly-doc-keys)
+  (mgl-pax-hijack-slime-doc-keys)
   (global-set-key (kbd "s-.") 'mgl-pax-document))
 
 (use-package mgl-try)

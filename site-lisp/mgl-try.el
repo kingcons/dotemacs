@@ -68,12 +68,12 @@
 
 (defun mgl-try-read-from-minibuffer (prompt &optional initial-value
                                             default-value history)
-  (let* ((minibuffer-setup-hook (run-hooks 'sly-minibuffer-setup-hook))
+  (let* ((minibuffer-setup-hook (slime-minibuffer-setup-hook))
          (prompt (if default-value
                      (concat prompt " (default: " default-value "): ")
                    (concat prompt ": ")))
          (string (read-from-minibuffer prompt initial-value
-                                       sly-minibuffer-map nil history)))
+                                       slime-minibuffer-map nil history)))
     (if (zerop (length string))
         default-value
       string)))
@@ -85,15 +85,15 @@ with minor mode `mgl-try-mode'."
                                                    (car mgl-try-history)
                                                    'mgl-try-history)
                      nil))
-  (if (sly-eval '(cl:not (cl:find-package :try)))
+  (if (slime-eval '(cl:not (cl:find-package :try)))
       (message "Try is not loaded on the Common Lisp side.")
-    (sly-eval-async `(swank::with-buffer-syntax
-                      ()
-                      (try::try-for-emacs ,(if (stringp test-name)
-                                               `(cl:read-from-string
-                                                 ,test-name)
-                                             test-name)
-                                          :rerun-all ,rerun-all))
+    (slime-eval-async `(swank::with-buffer-syntax
+                        ()
+                        (try::try-for-emacs ,(if (stringp test-name)
+                                                 `(cl:read-from-string
+                                                   ,test-name)
+                                               test-name)
+                                            :rerun-all ,rerun-all))
       (lambda (output)
         (when (< 0 (length output))
           (mgl-try-display output))))))
@@ -141,7 +141,7 @@ with minor mode `mgl-try-mode'."
 (defun mgl-try-try (test-name)
   "Like `mgl-try', but defaults to the symbol under point."
   (interactive (list (mgl-try-read-from-minibuffer "Run test"
-                                                   (sly-symbol-at-point)
+                                                   (slime-symbol-at-point)
                                                    (car mgl-try-history)
                                                    'mgl-try-history)))
   (mgl-try test-name nil))

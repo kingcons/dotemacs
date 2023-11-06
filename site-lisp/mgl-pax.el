@@ -19,7 +19,7 @@
 ;;;; NAVIGATE (see MGL-PAX::@NAVIGATING-IN-EMACS)
 ;;;; --------------------------------------------
 ;;;;
-;;;; - `M-.' (`sly-edit-definition') supports new kinds of
+;;;; - `M-.' (`slime-edit-definition') supports new kinds of
 ;;;;   definitions (e.g. of ASDF/SYSTEMs) and disambiguates based on
 ;;;;   nearby locatives. Just by loading this file, `M-.' shall be
 ;;;;   able to recognize disambiguate based on locatives near point as
@@ -37,8 +37,8 @@
 ;;;; - Also, see `mgl-pax-current-definition-toggle-view'.
 ;;;;
 ;;;; - `mgl-pax-apropos', `mgl-pax-apropos-all' and
-;;;;   `mgl-pax-apropos-package' are replacements for `sly-apropos'
-;;;;   `sly-apropos-all' and `sly-apropos-package', respectively.
+;;;;   `mgl-pax-apropos-package' are replacements for `slime-apropos'
+;;;;   `slime-apropos-all' and `slime-apropos-package', respectively.
 ;;;;   They are all built on top of `mgl-pax-document'.
 ;;;;
 ;;;; TRANSCRIBE (see MGL-PAX::@TRANSCRIBING-WITH-EMACS (press `C-.' on this))
@@ -51,14 +51,14 @@
   (require 'cl-lib nil t)
   ;; For emacs 23, look for bundled version
   (require 'cl-lib "lib/cl-lib")
-  (require 'sly))
+  (require 'slime))
 
 
 ;;;; Autoloading of MGL-PAX on the Common Lisp side
 
 (defcustom mgl-pax-autoload t
   "If true, then the MGL-PAX ASDF system will be loaded as necessary
-via Sly by `sly-edit-definition', `mgl-pax-document' and
+via Slime by `slime-edit-definition', `mgl-pax-document' and
 other mgl-pax commands. Furthermore, when
 `mgl-pax-browser-function' is not 'w3m-browse-url',
 `mgl-pax-document' will start a web server on the Common Lisp
@@ -83,11 +83,11 @@ side."
                               ',mgl-pax-version)
                   t)))
     (if mgl-pax-autoload
-        (sly-eval-async
+        (slime-eval-async
             `(cl:progn
               (cl:unless
                (cl:and (cl:find-package :mgl-pax)
-                       ;; Not there if only mgl-pax-bootstrap is loaded.
+                       ;; Not there if only mgl-pax/bootstrap loaded.
                        (cl:find-symbol
                         (cl:string '#:check-pax-elisp-version)
                         (cl:find-package :mgl-pax)))
@@ -97,7 +97,7 @@ side."
                (cl:format t ";; Done autoloading MGL-PAX for Emacs~%"))
               ,check-version-form)
           cont)
-      (sly-eval-async check-version-form cont))))
+      (slime-eval-async check-version-form cont))))
 
 (cl-defmacro mgl-pax-ensure-pax-loaded ((&key no-web) &body body)
   (declare (indent 1))
@@ -121,15 +121,15 @@ See MGL-PAX::@EMACS-SETUP."
     (load-file sourcefile)))
 
 
-(defun mgl-pax-hijack-sly-doc-keys ()
-  "Make the following changes to `sly-doc-map' (assuming it's
+(defun mgl-pax-hijack-slime-doc-keys ()
+  "Make the following changes to `slime-doc-map' (assuming it's
 bound to `C-c C-d').
 
-- `C-c C-d a': `mgl-pax-apropos' (replaces `sly-apropos')
-- `C-c C-d z': `mgl-pax-aproposa-all' (replaces `sly-apropos-all')
-- `C-c C-d p': `mgl-pax-apropos-package' (replaces `sly-apropos-package')
-- `C-c C-d d': `mgl-pax-document' (replaces `sly-describe-symbol')
-- `C-c C-d f': `mgl-pax-document' (replaces `sly-describe-function')
+- `C-c C-d a': `mgl-pax-apropos' (replaces `slime-apropos')
+- `C-c C-d z': `mgl-pax-aproposa-all' (replaces `slime-apropos-all')
+- `C-c C-d p': `mgl-pax-apropos-package' (replaces `slime-apropos-package')
+- `C-c C-d d': `mgl-pax-document' (replaces `slime-describe-symbol')
+- `C-c C-d f': `mgl-pax-document' (replaces `slime-describe-function')
 - `C-c C-d c': `mgl-pax-current-definition-toggle-view'
 
 Also, regardless of whether `w3m' is available, add this:
@@ -139,26 +139,24 @@ Also, regardless of whether `w3m' is available, add this:
 In addition, because it can be almost as useful as `M-.', one may
 want to give `mgl-pax-document' a more convenient binding such as
 `C-.' or `s-.' if you have a Super key. For example, to bind
-`C-.' in all Sly buffers:
+`C-.' in all Slime buffers:
 
-    (sly-bind-keys sly-parent-map nil '((\"C-.\" mgl-pax-document)))
+    (slime-bind-keys slime-parent-map nil '((\"C-.\" mgl-pax-document)))
 
 To bind `C-.' globally:
 
     (global-set-key (kbd \"C-.\") 'mgl-pax-document)"
   ;; end-hijack-include
   (interactive)
-  (let ((replaces '((sly-apropos            mgl-pax-apropos)
-                    (sly-apropos-all        mgl-pax-apropos-all)
-                    (sly-apropos-package    mgl-pax-apropos-package)
-                    (sly-describe-symbol    mgl-pax-document)
-                    (sly-describe-function  mgl-pax-document)))
-        (newbinds '(("u" mgl-pax-edit-parent-section)
-                    ("c" mgl-pax-current-definition-toggle-view))))
-    (cl-loop for (olddef newdef) in replaces
-             do (substitute-key-definition olddef newdef sly-doc-map))
-    (cl-loop for (key command) in newbinds
-             do (keymap-set sly-doc-map key command))))
+  (slime-bind-keys slime-doc-map t
+                   '((?a mgl-pax-apropos)
+                     (?z mgl-pax-apropos-all)
+                     (?p mgl-pax-apropos-package)
+                     (?d mgl-pax-document)
+                     (?f mgl-pax-document)
+                     (?c mgl-pax-current-definition-toggle-view)))
+  (slime-bind-keys slime-doc-map t
+                   '((?u mgl-pax-edit-parent-section))))
 
 
 ;;;; Browser configuration
@@ -189,7 +187,7 @@ See `mgl-pax-autoload'. If nil, then a free port will be used."
    (lambda (loadedp)
      (if (not loadedp)
          (funcall cont nil)
-       (sly-eval-async `(mgl-pax::ensure-web-server
+       (slime-eval-async `(mgl-pax::ensure-web-server
                            :hyperspec-root ',common-lisp-hyperspec-root
                            :port ,mgl-pax-web-server-port)
          (lambda (values)
@@ -208,14 +206,14 @@ See `mgl-pax-autoload'. If nil, then a free port will be used."
 ;;; locative2), and so on. MGL-PAX::LOCATE-DEFINITIONS-FOR-EMACS and
 ;;; MGL-PAX::DOCUMENT-FOR-EMACS take such lists.
 ;;;
-;;; `sly-symbol-at-point' works fine in code, but in printed
+;;; `slime-symbol-at-point' works fine in code, but in printed
 ;;; representations and docstrings heuristics are needed (just think
 ;;; "SYM." and "#<SYM"), which we leave for the the Common Lisp side
 ;;; to resolve. However, we handle here the complications caused by
 ;;; Markdown, whose code (`nil`) and reference link syntax
 ;;; ([title][id]) is used by PAX, maybe both at the same time as in
 ;;; [`FOO`][function] or [FOO][`function`]. ?` is a delimiter, but ?\[
-;;; is not, which means that `sly-symbol-at-point' on FOO will
+;;; is not, which means that `slime-symbol-at-point' on FOO will
 ;;; result in NAME being "FOO" or "[FOO][". "[FOO][" is a valid symbol
 ;;; name, so we definitely want to look up definitions for it. In
 ;;; addition, we also look up definitions for the symbol whose name
@@ -229,8 +227,8 @@ See `mgl-pax-autoload'. If nil, then a free port will be used."
      ;; without the semicolons.
      (mgl-pax-call-uncommented
       (lambda ()
-        (let ((name (sly-symbol-at-point))
-              (bounds (sly-bounds-of-symbol-at-point)))
+        (let ((name (slime-symbol-at-point))
+              (bounds (slime-bounds-of-symbol-at-point)))
           (when bounds
             (let ((locatives (mgl-pax-find-locatives bounds))
                   (wall (mgl-pax-parse-reflink bounds)))
@@ -295,10 +293,10 @@ See `mgl-pax-autoload'. If nil, then a free port will be used."
                   (point))))
       (list beg end))))
 
-;;; Return the sexps before and after (sly-symbol-at-point),
+;;; Return the sexps before and after (slime-symbol-at-point),
 ;;; skipping some markup.
 (cl-defun mgl-pax-find-locatives
-    (&optional (bounds (sly-bounds-of-symbol-at-point)))
+    (&optional (bounds (slime-bounds-of-symbol-at-point)))
   (remove nil (list (mgl-pax-locative-before (car bounds))
                     (mgl-pax-locative-after (cdr bounds)))))
 
@@ -307,7 +305,7 @@ See `mgl-pax-autoload'. If nil, then a free port will be used."
     (goto-char (1- point))
     (unless (looking-at "(")
       (skip-chars-backward "            ;` \n\t")
-                          (let ((sexp (ignore-errors (sly-last-expression))))
+                          (let ((sexp (ignore-errors (slime-last-expression))))
                             (unless (equal sexp "")
                               sexp)))))
 
@@ -334,7 +332,7 @@ See `mgl-pax-autoload'. If nil, then a free port will be used."
 (defun mgl-pax-next-sexp ()
   (save-excursion
     (when (mgl-pax-forward-sexp)
-      (ignore-errors (sly-last-expression)))))
+      (ignore-errors (slime-last-expression)))))
 
 ;;; Like forward-sexp, but don't signal errors and return t if
 ;;; something other than whitespace was skipped over.
@@ -349,7 +347,7 @@ See `mgl-pax-autoload'. If nil, then a free port will be used."
 ;;; Markdown reference link. Return the name and the locative string
 ;;; as a list like ("FOO" ("function")).
 (cl-defun mgl-pax-parse-reflink
-    (&optional (bounds (sly-bounds-of-symbol-at-point)))
+    (&optional (bounds (slime-bounds-of-symbol-at-point)))
   (when bounds
     (let ((wall ()))
       (cl-flet ((add (start end)
@@ -388,12 +386,12 @@ See `mgl-pax-autoload'. If nil, then a free port will be used."
       (reverse wall))))
 
 
-;;;; Integration with `M-.' (`sly-edit-definition')
+;;;; Integration with `M-.' (`slime-edit-definition')
 
-;;; When it's on `sly-edit-definition-hooks', `M-.' calls this
-;;; function with (sly-symbol-at-point) as NAME.
+;;; When it's on `slime-edit-definition-hooks', `M-.' calls this
+;;; function with (slime-symbol-at-point) as NAME.
 (defun mgl-pax-edit-definitions (name &optional where)
-  (if (sly-eval '(cl:and (cl:find-package :mgl-pax)
+  (if (slime-eval '(cl:and (cl:find-package :mgl-pax)
                            (cl:find-symbol (cl:string '#:*navigate-loaded*)
                                            :mgl-pax)
                            cl:t))
@@ -405,7 +403,7 @@ See `mgl-pax-autoload'. If nil, then a free port will be used."
     (mgl-pax-maybe-autoload
      :no-web
      (lambda (loadedp)
-       ;; `sly-edit-definition' is functional even without PAX. Remain
+       ;; `slime-edit-definition' is functional even without PAX. Remain
        ;; silent if PAX is not loaded.
        (when loadedp
          (mgl-pax-edit-definitions-1 name where t))))
@@ -416,7 +414,7 @@ See `mgl-pax-autoload'. If nil, then a free port will be used."
     nil))
 
 (defun mgl-pax-edit-definitions-1 (name where asyncp)
-  (let ((name-in-buffer (sly-symbol-at-point)))
+  (let ((name-in-buffer (slime-symbol-at-point)))
     (if (string= name name-in-buffer)
         (mgl-pax-edit-buffer-definitions asyncp)
       (mgl-pax-edit-interactive-definitions name where asyncp))))
@@ -447,8 +445,8 @@ See `mgl-pax-autoload'. If nil, then a free port will be used."
                             :mgl-pax)
                            ',name-and-locatives-list)))
     (if asyncp
-        (sly-eval-async form cont)
-      (funcall cont (sly-eval form)))))
+        (slime-eval-async form cont)
+      (funcall cont (slime-eval form)))))
 
 (defun mgl-pax-visit-locations (dspec-and-location-list)
   (when (consp dspec-and-location-list)
@@ -520,7 +518,7 @@ on the page that contains the entire PAX manual.
 When invoked interactively:
 
 - Without a prefix arg, the object of the reference defaults to
-  `sly-symbol-at-point' and an attempt is made to find the
+  `slime-symbol-at-point' and an attempt is made to find the
   locative around that. This works in non-lisp buffers as well.
 
 - With a prefix arg, when no object is found, or when there are
@@ -545,13 +543,13 @@ selecting the locative from the buffer that pops up works. For
 finding all definitions with a given locative, use
 `mgl-pax-apropos'.
 
-The package in which symbols are read is `sly-current-package'.
+The package in which symbols are read is `slime-current-package'.
 Hence, in Lisp buffers, the buffer's package is used. In other
 buffers, the package of the repl.
 
 The suggested key binding is `C-.' to parallel `M-.'."
   (interactive (list nil))
-  (sly-check-connected)
+  (slime-check-connected)
   (mgl-pax-require-w3m)
   ;; Handle the interactive defaults here because it involves async
   ;; calls.
@@ -587,7 +585,7 @@ The suggested key binding is `C-.' to parallel `M-.'."
 (defun mgl-pax-prompt-and-document ()
   ;; Cancel the non-local exits to avoid "error in process filter"
   ;; messages and the subsequent delay when this function is called by
-  ;; `sly-async-eval' and `read-from-minibuffer' is C-g'ed.
+  ;; `slime-async-eval' and `read-from-minibuffer' is C-g'ed.
   (mgl-pax-with-nlx-barrier
    (mgl-pax-document-pax-url
     (mgl-pax-urllike-to-url
@@ -615,10 +613,10 @@ The suggested key binding is `C-.' to parallel `M-.'."
                   (let ((url (concat mgl-pax-web-server-base-url "/"
                                      (url-hexify-string
                                       pax-url mgl-pax-url-allowed-chars)
-                                     (when (sly-current-package)
+                                     (when (slime-current-package)
                                        (concat "?pkg="
                                                (url-hexify-string
-                                                (sly-current-package)))))))
+                                                (slime-current-package)))))))
                     (funcall (or mgl-pax-browser-function
                                  browse-url-browser-function)
                              url)))))))
@@ -654,9 +652,9 @@ The suggested key binding is `C-.' to parallel `M-.'."
                               ;; Maybe pop to a pax doc buffer.
                               (when (and (not (mgl-pax-in-doc-buffer-p))
                                          mgl-pax-doc-buffers)
-                                (let ((package (sly-current-package)))
+                                (let ((package (slime-current-package)))
                                   (pop-to-buffer (cl-first mgl-pax-doc-buffers))
-                                  (setq sly-buffer-package package)))
+                                  (setq slime-buffer-package package)))
                               (w3m-goto-url url :reload)
                               (mgl-pax-set-up-doc-buffer doc-dir))))))
           ;; Display the docs of this very documentation browser if
@@ -671,9 +669,9 @@ The suggested key binding is `C-.' to parallel `M-.'."
              :ok-cont (lambda (url)
                         (if (null url)
                             (mgl-pax-prompt-and-document)
-                          (let ((package (sly-current-package)))
+                          (let ((package (slime-current-package)))
                             (w3m-goto-url url :reload)
-                            (setq sly-buffer-package package))
+                            (setq slime-buffer-package package))
                           (mgl-pax-set-up-doc-buffer doc-dir)))
              :abort-cont (lambda (condition)
                            (mgl-pax-delete-doc-dir doc-dir)))))))))
@@ -690,9 +688,9 @@ The suggested key binding is `C-.' to parallel `M-.'."
 (defun mgl-pax-doc-set-up-key-bindings ()
   (use-local-map (copy-keymap w3m-mode-map))
   ;; `M-.' visits the source when pressed on a "pax:" link.
-  (local-set-key (kbd "M-.") 'sly-edit-definition)
-  (local-set-key (kbd "M-,") 'sly-pop-find-definition-stack)
-  (local-set-key (kbd "C-c C-d") 'sly-doc-map)
+  (local-set-key (kbd "M-.") 'slime-edit-definition)
+  (local-set-key (kbd "M-,") 'slime-pop-find-definition-stack)
+  (local-set-key (kbd "C-c C-d") 'slime-doc-map)
   ;; Make reloading regenerate the documentation.
   (local-set-key (kbd "R") 'mgl-pax-doc-reload)
   (local-set-key (kbd "n") 'mgl-pax-doc-next-definition)
@@ -726,14 +724,14 @@ The suggested key binding is `C-.' to parallel `M-.'."
 (defun mgl-pax-read-urllike-from-minibuffer (prompt)
   (let ((slime-completion-at-point-functions
          '(mgl-pax-complete-urllike-in-minibuffer)))
-    (sly-read-from-minibuffer prompt)))
+    (slime-read-from-minibuffer prompt)))
 
 (defun mgl-pax-complete-urllike-in-minibuffer ()
   (let* ((start
           ;; The position of the first character after the prompt
           (line-beginning-position -1000))
          (end (point))
-         (beg (sly-symbol-start-pos))
+         (beg (slime-symbol-start-pos))
          (first-space-pos (cl-position ?\s (buffer-substring-no-properties
                                             start end))))
     (if first-space-pos
@@ -742,10 +740,10 @@ The suggested key binding is `C-.' to parallel `M-.'."
           (list beg end (completion-table-dynamic
                          (lambda (prefix)
                            (mgl-pax-locatives-for-name object)))))
-      (list beg end (completion-table-dynamic #'sly-simple-completions)))))
+      (list beg end (completion-table-dynamic #'slime-simple-completions)))))
 
 (defun mgl-pax-locatives-for-name (object)
-  (let ((values (sly-eval
+  (let ((values (slime-eval
                  `(cl:funcall (cl:find-symbol
                                (cl:string '#:locatives-for-name-for-emacs)
                                :mgl-pax)
@@ -780,10 +778,10 @@ The suggested key binding is `C-.' to parallel `M-.'."
                                            (pop-to-buffer buffer)
                                            (apply oldfun url args)))))))
 
-;;; Like sly-eval-async, but call abort-cont on :abort.
+;;; Like slime-eval-async, but call abort-cont on :abort.
 (defun mgl-pax-eval-async (sexp ok-cont &optional abort-cont package)
-  (sly-rex (ok-cont abort-cont (buffer (current-buffer)))
-      (sexp (or package (sly-current-package)))
+  (slime-rex (ok-cont abort-cont (buffer (current-buffer)))
+      (sexp (or package (slime-current-package)))
     ((:ok result)
      (when ok-cont
        (set-buffer buffer)
@@ -821,7 +819,7 @@ if the current page was generated from a PAX URL."
                                            (w3m-reload-this-page))))))
 
 (defun mgl-pax-call-redocument-for-emacs (file-url dir cont)
-  (sly-eval-async
+  (slime-eval-async
       `(cl:if (cl:find-package :mgl-pax)
               (cl:funcall (cl:find-symbol (cl:string '#:redocument-for-emacs)
                                           :mgl-pax)
@@ -972,7 +970,7 @@ move point to the beginning of the buffer."
     (mgl-pax-doc-pax-url (w3m-anchor))))
 
 
-;;;; Make `M-.' (`sly-edit-definition') work on links in w3m PAX
+;;;; Make `M-.' (`slime-edit-definition') work on links in w3m PAX
 ;;;; doc.
 
 ;;; If over a link in a w3m buffer, then visit the source if it is a
@@ -986,7 +984,7 @@ move point to the beginning of the buffer."
 
 (defun mgl-pax-doc-edit-pax-definition (pax-url)
   (when (string-prefix-p "pax:" pax-url)
-    (sly-eval-async
+    (slime-eval-async
         ;; Silently fail if MGL-PAX is not loaded.
         `(cl:when (cl:find-package :mgl-pax)
                   (cl:funcall
@@ -1032,7 +1030,7 @@ move point to the beginning of the buffer."
         (when (< 200 (length snippet))
           (setq snippet (cl-subseq snippet 0 200)))
         (down-list)
-        (sly-forward-sexp)
+        (slime-forward-sexp)
         (forward-char)
         ;; `name' can be a symbol or a string ...
         (let ((name (mgl-pax-next-sexp)))
@@ -1052,7 +1050,7 @@ In a PAX doc buffer, it's equivalent to pressing `v'
       (mgl-pax-current-definition-pax-url 'mgl-pax-document))))
 
 (defun mgl-pax-current-definition-pax-url (cont)
-  (sly-eval-async
+  (slime-eval-async
       `(cl:if (cl:find-package :mgl-pax)
               (cl:funcall
                (cl:find-symbol (cl:string
@@ -1070,7 +1068,7 @@ In a PAX doc buffer, it's equivalent to pressing `v'
 
 (defun mgl-pax-edit-parent-section ()
   "Look up the definition of parent section of the definition
-`point' is in as if with `M-.' (`sly-edit-definition'). If
+`point' is in as if with `M-.' (`slime-edit-definition'). If
 there are multiple containing sections, then pop up a selection
 buffer."
   (interactive)
@@ -1078,7 +1076,7 @@ buffer."
     (mgl-pax-find-parent-section #'mgl-pax-visit-locations)))
 
 (defun mgl-pax-find-parent-section (cont)
-  (sly-eval-async
+  (slime-eval-async
       `(cl:if (cl:find-package :mgl-pax)
               (cl:funcall
                (cl:find-symbol (cl:string
@@ -1154,7 +1152,7 @@ Also, see `mgl-pax-apropos-all'."
                  (list (mgl-pax-read-urllike-from-minibuffer
                         "PAX Apropos: ")
                        (y-or-n-p "External symbols only? ")
-                       (sly-read-package-name "Package: ")
+                       (slime-read-package-name "Package: ")
                        (y-or-n-p "Case-sensitive? "))
                (list (mgl-pax-read-urllike-from-minibuffer
                       "PAX Apropos: ")
@@ -1176,9 +1174,9 @@ Also, see `mgl-pax-apropos-all'."
   "Show apropos listing for symbols in PACKAGE.
 With prefix argument include internal symbols.
 The empty string means the current package."
-  (interactive (list (let ((pkg (sly-read-package-name
+  (interactive (list (let ((pkg (slime-read-package-name
                                  "PAX Apropos for Package: ")))
-                       (if (string= pkg "") (sly-current-package) pkg))
+                       (if (string= pkg "") (slime-current-package) pkg))
                      current-prefix-arg))
   (mgl-pax-apropos "" (not internal) (concat "'" package) nil))
 
@@ -1186,7 +1184,7 @@ The empty string means the current package."
 ;;;; Transcribe
 
 (defun mgl-pax-transcribe-last-expression ()
-  "A bit like C-u C-x C-e (sly-eval-last-expression) that
+  "A bit like C-u C-x C-e (slime-eval-last-expression) that
 inserts the output and values of the sexp before the point, this
 does the same but with MGL-PAX:TRANSCRIBE. Use a numeric prefix
 argument as in index to select one of the Common Lisp
@@ -1262,7 +1260,7 @@ input will not be changed."
 
 (defun mgl-pax-transcribe (start end syntax update-only echo
                                  first-line-special-p dynenv)
-  (sly-eval
+  (slime-eval
    `(cl:funcall (cl:find-symbol (cl:string '#:transcribe-for-emacs) :mgl-pax)
                 ,(buffer-substring-no-properties start end)
                 ',syntax ',update-only ',echo ',first-line-special-p ,dynenv)))
