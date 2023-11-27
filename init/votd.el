@@ -47,15 +47,18 @@
     (message "Searching for %s - %s" artist album)
     (bsb/show-cover-art response)))
 
+(defun bsb/gimme-genre (genre)
+  (interactive "sWhat genre? ")
+  (bsb/choose-record :genre genre))
+
 (defun bsb/gimme-techno ()
   (interactive)
   (bsb/choose-record :genre "Techno"))
 
-(defun bsb/gimme-music (&optional genre)
-  (interactive "sWhat genre? ")
-  (if (zerop (length genre))
-      (bsb/show-random-album bsb/vinyl-collection)
-    (bsb/choose-record :genre genre)))
+(defun bsb/gimme-music ()
+  (interactive)
+  (bsb/show-random-album bsb/vinyl-collection))
 
+(global-set-key (kbd "s-g") 'bsb/gimme-genre)
 (global-set-key (kbd "s-n") 'bsb/gimme-techno)
 (global-set-key (kbd "s-m") 'bsb/gimme-music)
