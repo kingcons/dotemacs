@@ -34,14 +34,14 @@
 (defvar bsb/config-dir
   user-emacs-directory)
 
-(defun bsb/config-file (file-name &optional extension)
+(defun bsb/init-file (file-name &optional extension)
   (when (null extension)
     (setf extension "el"))
   (format "%s/init/%s.%s" bsb/config-dir file-name extension))
 
 (defun bsb/initialize-config! (modules)
   (dolist (module modules)
-    (load-file (bsb/config-file module))))
+    (load-file (bsb/init-file module))))
 
 ;; Let 'er rip
 (let ((modules '("appearance"

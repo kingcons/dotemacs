@@ -1,5 +1,5 @@
 (defvar bsb/vinyl-collection
-  (with-current-buffer (find-file-noselect (bsb/config-file "records" "dat"))
+  (with-current-buffer (find-file-noselect (bsb/init-file "records" "dat"))
     (goto-char (point-min))
     (read (current-buffer))))
 
