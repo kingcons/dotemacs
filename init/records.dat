@@ -4,336 +4,662 @@
 
 (
  ;; Ambient
- (:artist "36" :album "Symmetry Systems" :genre "Ambient" :label "Past Inside the Present")
- (:artist "Amble" :album "Drip" :genre "Ambient" :label "Repeatle")
- (:artist "Anthony Naples" :album "Orbs" :genre "Ambient" :label "Incienso")
- (:artist "Aphex Twin" :album "Selected Ambient Works" :genre "Ambient" :label "Warp")
- (:artist "Boards of Canada" :album "Geogaddi" :genre "Ambient" :label "Warp")
- (:artist "Convextion" :album "2845" :genre "Ambient" :label "Mojuba Records")
- (:artist "Daniel Avery + Alessandro Cortini" :album "Illusion of Time" :genre "Ambient" :label "Mute Records")
- (:artist "Dialog" :album "Dialog" :genre "Ambient" :label "Astral Industries")
- (:artist "Downstairs J" :album "Basement etc" :genre "Ambient" :label "Incienso")
- (:artist "Future Sound of London" :album "Lifeforms" :genre "Ambient" :label "Universal Music")
- (:artist "Gigi Masin & Greg Foat" :album "Dolphin" :genre "Ambient" :label "Strut")
- (:artist "Gigi Masin & Rod Modell" :album "Red Hair Girl at the Lighthouse Beach" :genre "Ambient" :label "Silentes")
- (:artist "Jake Muir" :album "Lady's Mantle" :genre "Ambient" :label "Sferic")
- (:artist "Jake Muir" :album "the hum of your veiled voice" :genre "Ambient" :label "Sferic")
- (:artist "JakoJako" :album "Metamorphose" :genre "Ambient" :label "Bigamo")
- (:artist "Jeremiah Chiu & Marta Sofia Honer" :album "Recordings from the Aland Islands" :genre "Ambient" :label "International Anthem")
- (:artist "Jonah Sharp & Mixmaster Morris" :album "Quiet Logic" :genre "Ambient" :label "WRWTFWW Records")
- (:artist "Rod Modell" :album "Ghost Lights" :genre "Ambient" :label "Astral Industries")
- (:artist "Rod Modell & Taka Noda" :album "Glow World" :genre "Ambient" :label "Silentes")
- (:artist "Sam McQueen" :album "Dreams in Sepia" :genre "Ambient" :label "Mojuba Records")
- (:artist "Skee Mask" :album "ISS006" :genre "Ambient" :label "Ilian Tape")
- (:artist "Sky H1" :album "Azure" :genre "Ambient" :label "AD 93")
- (:artist "Sonmi451" :album "Nachtmuziek" :genre "Ambient" :label "Astral Industries")
- (:artist "The Detroit Escalator Company" :album "Soundtrack [313]" :genre "Ambient" :label "Mental Groove Records")
- (:artist "The Orb" :album "The Orb's Adventures Beyond the Ultraworld" :genre "Ambient" :label "Island Records")
- (:artist "Tycho" :album "Dive" :genre "Ambient" :label "Ghostly")
- (:artist "Yu Su" :album "Roll With The Punches" :genre "Ambient" :label "Second Circle")
+ (:artist "36" :album "Symmetry Systems" :genre "Ambient" 
+  :label "Past Inside the Present" :year 2022 :art "symmetry.png")
+ (:artist "Amble" :album "Drip" :genre "Ambient"
+  :label "Repeatle" :year 2019 :art "drip.png")
+ (:artist "Anthony Naples" :album "Orbs" :genre "Ambient"
+  :label "Incienso" :year 2023 :art "orbs.jpg")
+ (:artist "Aphex Twin" :album "Selected Ambient Works" :genre "Ambient"
+  :label "Warp" :year 1992 :art "saw8592.jpg")
+ (:artist "Boards of Canada" :album "Geogaddi" :genre "Ambient"
+  :label "Warp" :year 2002 :art "geogaddi.jpg")
+ (:artist "Convextion" :album "2845" :genre "Ambient"
+  :label "Mojuba Records" :year 2016 :art "2845.jpg")
+ (:artist "Daniel Avery + Alessandro Cortini" :album "Illusion of Time" :genre "Ambient"
+  :label "Mute Records" :year 2020 :art "illusion.jpg")
+ (:artist "Dialog" :album "Dialog" :genre "Ambient"
+  :label "Astral Industries" :year 2022 :art "dialog.jpg")
+ (:artist "Downstairs J" :album "Basement etc" :genre "Ambient"
+  :label "Incienso" :year 2021 :art "basement-etc.jpg")
+ (:artist "Future Sound of London" :album "Lifeforms" :genre "Ambient"
+  :label "Universal Music" :year 1994 :art "lifeforms.jpg")
+ (:artist "Gigi Masin & Greg Foat" :album "Dolphin" :genre "Ambient"
+  :label "Strut" :year 2023 :art "dolphin.jpg")
+ (:artist "Gigi Masin & Rod Modell" :album "Red Hair Girl at the Lighthouse Beach" :genre "Ambient"
+  :label "Silentes" :year 2023 :art "red-hair-girl.jpg")
+ (:artist "Jake Muir" :album "Lady's Mantle" :genre "Ambient"
+  :label "Sferic" :year 2018 :art "mantle.jpg")
+ (:artist "Jake Muir" :album "the hum of your veiled voice" :genre "Ambient"
+  :label "Sferic" :year 2020 :art "veiled-voice.jpg")
+ (:artist "JakoJako" :album "Metamorphose" :genre "Ambient"
+  :label "Bigamo" :year 2022 :art "metamorphose.jpg")
+ (:artist "Jeremiah Chiu & Marta Sofia Honer" :album "Recordings from the Aland Islands" :genre "Ambient"
+  :label "International Anthem" :year 2022 :art "aland-islands.jpg")
+ (:artist "Jonah Sharp & Mixmaster Morris" :album "Quiet Logic" :genre "Ambient"
+  :label "WRWTFWW Records" :year 1998 :art "quiet-logic.jpg")
+ (:artist "Rod Modell" :album "Ghost Lights" :genre "Ambient"
+  :label "Astral Industries" :year 2023 :art "ghost-lights.jpg")
+ (:artist "Rod Modell & Taka Noda" :album "Glow World" :genre "Ambient"
+  :label "Silentes" :year 2023 :art "glow-world.jpg")
+ (:artist "Sam McQueen" :album "Dreams in Sepia" :genre "Ambient"
+  :label "Mojuba Records" :year 2020 :art "dreams-in-sepia.jpg")
+ (:artist "Skee Mask" :album "ISS006" :genre "Ambient"
+  :label "Ilian Tape" :year 2020 :art "iss006.png")
+ (:artist "Sky H1" :album "Azure" :genre "Ambient"
+  :label "AD 93" :year 2021 :art "azure.jpg")
+ (:artist "Sonmi451" :album "Nachtmuziek" :genre "Ambient"
+  :label "Astral Industries" :year 2019 :art "nachtmuziek.jpg")
+ (:artist "The Detroit Escalator Company" :album "Soundtrack [313]" :genre "Ambient"
+  :label "Mental Groove Records" :year 1996 :art "soundtrack-313.jpg")
+ (:artist "The Orb" :album "The Orb's Adventures Beyond the Ultraworld" :genre "Ambient"
+  :label "Island Records" :year 1991 :art "ultraworld.jpg")
+ (:artist "Tycho" :album "Dive" :genre "Ambient"
+  :label "Ghostly" :year 2011 :art "dive.jpg")
+ (:artist "Yu Su" :album "Roll With The Punches" :genre "Ambient"
+  :label "Second Circle" :year 2019 :art "punches.jpg")
  ;; Dub
- (:artist "Andy Stott" :album "Luxury Problems" :genre "Dub" :label "Modern Love")
- (:artist "Deepchord" :album "Lanterns" :genre "Dub" :label "Astral Industries")
- (:artist "Deepchord" :album "Auratones" :genre "Dub" :label "Soma")
- (:artist "Deepchord" :album "Immersions" :genre "Dub" :label "Astral Industries")
- (:artist "Deepchord" :album "Functional Designs" :genre "Dub" :label "Soma")
- (:artist "Forest Drive West" :album "Dualism" :genre "Dub" :label "Livity Sound")
- (:artist "Forest Drive West" :album "Recursion" :genre "Dub" :label "Echocord")
- (:artist "Juan Atkins & Moritz Von Oswald" :album "Transport" :genre "Dub" :label "Tresor")
- (:artist "Monolake" :album "Hongkong" :genre "Dub" :label "Chain Reaction")
- (:artist "Porter Ricks" :album "Biokinetics" :genre "Dub" :label "Mille Plateaux")
- (:artist "Purelink" :album "Signs" :genre "Dub" :label "Peak Oil")
- (:artist "Tammo Hesselink" :album "Beam" :genre "Dub" :label "Nous'klaer")
- (:artist "Topdown Dialectic" :album "S/T 2013" :genre "Dub" :label "Peak Oil")
- (:artist "Topdown Dialectic" :album "Vol 1" :genre "Dub" :label "Peak Oil")
- (:artist "Topdown Dialectic" :album "Vol 2" :genre "Dub" :label "Peak Oil")
- (:artist "Vladislav Delay" :album "Multila" :genre "Dub" :label "Keplar")
- (:artist "Vladislav Delay" :album "Whistleblower" :genre "Dub" :label "Keplar")
- (:artist "Voices from the Lake" :album "Voices from the Lake" :genre "Dub" :label "Prologue")
- (:artist "Vril" :album "Anima Mundi" :genre "Dub" :label "Delsin")
- (:artist "Vril" :album "Animist" :genre "Dub" :label "Delsin")
- (:artist "Vril & Rodhad" :album "Out of Place Artefacts" :genre "Dub" :label "WSNWG")
- (:artist "Vril & Rodhad" :album "Out of Place Artefacts II" :genre "Dub" :label "WSNWG")    
+ (:artist "Andy Stott" :album "Luxury Problems" :genre "Dub"
+  :label "Modern Love" :year 2012 :art "luxury.jpg")
+ (:artist "Deepchord" :album "Lanterns" :genre "Dub"
+  :label "Astral Industries" :year 2014 :art "lanterns.jpg")
+ (:artist "Deepchord" :album "Auratones" :genre "Dub"
+  :label "Soma" :year 2017 :art "auratones.jpg")
+ (:artist "Deepchord" :album "Immersions" :genre "Dub"
+  :label "Astral Industries" :year 2018 :art "immersions.jpg")
+ (:artist "Deepchord" :album "Functional Designs" :genre "Dub"
+  :label "Soma" :year 2022 :art "functional.jpg")
+ (:artist "Forest Drive West" :album "Dualism" :genre "Dub"
+  :label "Livity Sound" :year 2021 :art "dualism.jpg")
+ (:artist "Forest Drive West" :album "Recursion" :genre "Dub"
+  :label "Echocord" :year 2022 :art "recursion.jpg")
+ (:artist "Juan Atkins & Moritz Von Oswald" :album "Transport" :genre "Dub"
+  :label "Tresor" :year 2016 :art "transport.jpg")
+ (:artist "Monolake" :album "Hongkong" :genre "Dub"
+  :label "Chain Reaction" :year 1997 :art "hongkong.png")
+ (:artist "Porter Ricks" :album "Biokinetics" :genre "Dub"
+  :label "Mille Plateaux" :year 1996 :art "biokinetics.jpg")
+ (:artist "Purelink" :album "Signs" :genre "Dub"
+  :label "Peak Oil" :year 2023 :art "signs.jpg")
+ (:artist "Tammo Hesselink" :album "Beam" :genre "Dub"
+  :label "Nous'klaer" :year 2023 :art "beam.jpg")
+ (:artist "Topdown Dialectic" :album "S/T 2013" :genre "Dub"
+  :label "Peak Oil" :year 2013 :art "topdown-dialectic-st.jpg")
+ (:artist "Topdown Dialectic" :album "Vol 1" :genre "Dub"
+  :label "Peak Oil" :year 2018 :art "topdown-dialectic-1.jpg")
+ (:artist "Topdown Dialectic" :album "Vol 2" :genre "Dub"
+  :label "Peak Oil" :year 2019 :art "topdown-dialectic-2.jpg")
+ (:artist "Vladislav Delay" :album "Multila" :genre "Dub"
+  :label "Keplar" :year 2000 :art "multila.jpg")
+ (:artist "Vladislav Delay" :album "Whistleblower" :genre "Dub"
+  :label "Keplar" :year 2007 :art "whistleblower.jpg")
+ (:artist "Voices from the Lake" :album "Voices from the Lake" :genre "Dub"
+  :label "Prologue" :year 2012 :art "voices-from-the-lake.jpg")
+ (:artist "Vril" :album "Anima Mundi" :genre "Dub"
+  :label "Delsin" :year 2017 :art "anima-mundi.jpg")
+ (:artist "Vril" :album "Animist" :genre "Dub"
+  :label "Delsin" :year 2023 :art "animist.jpg")
+ (:artist "Vril & Rodhad" :album "Out of Place Artefacts" :genre "Dub"
+  :label "WSNWG" :year 2020 :art "out-of-place-1.jpg")
+ (:artist "Vril & Rodhad" :album "Out of Place Artefacts II" :genre "Dub"
+ :label "WSNWG" :year 2022 :art "out-of-place-2.jpg")
  ;; Experimental
- (:artist "Amon Tobin" :album "Bricolage" :genre "Experimental" :label "Ninja Tune")
- (:artist "Amon Tobin" :album "Permutation" :genre "Experimental" :label "Ninja Tune")
- (:artist "Amon Tobin" :album "Supermodified" :genre "Experimental" :label "Ninja Tune")
- (:artist "Amon Tobin" :album "Out from Out Where" :genre "Experimental" :label "Ninja Tune")
- (:artist "Beatrice Dillon" :album "Workaround" :genre "Experimental" :label "PAN")
- (:artist "Call Super" :album "Suzi Ecto" :genre "Experimental" :label "Houndstooth")
- (:artist "Call Super" :album "Arpo" :genre "Experimental" :label "Houndstooth")
- (:artist "Fennesz" :album "Endless Summer" :genre "Experimental" :label "Editions Mego")
- (:artist "Fennesz" :album "Venice" :genre "Experimental" :label "Touch")
- (:artist "Jan Jelinek" :album "Loop-finding-jazz-records" :genre "Experimental" :label "Faitiche")
- (:artist "Max Richter" :album "The Blue Notebooks" :genre "Experimental" :label "Deutsche Grammophon")
- (:artist "Nicolas Jaar" :album "Space Is Only Noise" :genre "Experimental" :label "Circus Company")
- (:artist "Nicolas Jaar" :album "Sirens" :genre "Experimental" :label "Other People")
- (:artist "Nils Frahm" :album "Spaces" :genre "Experimental" :label "Erased Tapes")
- (:artist "Oneohtrix Point Never" :album "Returnal" :genre "Experimental" :label "Editions Mego")
- (:artist "Oval" :album "94diskont." :genre "Experimental" :label "Mille Plateaux")
- (:artist "Shuttle358" :album "Chessa" :genre "Experimental" :label "12K Records")
- (:artist "Tim Hecker" :album "Harmony in Ultraviolet" :genre "Experimental" :label "Kranky")
- (:artist "Tim Hecker" :album "Ravedeath, 1972" :genre "Experimental" :label "Kranky")
+ (:artist "Amon Tobin" :album "Bricolage" :genre "Experimental"
+  :label "Ninja Tune" :year 1997 :art "bricolage.jpg")
+ (:artist "Amon Tobin" :album "Permutation" :genre "Experimental"
+  :label "Ninja Tune" :year 1998 :art "permutation.jpg")
+ (:artist "Amon Tobin" :album "Supermodified" :genre "Experimental"
+  :label "Ninja Tune" :year 2000 :art "supermodified.jpg")
+ (:artist "Amon Tobin" :album "Out from Out Where" :genre "Experimental"
+  :label "Ninja Tune" :year 2002 :art "out-where.jpg")
+ (:artist "Beatrice Dillon" :album "Workaround" :genre "Experimental"
+  :label "PAN" :year 2020 :art "workaround.jpg")
+ (:artist "Call Super" :album "Suzi Ecto" :genre "Experimental"
+  :label "Houndstooth" :year 2014 :art "suzi-ecto.jpg")
+ (:artist "Call Super" :album "Arpo" :genre "Experimental"
+  :label "Houndstooth" :year 2017 :art "arpo.jpg")
+ (:artist "Fennesz" :album "Endless Summer" :genre "Experimental"
+  :label "Editions Mego" :year 2001 :art "endless.jpg")
+ (:artist "Fennesz" :album "Venice" :genre "Experimental"
+  :label "Touch" :year 2004 :art "venice.jpg")
+ (:artist "Jan Jelinek" :album "Loop-finding-jazz-records" :genre "Experimental"
+  :label "Faitiche" :year 2001 :art "loop-finding.jpg")
+ (:artist "Max Richter" :album "The Blue Notebooks" :genre "Experimental"
+  :label "Deutsche Grammophon" :year 2004 :art "blue-notebooks.jpg")
+ (:artist "Nicolas Jaar" :album "Space Is Only Noise" :genre "Experimental"
+  :label "Circus Company" :year 2011 :art "space-is-only-noise.jpg")
+ (:artist "Nicolas Jaar" :album "Sirens" :genre "Experimental"
+  :label "Other People" :year 2017 :art "sirens.jpg")
+ (:artist "Nils Frahm" :album "Spaces" :genre "Experimental"
+  :label "Erased Tapes" :year 2013 :art "spaces.jpg")
+ (:artist "Oneohtrix Point Never" :album "Returnal" :genre "Experimental"
+  :label "Editions Mego" :year 2010 :art "returnal.jpg")
+ (:artist "Oval" :album "94diskont." :genre "Experimental"
+  :label "Mille Plateaux" :year 1995 :art "94diskont.jpg")
+ (:artist "Shuttle358" :album "Chessa" :genre "Experimental"
+  :label "12K Records" :year 2004 :art "chessa.jpg")
+ (:artist "Tim Hecker" :album "Harmony in Ultraviolet" :genre "Experimental"
+  :label "Kranky" :year 2006 :art "ultraviolet.png")
+ (:artist "Tim Hecker" :album "Ravedeath, 1972" :genre "Experimental"
+  :label "Kranky" :year 2011 :art "ravedeath.jpg")
  ;; IDM
- (:artist "Abfahrt Hinwil" :album "Links Berge Rechts Seen" :genre "IDM" :label "Lapsus Records")
- (:artist "Aoki Takamasa" :album "RV8" :genre "IDM" :label "Raster-Noton")
- (:artist "Aphex Twin" :album "Syro" :genre "IDM" :label "Warp")
- (:artist "Arovane" :album "Tides" :genre "IDM" :label "Keplar")
- (:artist "Arovane" :album "Atol Scrap" :genre "IDM" :label "Keplar")
- (:artist "Autechre" :album "Tri Repetae" :genre "IDM" :label "Warp")
- (:artist "Autechre" :album "Chiastic Slide" :genre "IDM" :label "Warp")
- (:artist "Autechre" :album "LP5" :genre "IDM" :label "Warp")
- (:artist "Brainwaltzera" :album "ITSAME" :genre "IDM" :label "FILM")
- (:artist "Datach'i" :album "Bones" :genre "IDM" :label "Timesig")
- (:artist "Datassette" :album "Sentinel" :genre "IDM" :label "Lapsus Records")
- (:artist "Galaxian" :album "Coming Up for Air" :genre "Techno" :label "Ilian Tape")
- (:artist "Gimmik" :album "Slow Motion Process" :genre "IDM" :label "Lapsus Records")
- (:artist "James Holden" :album "Imagine This Is a High Dimensional Space" :genre "IDM" :label "Border Community")
- (:artist "Kettel" :album "Myam James Part I" :genre "IDM" :label "Lapsus Records")
- (:artist "Kettel" :album "My Dogan" :genre "IDM" :label "Lapsus Records")
- (:artist "Objekt" :album "Objekt #2" :genre "IDM" :label "Objekt")
- (:artist "Objekt" :album "Flatland" :genre "IDM" :label "PAN")
- (:artist "Objekt" :album "Hypnagogia" :genre "IDM" :label "Leisure System")
- (:artist "Paperclip Minimiser" :album "Paperclip Minimiser" :genre "IDM" :label "Peak Oil")
- (:artist "Patricia" :album "Several Shades of the Same Color" :genre "IDM" :label "Spectral Sound")
- (:artist "Patricia" :album "Blue Ridge" :genre "IDM" :label "Analogical Force")
- (:artist "Patricia" :album "Less than 7" :genre "IDM" :label "Acid Test")
- (:artist "Plaid" :album "Feorm Falarx" :genre "IDM" :label "Warp")
- (:artist "Roel Funcken" :album "Sapper Morton" :genre "IDM" :label "Analogical Force")
- (:artist "Roel Funcken" :album "Hexavalent" :genre "IDM" :label "Analogical Force")
- (:artist "RTR" :album "Symmetriades" :genre "IDM" :label "Analogical Force")
- (:artist "Shinra" :album "Meteor" :genre "IDM" :label "Analogical Force")
- (:artist "Shinra" :album "Supernova" :genre "IDM" :label "Analogical Force")
- (:artist "Shinra" :album "Vital Heat" :genre "IDM" :label "Analogical Force")
- (:artist "Shinra" :album "Darkroom" :genre "IDM" :label "Craigie Knowes")
- (:artist "Shinra" :album "Surface" :genre "IDM" :label "Analogical Force")
- (:artist "Squarepusher" :album "Feed Me Weird Things" :genre "IDM" :label "Warp")
- (:artist "u-Ziq" :album "Magic Pony Ride" :genre "IDM" :label "Planet Mu")
- (:artist "Venetian Snares" :album "Rossz Csillag Alatt Szuletett" :genre "IDM" :label "Planet Mu")
+ (:artist "Abfahrt Hinwil" :album "Links Berge Rechts Seen" :genre "IDM"
+  :label "Lapsus Records" :year 2002 :art "berge-rechts.jpg")
+ (:artist "Aoki Takamasa" :album "RV8" :genre "IDM"
+  :label "Raster-Noton" :year 2013 :art "rv8.jpg")
+ (:artist "Aphex Twin" :album "Syro" :genre "IDM"
+  :label "Warp" :year 2014 :genre "syro.jpg")
+ (:artist "Arovane" :album "Tides" :genre "IDM"
+  :label "Keplar" :year 2000 :art "tides.jpg")
+ (:artist "Arovane" :album "Atol Scrap" :genre "IDM"
+  :label "Keplar" :year 2000 :art "atol-scrap.jpg")
+ (:artist "Autechre" :album "Tri Repetae" :genre "IDM"
+  :label "Warp" :year 1995 :art "repetae.jpg")
+ (:artist "Autechre" :album "Chiastic Slide" :genre "IDM"
+  :label "Warp" :year 1997 :art "chiastic.jpg")
+ (:artist "Autechre" :album "LP5" :genre "IDM"
+  :label "Warp" :year 1998 :art "lp5.jpg")
+ (:artist "Brainwaltzera" :album "ITSAME" :genre "IDM"
+  :label "FILM" :year 2022 :art "itsame.jpg")
+ (:artist "Datach'i" :album "Bones" :genre "IDM"
+  :label "Timesig" :year 2019 :art "bones.jpg")
+ (:artist "Datassette" :album "Sentinel" :genre "IDM"
+  :label "Lapsus Records" :year 2022 :art "sentinel.jpg")
+ (:artist "Galaxian" :album "Coming Up for Air" :genre "IDM"
+  :label "Ilian Tape" :year 2019 :art "coming-up.png")
+ (:artist "Gimmik" :album "Slow Motion Process" :genre "IDM"
+  :label "Lapsus Records" :year 2001 :art "slow-motion.jpg")
+ (:artist "James Holden" :album "Imagine This Is a High Dimensional Space" :genre "IDM"
+  :label "Border Community" :year 2023 :art "high-dimensional.jpg")
+ (:artist "Kettel" :album "Myam James Part I" :genre "IDM"
+  :label "Lapsus Records" :year 2008 :art "myam-james-1.jpg")
+ (:artist "Kettel" :album "My Dogan" :genre "IDM"
+  :label "Lapsus Records" :year 2006 :art "my-dogan.jpg")
+ (:artist "Objekt" :album "Objekt #2" :genre "IDM"
+  :label "Objekt" :year 2011 :art "objekt-2.jpg")
+ (:artist "Objekt" :album "Flatland" :genre "IDM"
+  :label "PAN" :year 2014 :art "flatland.jpg")
+ (:artist "Objekt" :album "Hypnagogia" :genre "IDM"
+  :label "Leisure System" :year 2014 :art "hypnagogia.jpg")
+ (:artist "Paperclip Minimiser" :album "Paperclip Minimiser" :genre "IDM"
+  :label "Peak Oil" :year 2022 :art "paperclip-minimiser.jpg")
+ (:artist "Patricia" :album "Several Shades of the Same Color" :genre "IDM"
+  :label "Spectral Sound" :year 2017 :art "several-shades.jpg")
+ (:artist "Patricia" :album "Blue Ridge" :genre "IDM"
+  :label "Analogical Force" :year 2021 :art "blue-ridge.jpg")
+ (:artist "Patricia" :album "Less than 7" :genre "IDM"
+  :label "Acid Test" :year 2022 :art "less-than-7.jpg")
+ (:artist "Plaid" :album "Feorm Falarx" :genre "IDM"
+  :label "Warp" :year 2022 :art "feorm-falarx.jpg")
+ (:artist "Roel Funcken" :album "Sapper Morton" :genre "IDM"
+  :label "Analogical Force" :year 2018 :art "sapper-morton.jpg")
+ (:artist "Roel Funcken" :album "Hexavalent" :genre "IDM"
+  :label "Analogical Force" :year 2022 :art "hexavalent.jpg")
+ (:artist "RTR" :album "Symmetriades" :genre "IDM"
+  :label "Analogical Force" :year 2020 :art "symmetriades.jpg")
+ (:artist "Shinra" :album "Meteor" :genre "IDM"
+  :label "Analogical Force" :year 2017 :art "meteor.jpg")
+ (:artist "Shinra" :album "Supernova" :genre "IDM"
+  :label "Analogical Force" :year 2018 :art "supernova.jpg")
+ (:artist "Shinra" :album "Vital Heat" :genre "IDM"
+  :label "Analogical Force" :year 2018 :art "vital-heat.jpg")
+ (:artist "Shinra" :album "Darkroom" :genre "IDM"
+  :label "Craigie Knowes" :year 2019 :art "darkroom.jpg")
+ (:artist "Shinra" :album "Surface" :genre "IDM"
+  :label "Analogical Force" :year 2022 :art "surface.jpg")
+ (:artist "Squarepusher" :album "Feed Me Weird Things" :genre "IDM"
+  :label "Warp" :year 1996 :art "feed-me-weird-things.jpg")
+ (:artist "u-Ziq" :album "Magic Pony Ride" :genre "IDM"
+  :label "Planet Mu" :year 2022 :art "magic-pony-ride.jpg")
+ (:artist "Venetian Snares" :album "Rossz Csillag Alatt Szuletett" :genre "IDM"
+  :label "Planet Mu" :year 2005 :art "rossz-csillag.jpg")
  ;; Techno
- (:artist "Andrea" :album "Outlines" :genre "Techno" :label "Ilian Tape")
- (:artist "Andrea" :album "Ritorno" :genre "Techno" :label "Ilian Tape")
- (:artist "Andrea" :album "Due In Color" :genre "Techno" :label "Ilian Tape")
- (:artist "Aurora Halal" :album "Liquiddity" :genre "Techno" :label "Mutual Dreaming")
- (:artist "Barker" :album "Debiasing" :genre "Techno" :label "Ostgut Ton")
- (:artist "Barker" :album "Utility" :genre "Techno" :label "Ostgut Ton")
- (:artist "Barker" :album "BARKER001" :genre "Techno" :label "Ostgut Ton")
- (:artist "Barker" :album "BARKER002" :genre "Techno" :label "Ostgut Ton")
- (:artist "Ben Klock" :album "Before One" :genre "Techno" :label "Ostgut Ton")
- (:artist "Burial" :album "Burial" :genre "Techno" :label "Hyperdub")
- (:artist "Burial" :album "Untrue" :genre "Techno" :label "Hyperdub")
- (:artist "Burial" :album "Kindred" :genre "Techno" :label "Hyperdub")
- (:artist "Clark" :album "Clark" :genre "Techno" :label "Warp")
- (:artist "Clark" :album "Superscope" :genre "Techno" :label "Warp")
- (:artist "Com Truise" :album "Galactic Melt" :genre "Techno" :label "Ghostly")
- (:artist "Com Truise" :album "Iteration" :genre "Techno" :label "Ghostly")
- (:artist "Daniel Avery" :album "Drone Logic" :genre "Techno" :label "Phantasy Sound")
- (:artist "Daniel Avery" :album "Song for Alpha" :genre "Techno" :label "Phantasy Sound")
- (:artist "Daniel Avery" :album "Ultra Truth" :genre "Techno" :label "Phantasy Sound")
- (:artist "Djrum" :album "Broken Glass Arch" :genre "Techno" :label "R&S Records")
- (:artist "Djrum" :album "Portrait in Firewood" :genre "Techno" :label "R&S Records")
- (:artist "Djrum" :album "Hard to Say / Tournesol" :genre "Techno" :label "R&S Records")
- (:artist "Drexciya" :album "Neptune's Lair" :genre "Techno" :label "Tresor")
- (:artist "Drexciya" :album "Harnessed the Storm" :genre "Techno" :label "Tresor")
- (:artist "Floating Points" :album "J&W Beat" :genre "Techno" :label "Planet Mu")
- (:artist "Floating Points" :album "Shadows" :genre "Techno" :label "Eglo Records")
- (:artist "Floating Points" :album "Elaenia" :genre "Techno" :label "Luaka Bop")
- (:artist "Floating Points" :album "Kuiper" :genre "Techno" :label "Luaka Bop")
- (:artist "Floating Points" :album "Crush" :genre "Techno" :label "Ninja Tune")
- (:artist "Four Tet" :album "Rounds" :genre "Techno" :label "Domino")
- (:artist "Four Tet" :album "There Is Love In You" :genre "Techno" :label "Domino")
- (:artist "Function" :album "Variance 1-3" :genre "Techno" :label "Sandwell District")
- (:artist "Function" :album "Recompiled I/II" :genre "Techno" :label "Ostgut Ton")
- (:artist "Function" :album "Recompiled II/II" :genre "Techno" :label "Ostgut Ton")
- (:artist "Function" :album "Incubation" :genre "Techno" :label "Ostgut Ton")
- (:artist "Function" :album "Existenz" :genre "Techno" :label "Tresor")
- (:artist "Function" :album "Awakening from the Illusory Self" :genre "Techno" :label "Tresor")
- (:artist "Gacha Bakradze" :album "Obscure Languages" :genre "IDM" :label "Lapsus Records")
- (:artist "Gacha Bakradze" :album "Forget" :genre "IDM" :label "Oath Records")
- (:artist "HVL" :album "Ostati" :genre "Techno" :label "Organic Analogue")
- (:artist "HVL" :album "Rhythmic Sonatas" :genre "Techno" :label "Bassiani")
- (:artist "HVL" :album "Alignment EP" :genre "Techno" :label "Appian Sounds")
- (:artist "HVL" :album "Aura Fossil EP" :genre "Techno" :label "Appian Sounds")
- (:artist "HVL" :album "Vessel" :genre "Techno" :label "System Revival")
- (:artist "JakoJako" :album "Lux" :genre "Techno" :label "Leisure System")
- (:artist "JakoJako & Rodhad" :album "In Vere" :genre "Techno" :label "WSNWG")
- (:artist "John Tejada" :album "Signs Under Test" :genre "Techno" :label "Kompakt")
- (:artist "Jon Hopkins" :album "Immunity" :genre "Techno" :label "Domino")
- (:artist "Jon Hopkins" :album "Singularity" :genre "Techno" :label "Domino")
- (:artist "Kangding Ray" :album "Solens Arc" :genre "Techno" :label "Raster-Noton")
- (:artist "Kangding Ray" :album "Hyper Opal Mantis" :genre "Techno" :label "Stroboscopic Artefacts")
- (:artist "Kangding Ray" :album "Ultrachroma" :genre "Techno" :label "Ara Records")
- (:artist "Karenn" :album "Music Sounds Better with Shoe" :genre "Techno" :label "Voam")
- (:artist "Kessler" :album "Ambivalent" :genre "Techno" :label "Shall Not Fade")
- (:artist "Leon Vynehall" :album "Music for the Uninvited" :genre "Techno" :label "3024")
- (:artist "Leon Vynehall" :album "Rojus (Designed to Dance)" :genre "Techno" :label "Running Back")
- (:artist "Leon Vynehall" :album "Rare, Forever" :genre "Techno" :label "Ninja Tune")
- (:artist "Lone" :album "Levitate" :genre "Techno" :label "R&S Records")
- (:artist "Machinedrum" :album "Room(s)" :genre "Techno" :label "Planet Mu")
- (:artist "Machinedrum" :album "Vapor City" :genre "Techno" :label "Ninja Tune")
- (:artist "Machinedrum" :album "A View of U" :genre "Techno" :label "Ninja Tune")
- (:artist "Moderat" :album "II" :genre "Techno" :label "Monkeytown Records")
- (:artist "Neon Chambers" :album "One" :genre "Techno" :label "Dekmantel")
- (:artist "Overmono" :album "BMW Track / So U Kno" :genre "Techno" :label "Poly Kicks")
- (:artist "Pearson Sound" :album "Alien Mode EP" :genre "Techno" :label "Hessle Audio")
- (:artist "Prodigy" :album "The Fat of the Land" :genre "Techno" :label "XL Recordings")
- (:artist "Sandwell District" :album "Feed-Forward" :genre "Techno" :label "The Point of Departure")
- (:artist "Shawn Rudiman" :album "Conduit" :genre "Techno" :label "Pittsburgh Tracks")
- (:artist "Shawn Rudiman" :album "Flow State" :genre "Techno" :label "Pittsburgh Tracks")
- (:artist "Shed" :album "Shedding the Past" :genre "Techno" :label "Ostgut Ton")
- (:artist "Shed" :album "The Traveller" :genre "Techno" :label "Ostgut Ton")
- (:artist "Skee Mask" :album "Compro" :genre "Techno" :label "Ilian Tape")
- (:artist "Skee Mask" :album "Pool" :genre "Techno" :label "Ilian Tape")
- (:artist "Skee Mask" :album "ISS007" :genre "Techno" :label "Ilian Tape")
- (:artist "Special Request" :album "Soul Music" :genre "Techno" :label "Houndstooth")
- (:artist "Stenny" :album "Stress Test" :genre "Techno" :label "Ilian Tape")
- (:artist "Stenny" :album "Upsurge" :genre "Techno" :label "Ilian Tape")
- (:artist "Surgeon" :album "Crash Recoil" :genre "Techno" :label "Tresor")
- (:artist "The Field" :album "Looping State of Mind" :genre "Techno" :label "Kompakt")
- (:artist "Thom Yorke + Four Tet + Burial" :album "Ego / Mirror" :genre "Techno" :label "Text Records")
- (:artist "Thom Yorke + Four Tet + Burial" :album "Her Revolution / His Rope" :genre "Techno" :label "Text Records")
- (:artist "Tobias" :album "1972" :genre "Techno" :label "Ostgut Ton")
- (:artist "Underworld" :album "dubnobasswithmyheadman" :genre "Techno" :label "Universal")
- (:artist "Various Artists" :album "Tresor 30" :genre "Techno" :label "Tresor")
- (:artist "Wata Igarashi & Voiski" :album "9719" :genre "Techno" :label "Delsin")
- (:artist "Wata Igarashi" :album "New Dawn" :genre "Techno" :label "Figure 8")
- (:artist "Xyla" :album "Ways" :genre "Techno" :label "Leaving Records")
- (:artist "Dario Zenker" :album "Reflection" :genre "Techno" :label "Ilian Tape")
- (:artist "Marco Zenker" :album "Channel Balance" :genre "Techno" :label "Ilian Tape")
+ (:artist "Andrea" :album "Outlines" :genre "Techno"
+  :label "Ilian Tape" :year 2015 :art "outlines.png")
+ (:artist "Andrea" :album "Ritorno" :genre "Techno"
+  :label "Ilian Tape" :year 2020 :art "ritorno.jpg")
+ (:artist "Andrea" :album "Due In Color" :genre "Techno"
+  :label "Ilian Tape" :year 2023 :art "in-color.jpg")
+ (:artist "Aurora Halal" :album "Liquiddity" :genre "Techno"
+  :label "Mutual Dreaming" :year 2019 :art "liquiddity.jpg")
+ (:artist "Barker" :album "Debiasing" :genre "Techno"
+  :label "Ostgut Ton" :year 2018 :art "debiasing.jpg")
+ (:artist "Barker" :album "Utility" :genre "Techno"
+  :label "Ostgut Ton" :year 2019 :art "utility.jpg")
+ (:artist "Barker" :album "BARKER001" :genre "Techno"
+  :label "Ostgut Ton" :year 2019 :art "barker-1.jpg")
+ (:artist "Barker" :album "BARKER002" :genre "Techno"
+  :label "Ostgut Ton" :year 2021 :art "barker-2.jpg")
+ (:artist "Ben Klock" :album "Before One" :genre "Techno"
+  :label "Ostgut Ton" :year 2009 :art "before-one.jpg")
+ (:artist "Burial" :album "Burial" :genre "Techno"
+  :label "Hyperdub" :year 2006 :art "burial.png")
+ (:artist "Burial" :album "Untrue" :genre "Techno"
+  :label "Hyperdub" :year 2007 :art "untrue.png")
+ (:artist "Burial" :album "Kindred" :genre "Techno"
+  :label "Hyperdub" :year 2012 :art "kindred.jpg")
+ (:artist "Clark" :album "Clark" :genre "Techno"
+  :label "Warp" :year 2014 :art "clark.jpg")
+ (:artist "Clark" :album "Superscope" :genre "Techno"
+  :label "Warp" :year 2014 :art "superscope.jpg")
+ (:artist "Com Truise" :album "Galactic Melt" :genre "Techno"
+  :label "Ghostly" :year 2011 :art "galactic.jpg")
+ (:artist "Com Truise" :album "Iteration" :genre "Techno"
+  :label "Ghostly" :year 2017 :art "iteration.jpg")
+ (:artist "Daniel Avery" :album "Drone Logic" :genre "Techno"
+  :label "Phantasy Sound" :year 2013 :art "drone.jpg")
+ (:artist "Daniel Avery" :album "Song for Alpha" :genre "Techno"
+  :label "Phantasy Sound" :year 2018 :art "alpha.jpg")
+ (:artist "Daniel Avery" :album "Ultra Truth" :genre "Techno"
+  :label "Phantasy Sound" :year 2022 :art "ultra.jpg")
+ (:artist "Djrum" :album "Broken Glass Arch" :genre "Techno"
+  :label "R&S Records" :year 2017 :art "glass-arch.jpg")
+ (:artist "Djrum" :album "Portrait with Firewood" :genre "Techno"
+  :label "R&S Records" :year 2018 :art "firewood.jpg")
+ (:artist "Djrum" :album "Hard to Say / Tournesol" :genre "Techno"
+  :label "R&S Records" :year 2019 :art "hard-to-say.jpg")
+ (:artist "Drexciya" :album "Neptune's Lair" :genre "Techno"
+  :label "Tresor" :year 1999 :art "neptune.jpg")
+ (:artist "Drexciya" :album "Harnessed the Storm" :genre "Techno"
+  :label "Tresor" :year 2002 :art "harnessed.jpg")
+ (:artist "Floating Points" :album "J&W Beat" :genre "Techno"
+  :label "Planet Mu" :year :art "jw-beat.jpg")
+ (:artist "Floating Points" :album "Shadows" :genre "Techno"
+  :label "Eglo Records" :year 2011 :art "shadows.jpg")
+ (:artist "Floating Points" :album "Elaenia" :genre "Techno"
+  :label "Luaka Bop" :year 2015 :art "elaenia.jpg")
+ (:artist "Floating Points" :album "Kuiper" :genre "Techno"
+  :label "Luaka Bop" :year 2016 :art "kuiper.jpg")
+ (:artist "Floating Points" :album "Crush" :genre "Techno"
+  :label "Ninja Tune" :year 2019 :art "crush.jpg")
+ (:artist "Four Tet" :album "Rounds" :genre "Techno"
+  :label "Domino" :year 2003 :art "rounds.jpg")
+ (:artist "Four Tet" :album "There Is Love In You" :genre "Techno"
+  :label "Domino" :year 2010 :art "there-is-love.jpg")
+ (:artist "Function" :album "Variance 1-3" :genre "Techno"
+  :label "Sandwell District" :year 2010 :art "variance.jpg")
+ (:artist "Function" :album "Recompiled I/II" :genre "Techno"
+  :label "Ostgut Ton" :year 2017 :art "recompiled-1.jpg")
+ (:artist "Function" :album "Recompiled II/II" :genre "Techno"
+  :label "Ostgut Ton" :year 2017 :art "recompiled-2.jpg")
+ (:artist "Function" :album "Incubation" :genre "Techno"
+  :label "Ostgut Ton" :year 2013 :art "incubation.jpg")
+ (:artist "Function" :album "Existenz" :genre "Techno"
+  :label "Tresor" :year 2019 :art "existenz.png")
+ (:artist "Function" :album "Awakening from the Illusory Self" :genre "Techno"
+  :label "Tresor" :year 2021 :art "illusory-self.jpg")
+ (:artist "Gacha Bakradze" :album "Obscure Languages" :genre "IDM"
+  :label "Lapsus Records" :year 2021 :art "obscure.jpg")
+ (:artist "Gacha Bakradze" :album "Forget" :genre "IDM"
+  :label "Oath Records" :year 2023 :art "forget.jpg")
+ (:artist "HVL" :album "Ostati" :genre "Techno"
+  :label "Organic Analogue" :year 2018 :art "ostati.jpg")
+ (:artist "HVL" :album "Rhythmic Sonatas" :genre "Techno"
+  :label "Bassiani" :year 2019 :art "sonatas.png")
+ (:artist "HVL" :album "Alignment EP" :genre "Techno"
+  :label "Appian Sounds" :year 2020 :art "alignment.jpg")
+ (:artist "HVL" :album "Aura Fossil EP" :genre "Techno"
+  :label "Appian Sounds" :year 2020 :art "auro-fossil.jpg)
+ (:artist "HVL" :album "Vessel" :genre "Techno"
+  :label "System Revival" :year 2021 :art "vessel.jpg")
+ (:artist "JakoJako" :album "Lux" :genre "Techno"
+  :label "Leisure System" :year 2021 :art "lux.jpg")
+ (:artist "JakoJako & Rodhad" :album "In Vere" :genre "Techno"
+  :label "WSNWG" :year 2022 :art "in-vere.jpg")
+ (:artist "John Tejada" :album "Signs Under Test" :genre "Techno"
+  :label "Kompakt" :year 2015 :art "signs-under-test.jpg")
+ (:artist "Jon Hopkins" :album "Immunity" :genre "Techno"
+  :label "Domino" :year 2013 :art "immunity.png")
+ (:artist "Jon Hopkins" :album "Singularity" :genre "Techno"
+  :label "Domino" :year 2017 :art "singularity.jpg")
+ (:artist "Kangding Ray" :album "Solens Arc" :genre "Techno"
+  :label "Raster-Noton" :year 2014 :art "solens-arc.jpg")
+ (:artist "Kangding Ray" :album "Hyper Opal Mantis" :genre "Techno"
+  :label "Stroboscopic Artefacts" :year 2017 :art "hyper-opal.jpg")
+ (:artist "Kangding Ray" :album "Ultrachroma" :genre "Techno"
+  :label "Ara Records" :year 2022 :art "ultrachroma.jpg")
+ (:artist "Karenn" :album "Music Sounds Better with Shoe" :genre "Techno"
+  :label "Voam" :year 2020 :art "better-with-shoe.jpg")
+ (:artist "Kessler" :album "Ambivalent" :genre "Techno"
+  :label "Shall Not Fade" :year 2021 :art "ambivalent.jpg")
+ (:artist "Leon Vynehall" :album "Music for the Uninvited" :genre "Techno"
+  :label "3024" :year 2014 :art "uninvited.jpg")
+ (:artist "Leon Vynehall" :album "Rojus (Designed to Dance)" :genre "Techno"
+  :label "Running Back" :year 2016 :art "rojus.jpg")
+ (:artist "Leon Vynehall" :album "Rare, Forever" :genre "Techno"
+  :label "Ninja Tune" :year 2021 :art "rare-forever.jpg")
+ (:artist "Lone" :album "Levitate" :genre "Techno"
+  :label "R&S Records" :year 2016 :art "levitate.jpg")
+ (:artist "Machinedrum" :album "Room(s)" :genre "Techno"
+  :label "Planet Mu" :year 2011 :art "room(s).jpg")
+ (:artist "Machinedrum" :album "Vapor City" :genre "Techno"
+  :label "Ninja Tune" :year 2013 :art "vapor-city.jpg")
+ (:artist "Machinedrum" :album "A View of U" :genre "Techno"
+  :label "Ninja Tune" :year 2020 :art "a-view-of-u.jpg")
+ (:artist "Moderat" :album "II" :genre "Techno"
+  :label "Monkeytown Records" :year 2013 :art "II.jpg")
+ (:artist "Neon Chambers" :album "One" :genre "Techno"
+  :label "Dekmantel" :year 2019 :art "one.jpg")
+ (:artist "Overmono" :album "BMW Track / So U Kno" :genre "Techno"
+  :label "Poly Kicks" :year 2021 :art "so-u-kno.png")
+ (:artist "Pearson Sound" :album "Alien Mode EP" :genre "Techno"
+  :label "Hessle Audio" :year 2021 :art "alien-mode.jpg")
+ (:artist "Plastikman" :album "Sheet One" :genre "Techno"
+  :label "NovaMute" :year 1993 :art "sheet-one.jpg")
+ (:artist "Prodigy" :album "The Fat of the Land" :genre "Techno"
+  :label "XL Recordings" :year 1997 :art "fat-of-the-land.jpg")
+ (:artist "Sandwell District" :album "Feed-Forward" :genre "Techno"
+  :label "The Point of Departure" :year 2010 :art "feed-forward.jpg")
+ (:artist "Shawn Rudiman" :album "Conduit" :genre "Techno"
+  :label "Pittsburgh Tracks" :year 2020 :art "conduit.jpg")
+ (:artist "Shawn Rudiman" :album "Flow State" :genre "Techno"
+  :label "Pittsburgh Tracks" :year 2021 :art "flow-state.jpg")
+ (:artist "Shed" :album "Shedding the Past" :genre "Techno"
+  :label "Ostgut Ton" :year 2008 :art "shedding-the-past.jpg")
+ (:artist "Shed" :album "The Traveller" :genre "Techno"
+  :label "Ostgut Ton" :year 2010 :art "the-traveller.jpg")
+ (:artist "Skee Mask" :album "Compro" :genre "Techno"
+  :label "Ilian Tape" :year 2017 :art "compro.jpg")
+ (:artist "Skee Mask" :album "Pool" :genre "Techno"
+  :label "Ilian Tape" :year 2021 :art "pool.jpg")
+ (:artist "Skee Mask" :album "ISS007" :genre "Techno"
+  :label "Ilian Tape" :year 2020 :art "iss007.jpg")
+ (:artist "Special Request" :album "Soul Music" :genre "Techno"
+  :label "Houndstooth" :year 2013 :art "soul-music.jpg")
+ (:artist "Stenny" :album "Stress Test" :genre "Techno"
+  :label "Ilian Tape" :year 2019 :art "stress-test.png")
+ (:artist "Stenny" :album "Upsurge" :genre "Techno"
+  :label "Ilian Tape" :year 2019 :art "upsurge.jpg")
+ (:artist "Surgeon" :album "Crash Recoil" :genre "Techno"
+  :label "Tresor" :year 2023 :art "crash-recoil.jpg")
+ (:artist "The Field" :album "Looping State of Mind" :genre "Techno"
+  :label "Kompakt" :year 2011 :art "looping-state.jpg")
+ (:artist "Thom Yorke + Four Tet + Burial" :album "Ego / Mirror" :genre "Techno"
+  :label "Text Records" :year 2011 :art "ego-mirror.jpg")
+ (:artist "Thom Yorke + Four Tet + Burial" :album "Her Revolution / His Rope" :genre "Techno"
+  :label "Text Records" :year 2020 :art "his-rope.jpg")
+ (:artist "Tobias" :album "1972" :genre "Techno"
+  :label "Ostgut Ton" :year 2020 :art "1972.jpg")
+ (:artist "Underworld" :album "dubnobasswithmyheadman" :genre "Techno"
+  :label "Universal" :year 1994 :art "dubnobasswithmyheadman.jpg")
+ (:artist "Various Artists" :album "Tresor 30" :genre "Techno"
+  :label "Tresor" :year 2021 :art "tresor-30.png")
+ (:artist "Wata Igarashi & Voiski" :album "9719" :genre "Techno"
+  :label "Delsin" :year 2020 :art "9719.jpg")
+ (:artist "Wata Igarashi" :album "New Dawn" :genre "Techno"
+  :label "Figure 8" :year 2021 :art "new-dawn.jpg")
+ (:artist "Xyla" :album "Ways" :genre "Techno"
+  :label "Leaving Records" :year 2021 :art "ways.jpg")
+ (:artist "Dario Zenker" :album "Reflection" :genre "Techno"
+  :label "Ilian Tape" :year 2023 :art "reflection.jpg")
+ (:artist "Marco Zenker" :album "Channel Balance" :genre "Techno"
+  :label "Ilian Tape" :year 2022 :art "channel-balance.jpg")
  ;; Hip Hop
- (:artist "Aesop Rock" :album "Labor Days" :genre "Hip Hop")
- (:artist "A Tribe Called Quest" :album "The Low End Theory" :genre "Hip Hop")
- (:artist "Bibio" :album "Ambivalence Avenue" :genre "Hip Hop")
- (:artist "Deltron 3030" :album "Deltron 3030" :genre "Hip Hop")
- (:artist "Flying Lotus" :album "Cosmogramma" :genre "Hip Hop")
- (:artist "Flying Lotus" :album "Until the Quiet Comes" :genre "Hip Hop")
- (:artist "Freddie Gibbs & Madlib" :album "Pinata" :genre "Hip Hop")
- (:artist "Fugees" :album "The Score" :genre "Hip Hop")
- (:artist "Ghostface Killah" :album "Fishscale" :genre "Hip Hop")
- (:artist "Gorillaz" :album "Demon Dayz" :genre "Hip Hop")
- (:artist "J Dilla" :album "Donuts" :genre "Hip Hop")
- (:artist "JID" :album "Forever Story" :genre "Hip Hop")
- (:artist "Kendrick Lamar" :album "good kid, m.A.A.d City" :genre "Hip Hop")
- (:artist "MF Doom" :album "Operation: Doomsday" :genre "Hip Hop")
- (:artist "Mr Dibbs" :album "Primitive Tracks" :genre "Hip Hop")
- (:artist "Outkast" :album "Aquemini" :genre "Hip Hop")
- (:artist "Teebs" :album "Ardour" :genre "Hip Hop")
- (:artist "Teebs" :album "Anicca" :genre "Hip Hop")
- (:artist "The Avalanches" :album "Since I Left You" :genre "Hip Hop")
+ (:artist "Aesop Rock" :album "Labor Days" :genre "Hip Hop"
+  :label "Def Jux" :year 2001 :art "labor.jpg")
+ (:artist "A Tribe Called Quest" :album "The Low End Theory" :genre "Hip Hop"
+  :label "Jive" :year 1991 :art "low-end.jpg")
+ (:artist "Bibio" :album "Ambivalence Avenue" :genre "Hip Hop"
+  :label "Warp" :year 2009 :art "ambivalence.jpg")
+ (:artist "Deltron 3030" :album "Deltron 3030" :genre "Hip Hop"
+  :label "75 Ark" :year 2000 :art "deltron.jpg")
+ (:artist "Flying Lotus" :album "Cosmogramma" :genre "Hip Hop"
+  :label "Warp" :year 2010 :art "cosmogramma.jpg")
+ (:artist "Flying Lotus" :album "Until the Quiet Comes" :genre "Hip Hop"
+  :label "Warp" :year 2012 :art "quiet-comes.jpg")
+ (:artist "Freddie Gibbs & Madlib" :album "Pinata" :genre "Hip Hop"
+  :label "Madlib Invazion" :year 2014 :art "pinata.jpg")
+ (:artist "Fugees" :album "The Score" :genre "Hip Hop"
+  :label "Ruffhouse Records" :year 1996 :art "the-score.jpg")
+ (:artist "Ghostface Killah" :album "Fishscale" :genre "Hip Hop"
+  :label "Def Jam Recordings" :year 2006 :art "fishscale.jpg")
+ (:artist "Gorillaz" :album "Demon Days" :genre "Hip Hop"
+  :label "Virgin" :year 2005 :art "demon-days.jpg")
+ (:artist "J Dilla" :album "Donuts" :genre "Hip Hop"
+  :label "Stones Throw" :year 2006 :art "donuts.jpg")
+ (:artist "JID" :album "Forever Story" :genre "Hip Hop"
+  :label "Dreamville" :year 2022 :art "forever-story.jpg")
+ (:artist "Kendrick Lamar" :album "good kid, m.A.A.d City" :genre "Hip Hop"
+  :label "Top Dawg Entertainment" :year 2012 :art "good-kid.jpg")
+ (:artist "MF Doom" :album "Operation: Doomsday" :genre "Hip Hop"
+  :label "Metal Face" :year 1999 :art "doomsday.jpg")
+ (:artist "Mr Dibbs" :album "Primitive Tracks" :genre "Hip Hop"
+  :label "Cease and Desist" :year 2000 :art "primitive.jpg")
+ (:artist "Outkast" :album "Aquemini" :genre "Hip Hop"
+  :label "LaFace Records" :year 1998 :art "aquemini.jpg")
+ (:artist "Teebs" :album "Ardour" :genre "Hip Hop"
+  :label "Brainfeeder" :year 2010 :art "ardour.png")
+ (:artist "Teebs" :album "Anicca" :genre "Hip Hop"
+  :label "Brainfeeder" :year 2019 :art "anicca.jpg")
+ (:artist "The Avalanches" :album "Since I Left You" :genre "Hip Hop"
+  :label "Astralwerks" :year 2001 :art "since-i-left-you.jpg")
  ;; Jazz
- (:artist "Bill Evans" :album "The Tokyo Concert" :genre "Jazz")
- (:artist "Bill Evans Trio" :album "Waltz for Debby" :genre "Jazz")
- (:artist "Dave Brubeck Quartet" :album "Time Out" :genre "Jazz")
- (:artist "Fergus McCreadie" :album "Cairn" :genre "Jazz")
- (:artist "Floating Points + Pharaoh Sanders" :album "Promises" :genre "Jazz")
- (:artist "Herbie Hancock" :album "Maiden Voyage" :genre "Jazz")
- (:artist "Jasmine Myra" :album "Horizons" :genre "Jazz")
- (:artist "John Coltrane" :album "Blue Train" :genre "Jazz")
- (:artist "John Coltrane" :album "Live at the Village Vanguard" :genre "Jazz")
- (:artist "Kamasi Washington" :album "Harmony of Difference" :genre "Jazz")
- (:artist "Kokoroko" :album "Kokoroko" :genre "Jazz")
- (:artist "Lee Morgan" :album "The Sidewinder" :genre "Jazz")
- (:artist "Makaya McCraven" :album "In These Times" :genre "Jazz")
- (:artist "Miles Davis" :album "Kind of Blue" :genre "Jazz")
- (:artist "Nala Sinephro" :album "Space 1.8" :genre "Jazz")
- (:artist "Resavoir" :album "Resavoir" :genre "Jazz")
- (:artist "Sam Wilkes" :album "WILKES" :genre "Jazz")
- (:artist "Sam Wilkes + Sam Gendel" :album "Music for Saxophone and Bass Guitar" :genre "Jazz")
- (:artist "Sam Wilkes & Jacob Mann" :album "Perform the compositions of Sam Wilkes & Jacob Mann" :genre "Jazz")
- (:artist "Sarah Vaughan + Clifford Brown" :album "Sarah Vaughan + Clifford Brown" :genre "Jazz")
- (:artist "Sonny Rollins" :album "The Bridge" :genre "Jazz")
- (:artist "Sonny Rollins Quartet" :album "Tenor Madness" :genre "Jazz")
- (:artist "The Comet is Coming" :album "Prophecy" :genre "Jazz")
- (:artist "The Comet is Coming" :album "Channel the Spirits" :genre "Jazz")
- (:artist "The Comet is Coming" :album "Death to the Planet" :genre "Jazz")
- (:artist "The Comet is Coming" :album "Hyper-Dimensional Expansion Beam" :genre "Jazz")
- (:artist "Work Money Death" :album "Thought, Action, Reaction, Interaction" :genre "Jazz")
- (:artist "Yussef Dayes" :album "Black Classical Music" :genre "Jazz")
- (:artist "Cymande" :album "Cymande" :genre "Funk")
- (:artist "Marvin Gaye" :album "What's Going On" :genre "Soul")
+ (:artist "Bill Evans" :album "The Tokyo Concert" :genre "Jazz"
+  :label "Fantasy" :year 1974 :art "tokyo.jpg")
+ (:artist "Bill Evans Trio" :album "Waltz for Debby" :genre "Jazz"
+  :label "Riverside" :year 1962 :art "debby.jpg")
+ (:artist "Dave Brubeck Quartet" :album "Time Out" :genre "Jazz"
+  :label "Columbia" :year 1959 :art "time-out.jpg")
+ (:artist "Fergus McCreadie" :album "Cairn" :genre "Jazz"
+  :label "Edition Records" :year 2021 :art "cairn.jpg")
+ (:artist "Floating Points + Pharaoh Sanders" :album "Promises" :genre "Jazz"
+  :label "Luaka Bop" :year 2021 :art "promises.jpg")
+ (:artist "Herbie Hancock" :album "Maiden Voyage" :genre "Jazz"
+  :label "Blue Note" :year 1965 :art "maiden-voyage.jpg")
+ (:artist "Jasmine Myra" :album "Horizons" :genre "Jazz"
+  :label "Gondwana Records" :year 2022 :art "horizons.jpg")
+ (:artist "John Coltrane" :album "Blue Train" :genre "Jazz"
+  :label "Blue Note" :year 1957 :art "blue-train.jpg")
+ (:artist "John Coltrane" :album "Live at the Village Vanguard" :genre "Jazz"
+  :label "Impulse!" :year 1962 :art "coltrane-village.jpg")
+ (:artist "Kamasi Washington" :album "Harmony of Difference" :genre "Jazz"
+  :label "Young Turks" :year 2017 :art "harmony.jpg")
+ (:artist "Kokoroko" :album "Kokoroko" :genre "Jazz"
+  :label "Brownswood Recordings" :year 2019 :art "kokoroko.jpg")
+ (:artist "Lee Morgan" :album "The Sidewinder" :genre "Jazz"
+  :label "Blue Note" :year 1964 :art "sidewinder.jpg")
+ (:artist "Makaya McCraven" :album "In These Times" :genre "Jazz"
+  :label "International Anthem" :year 2022 :art "in-these-times.jpg")
+ (:artist "Miles Davis" :album "Kind of Blue" :genre "Jazz"
+  :label "Columbia" :year 1959 :art "kind-of-blue.jpg")
+ (:artist "Nala Sinephro" :album "Space 1.8" :genre "Jazz"
+  :label "Warp" :year 2021 :art "space-18.jpg")
+ (:artist "Resavoir" :album "Resavoir" :genre "Jazz"
+  :label "International Anthem" :year 2019 :art "resavoir.jpg")
+ (:artist "Sam Wilkes" :album "WILKES" :genre "Jazz"
+  :label "Leaving Records" :year 2018 :art "wilkes.jpg")
+ (:artist "Sam Wilkes + Sam Gendel" :album "Music for Saxophone and Bass Guitar" :genre "Jazz"
+  :label "Leaving Records" :year 2018 :art "mfsabg.jpg")
+ (:artist "Sam Wilkes & Jacob Mann" :album "Perform the compositions of Sam Wilkes & Jacob Mann" :genre "Jazz"
+  :label "Leaving Records" :year 2022 :art "ptcoswajm.jpg")
+ (:artist "Sarah Vaughan + Clifford Brown" :album "Sarah Vaughan + Clifford Brown" :genre "Jazz"
+  :label "Jazz Images" :year 2017 :art "")
+ (:artist "Sonny Rollins" :album "The Bridge" :genre "Jazz"
+  :label "RCA Victor" :year 1962 :art "the-bridge.jpg")
+ (:artist "Sonny Rollins Quartet" :album "Tenor Madness" :genre "Jazz"
+  :label "Prestige Recordings" :year 1956 :art "tenor-madness.jpg")
+ (:artist "The Comet is Coming" :album "Prophecy" :genre "Jazz"
+  :label "Leaf" :year 2015 :art "prophecy.jpg")
+ (:artist "The Comet is Coming" :album "Channel the Spirits" :genre "Jazz"
+  :label "Leaf" :year 2016 :art "channel-the-spirits.jpg")
+ (:artist "The Comet is Coming" :album "Death to the Planet" :genre "Jazz"
+  :label "Leaf" :year 2017 :art "death-to-the-planet.jpg")
+ (:artist "The Comet is Coming" :album "Hyper-Dimensional Expansion Beam" :genre "Jazz"
+  :label "Impulse!" :year 2022 :art "hyper-dimensional.jpg")
+ (:artist "Work Money Death" :album "Thought, Action, Reaction, Interaction" :genre "Jazz"
+  :label "ATA Records" :year 2022 :art "thought-action.jpg")
+ (:artist "Yussef Dayes" :album "Black Classical Music" :genre "Jazz"
+  :label "Brownswood" :year 2023 :art "black-classical.jpg")
+ (:artist "Cymande" :album "Cymande" :genre "Funk"
+  :label "Janus Records" :year 1972 :art "cymande.jpg")
+ (:artist "Marvin Gaye" :album "What's Going On" :genre "Soul"
+  :label "Motown" :year 1971 :art "whats-going-on.jpg")
  ;; Soundtracks
- (:artist "Lena Raine" :album "Celeste" :genre "Soundtrack")
- (:artist "Paul Haslinger" :album "Halt and Catch Fire" :genre "Soundtrack")
- (:artist "Paul Haslinger" :album "Halt and Catch Fire Volume 2" :genre "Soundtrack")
- (:artist "Christopher Larkin" :album "Hollow Knight" :genre "Soundtrack")
- (:artist "Materia Collective" :album "Hollow Knight Piano Collections" :genre "Soundtrack")
- (:artist "Disasterpeace" :album "Hyper Light Drifter" :genre "Soundtrack")
- (:artist "Disasterpeace" :album "Rise of the Obsidian Interstellar" :genre "Soundtrack")
- (:artist "Floating Points" :album "Late Night Tales" :genre "Mixtape")
+ (:artist "Lena Raine" :album "Celeste" :genre "Soundtrack"
+  :label "Radical Dreamland" :year 2018 :art "celeste.png")
+ (:artist "Paul Haslinger" :album "Halt and Catch Fire" :genre "Soundtrack"
+  :label "Lakeshore Records" :year 2016 :art "halt-catch-fire-1.jpg")
+ (:artist "Paul Haslinger" :album "Halt and Catch Fire Volume 2" :genre "Soundtrack"
+  :label "Lakeshore Records" :year 2019 :art "halt-catch-fire-2.jpg")
+ (:artist "Christopher Larkin" :album "Hollow Knight" :genre "Soundtrack"
+  :label "Ghost Ramp" :year 2018 :art "hollow-knight.jpg")
+ (:artist "David Peacock" :album "Hollow Knight Piano Collections" :genre "Soundtrack"
+  :label "Materia Collective" :year 2020 :art "hollow-piano.jpg")
+ (:artist "Disasterpeace" :album "Hyper Light Drifter" :genre "Soundtrack"
+  :label "Iam8bit" :year 2017 :art "hyper-light.png")
+ (:artist "Disasterpeace" :album "Rise of the Obsidian Interstellar" :genre "Soundtrack"
+  :label "Yetee Records" :year 2019 :art "obsidian.png")
+ (:artist "Floating Points" :album "Late Night Tales" :genre "Mixtape"
+  :label "LateNightTales" :year 2019 :art "late-night-points.jpg")
  ;; Indie (more of a catch-all for "people have heard of this")
- (:artist "Air" :album "Premiers Symptomes" :genre "Indie")
- (:artist "Air" :album "Moon Safari" :genre "Indie")
- (:artist "Band of Horses" :album "Everything All the Time" :genre "Indie")
- (:artist "Beach Bunny" :album "Prom Queen" :genre "Indie")
- (:artist "Beach Bunny" :album "Emotional Creature" :genre "Indie")
- (:artist "boygenius" :album "The Record" :genre "Indie")
- (:artist "Broken Social Scene" :album "You Forgot it in People" :genre "Indie")
- (:artist "Broken Social Scene" :album "Broken Social Scene" :genre "Indie")
- (:artist "Built to Spill" :album "Keep it like a Secret" :genre "Indie")
- (:artist "Car Seat Headrest" :album "Teens of Denial" :genre "Indie")
- (:artist "case/lang/veirs" :album "case/lang/veirs" :genre "Indie")
- (:artist "Death Cab for Cutie" :album "Transatlanticism" :genre "Indie")
- (:artist "DIIV" :album "Is the is are" :genre "Indie")
- (:artist "DIIV" :album "Deceiver" :genre "Indie")
- (:artist "Explosions in the Sky" :album "The Earth is not a cold, dead place" :genre "Indie")
- (:artist "feeble little horses" :album "Girl with Fish" :genre "Indie")
- (:artist "Fleet Foxes" :album "Fleet Foxes" :genre "Indie")
- (:artist "Fleet Foxes" :album "Shore" :genre "Indie")
- (:artist "Florist" :album "Emily Alone" :genre "Indie")
- (:artist "Interpol" :album "Turn on the Bright Lights" :genre "Indie")
- (:artist "Iron & Wine" :album "Woman King" :genre "Indie")
- (:artist "Janelle Monae" :album "The Archandroid" :genre "Indie")
- (:artist "Janelle Monae" :album "Dirty Computer" :genre "Indie")
- (:artist "Jay Som" :album "Everybody Works" :genre "Indie")
- (:artist "Jay Som" :album "Anak Ko" :genre "Indie")
- (:artist "Japanese Breakfast" :album "Soft Sounds from Another Planet" :genre "Indie")
- (:artist "Japanese Breakfast" :album "Jubilee" :genre "Indie")
- (:artist "Jimmy Eat World" :album "Bleed American" :genre "Indie")
- (:artist "Julien Baker" :album "Sprained Ankle" :genre "Indie")
- (:artist "Kelela" :album "Raven" :genre "Indie")
- (:artist "Khruangbin" :album "Con todo el mundo" :genre "Indie")
- (:artist "Laura Veirs" :album "Saltbreakers" :genre "Indie")
- (:artist "Laura Veirs" :album "July Flame" :genre "Indie")
- (:artist "Lucy Dacus" :album "Home Video" :genre "Indie")
- (:artist "Massive Attack" :album "Protection" :genre "Indie")
- (:artist "Massive Attack vs Mad Professor" :album "No Protection" :genre "Indie")
- (:artist "Massive Attack" :album "Mezzanine" :genre "Indie")
- (:artist "Minus the Bear" :album "Menos el Oso" :genre "Indie")
- (:artist "Modest Mouse" :album "Good News for People Who Love Bad News" :genre "Indie")
- (:artist "Moses Sumney" :album "Aromanticism" :genre "Indie")
- (:artist "Moses Sumney" :album "Grae" :genre "Indie")
- (:artist "My Bloody Valentine" :album "Loveless" :genre "Indie")
- (:artist "My Bloody Valentine" :album "mbv" :genre "Indie")
- (:artist "Nilufer Yanya" :album "Painless" :genre "Indie")
- (:artist "Phoebe Bridgers" :album "Punisher" :genre "Indie")
- (:artist "Pinback" :album "Summer in Abaddon" :genre "Indie")
- (:artist "Pinback" :album "Autumn of the Seraphs" :genre "Indie")
- (:artist "Purity Ring" :album "Shrines" :genre "Indie")
- (:artist "Radiohead" :album "OK Computer" :genre "Indie")
- (:artist "Radiohead" :album "Kid A Mnesia" :genre "Indie")
- (:artist "Radiohead" :album "In Rainbows" :genre "Indie")
- (:artist "Real Estate" :album "Days" :genre "Indie")
- (:artist "Snail Mail" :album "Valentine" :genre "Indie")
- (:artist "Soccer Mommy" :album "Clean" :genre "Indie")
- (:artist "Spoon" :album "Girls Can Tell" :genre "Indie")
- (:artist "Spoon" :album "Kill the Moonlight" :genre "Indie")
- (:artist "Stereolab" :album "Dots and Loops" :genre "Indie")
- (:artist "The Album Leaf" :album "One Day I'll Be On Time" :genre "Indie")
- (:artist "The Beths" :album "Future Me Hates Me" :genre "Indie")
- (:artist "The Long Winters" :album "Ultimatum" :genre "Indie")
- (:artist "The National" :album "Boxer" :genre "Indie")
- (:artist "The National" :album "High Violet" :genre "Indie")
- (:artist "The Sea & Cake" :album "Oui" :genre "Indie")
- (:artist "The Sea & Cake" :album "One Bedroom" :genre "Indie")
- (:artist "The Sea & Cake" :album "Everybody" :genre "Indie")
- (:artist "The Sea & Cake" :album "Car Alarm" :genre "Indie")
- (:artist "The Sea & Cake" :album "Runner" :genre "Indie")
- (:artist "The Shins" :album "Oh, Inverted World" :genre "Indie")
- (:artist "The Spinanes" :album "Arches & Aisles" :genre "Indie")
- (:artist "Thundercat" :album "The Golden Age of Apocalypse" :genre "Indie")
- (:artist "Thundercat" :album "It Is What It Is" :genre "Indie")
- (:artist "Tortoise" :album "TNT" :genre "Indie")
- (:artist "Wet Leg" :album "Wet Leg" :genre "Indie")
- (:artist "Youth Lagoon" :album "Heaven is a Junkyard" :genre "Indie")
- (:artist "Yves Tumor" :album "Praise A Lord Who Chews But Which Does Not Consume" :genre "Indie")
+ (:artist "Air" :album "Premiers Symptomes" :genre "Indie"
+  :label "Astralwerks" :year 1997 :art "premiers.jpg")
+ (:artist "Air" :album "Moon Safari" :genre "Indie"
+  :label "Astralwerks" :year 1998 :art "moon-safari.jpg")
+ (:artist "Band of Horses" :album "Everything All the Time" :genre "Indie"
+  :label "Sub Pop" :year 2006 :art "all-the-time.jpg")
+ (:artist "Beach Bunny" :album "Prom Queen" :genre "Indie"
+  :label "Mom + Pop" :year 2018 :art "prom-queen.png")
+ (:artist "Beach Bunny" :album "Emotional Creature" :genre "Indie"
+  :label "Mom + Pop" :year 2022 :art "emotional.jpg")
+ (:artist "boygenius" :album "The Record" :genre "Indie"
+  :label "Interscope" :year 2023 :art "the-record.jpg")
+ (:artist "Broken Social Scene" :album "You Forgot it in People" :genre "Indie"
+  :label "Arts & Crafts" :year 2002 :art "yfiip.jpg")
+ (:artist "Broken Social Scene" :album "Broken Social Scene" :genre "Indie"
+  :label "Arts & Crafts" :year 2005 :art "broken-social-scene.jpg")
+ (:artist "Built to Spill" :album "Keep it like a Secret" :genre "Indie"
+  :label "Warner Bros" :year 1999 :art "keep-it-like.jpg")
+ (:artist "Car Seat Headrest" :album "Teens of Denial" :genre "Indie"
+  :label "Matador" :year 2016 :art "denial.jpg")
+ (:artist "case/lang/veirs" :album "case/lang/veirs" :genre "Indie"
+  :label "ANTI-" :year 2016 :art "case-lang-veirs.jpg")
+ (:artist "Death Cab for Cutie" :album "Transatlanticism" :genre "Indie"
+  :label "Barsuk Records" :year 2003 :art "transatlanticism.jpg")
+ (:artist "DIIV" :album "Is the Is Are" :genre "Indie"
+  :label "Captured Tracks" :year 2016 :art "is-the-is-are.jpg")
+ (:artist "DIIV" :album "Deceiver" :genre "Indie"
+  :label "Captured Tracks" :year 2019 :art "deceiver.jpg")
+ (:artist "Explosions in the Sky" :album "The Earth is not a cold, dead place" :genre "Indie"
+  :label "Temporary Residence" :year 2003 :art "the-earth.jpg")
+ (:artist "feeble little horses" :album "Girl with Fish" :genre "Indie"
+  :label "Saddle Creek" :year 2023 :art "girl-with-fish.jpg")
+ (:artist "Fleet Foxes" :album "Fleet Foxes" :genre "Indie"
+  :label "Sub Pop" :year 2008 :art "fleet-foxes.jpg")
+ (:artist "Fleet Foxes" :album "Shore" :genre "Indie"
+  :label "ANTI-" :year 2020 :art "shore.jpg")
+ (:artist "Florist" :album "Emily Alone" :genre "Indie"
+  :label "Double Double Whammy" :year 2019 :art "emily-alone.jpg")
+ (:artist "Interpol" :album "Turn on the Bright Lights" :genre "Indie"
+  :label "Matador" :year 2002 :art "bright-lights.jpg")
+ (:artist "Iron & Wine" :album "Woman King" :genre "Indie"
+  :label "Sub Pop" :year 2005 :art "woman-king.jpg")
+ (:artist "Janelle Monae" :album "The Archandroid" :genre "Indie"
+  :label "Bad Boy Entertainment" :year 2010 :art "archandroid.jpg")
+ (:artist "Janelle Monae" :album "Dirty Computer" :genre "Indie"
+  :label "Bad Boy Entertainment" :year 2018 :art "dirty-computer.jpg")
+ (:artist "Jay Som" :album "Everybody Works" :genre "Indie"
+  :label "Polyvinyl" :year 2017 :art "everybody-works.jpg")
+ (:artist "Jay Som" :album "Anak Ko" :genre "Indie"
+  :label "Polyvinyl" :year 2019 :art "anak-ko.jpg")
+ (:artist "Japanese Breakfast" :album "Soft Sounds from Another Planet" :genre "Indie"
+  :label "Dead Oceans" :year 2017 :art "soft-sounds.jpg")
+ (:artist "Japanese Breakfast" :album "Jubilee" :genre "Indie"
+  :label "Dead Oceans" :year 2021 :art "jubilee.jpg")
+ (:artist "Jimmy Eat World" :album "Bleed American" :genre "Indie"
+  :label "Interscope" :year 2001 :art "american.jpg")
+ (:artist "Julien Baker" :album "Sprained Ankle" :genre "Indie"
+  :label "Matador" :year 2015 :art "sprained.jpg")
+ (:artist "Kelela" :album "Raven" :genre "Indie"
+  :label "Warp" :year 2023 :art "raven.jpg")
+ (:artist "Khruangbin" :album "Con todo el mundo" :genre "Indie"
+  :label "Dead Oceans" :year 2018 :art "con-todo.jpg")
+ (:artist "Laura Veirs" :album "Saltbreakers" :genre "Indie"
+  :label "Nonesuch" :year 2007 :art "saltbreakers.jpg")
+ (:artist "Laura Veirs" :album "July Flame" :genre "Indie"
+  :label "Bella Union" :year 2009 :art "july-flame.jpg")
+ (:artist "Lucy Dacus" :album "Home Video" :genre "Indie"
+  :label "Matador" :year 2021 :art "home-video.jpg")
+ (:artist "Massive Attack" :album "Protection" :genre "Indie"
+  :label "Wild Bunch Records" :year 1994 :art "protection.jpg")
+ (:artist "Massive Attack vs Mad Professor" :album "No Protection" :genre "Indie"
+  :label "Wild Bunch Records" :year 1995 :art "no-protection.jpg")
+ (:artist "Massive Attack" :album "Mezzanine" :genre "Indie"
+  :label "Virgin" :year 1998 :art "mezzanine.jpg")
+ (:artist "Minus the Bear" :album "Menos el Oso" :genre "Indie"
+  :label "Suicide Squeeze" :year 2005 :art "menos-el-oso.jpg")
+ (:artist "Modest Mouse" :album "Good News for People Who Love Bad News" :genre "Indie"
+  :label "Epic" :year 2004 :art "good-news.jpg")
+ (:artist "Moses Sumney" :album "Aromanticism" :genre "Indie"
+  :label "Jagjaguwar" :year 2017 :art "aromanticism.jpg")
+ (:artist "Moses Sumney" :album "Grae" :genre "Indie"
+  :label "Jagjaguwar" :year 2020 :art "grae.jpg")
+ (:artist "My Bloody Valentine" :album "Loveless" :genre "Indie"
+  :label "Creation Records" :year 1991 :art "loveless.jpg")
+ (:artist "My Bloody Valentine" :album "mbv" :genre "Indie"
+  :label "Domino" :year 2013 :art "mbv.jpg")
+ (:artist "Nilufer Yanya" :album "Painless" :genre "Indie"
+  :label "ATO Records" :year 2022 :art "painless.jpg")
+ (:artist "Phoebe Bridgers" :album "Punisher" :genre "Indie"
+  :label "Dead Oceans" :year 2020 :art "punisher.jpg")
+ (:artist "Pinback" :album "Summer in Abaddon" :genre "Indie"
+  :label "Touch and Go" :year 2004 :art "abaddon.jpg")
+ (:artist "Pinback" :album "Autumn of the Seraphs" :genre "Indie"
+  :label "Touch and Go" :year 2007 :art "seraphs.jpg")
+ (:artist "Purity Ring" :album "Shrines" :genre "Indie"
+  :label "4AD" :year 2012 :art "shrines.jpg")
+ (:artist "Radiohead" :album "OK Computer" :genre "Indie"
+  :label "Capitol Records" :year 1997 :art "ok-computer.jpg")
+ (:artist "Radiohead" :album "Kid A Mnesia" :genre "Indie"
+  :label "Capitol Records" :year 2000 :art "kid-a.jpg")
+ (:artist "Radiohead" :album "In Rainbows" :genre "Indie"
+  :label "XL Recordings" :year 2007 :art "in-rainbows.jpg")
+ (:artist "Real Estate" :album "Days" :genre "Indie"
+  :label "Domino" :year 2011 :art "days.jpg")
+ (:artist "Snail Mail" :album "Valentine" :genre "Indie"
+  :label "Matador" :year 2021 :art "valentine.jpg")
+ (:artist "Soccer Mommy" :album "Clean" :genre "Indie"
+  :label "Fat Possum" :year 2018 :art "clean.jpg")
+ (:artist "Spoon" :album "Girls Can Tell" :genre "Indie"
+  :label "Matador" :year 2001 :art "girls-can-tell.jpg")
+ (:artist "Spoon" :album "Kill the Moonlight" :genre "Indie"
+  :label "Matador" :year 2002 :art "kill-the-moonlight.jpg")
+ (:artist "Stereolab" :album "Dots and Loops" :genre "Indie"
+  :label "Drag City" :year 1997 :art "dots-and-loops.jpg")
+ (:artist "The Album Leaf" :album "One Day I'll Be On Time" :genre "Indie"
+  :label "Tiger Style" :year 2001 :art "one-day.jpg")
+ (:artist "The Beths" :album "Future Me Hates Me" :genre "Indie"
+  :label "Carpark Records" :year 2018 :art "future-me-hates-me.jpg")
+ (:artist "The Long Winters" :album "Ultimatum" :genre "Indie"
+  :label "Barsuk Records" :year 2005 :art "ultimatum.jpg")
+ (:artist "The National" :album "Boxer" :genre "Indie"
+  :label "Beggas Banquet" :year 2007 :art "boxer.jpg")
+ (:artist "The National" :album "High Violet" :genre "Indie"
+  :label "4AD" :year 2010 :art "high-violet.jpg")
+ (:artist "The Sea & Cake" :album "Oui" :genre "Indie"
+  :label "Thrill Jockey" :year 2001 :art "oui.jpg")
+ (:artist "The Sea & Cake" :album "One Bedroom" :genre "Indie"
+  :label "Thrill Jockey" :year 2003 :art "one-bedroom.jpg")
+ (:artist "The Sea & Cake" :album "Everybody" :genre "Indie"
+  :label "Thrill Jockey" :year 2007 :art "everybody.jpg")
+ (:artist "The Sea & Cake" :album "Car Alarm" :genre "Indie"
+  :label "Thrill Jockey" :year 2008 :art "car-alarm.jpg")
+ (:artist "The Sea & Cake" :album "Runner" :genre "Indie"
+  :label "Thrill Jockey" :year 2012 :art "runner.jpg")
+ (:artist "The Shins" :album "Oh, Inverted World" :genre "Indie"
+  :label "Sub Pop" :year 2001 :art "inverted-world.jpg")
+ (:artist "The Spinanes" :album "Arches & Aisles" :genre "Indie"
+  :label "Sub Pop" :year 1998 :art "arches-and-aisles.jpg")
+ (:artist "Thundercat" :album "The Golden Age of Apocalypse" :genre "Indie"
+  :label "Brainfeeder" :year 2011 :art "the-golden-age.jpg")
+ (:artist "Thundercat" :album "It Is What It Is" :genre "Indie"
+  :label "Brainfeeder" :year 2020 :art "it-is-what-it-is.jpg")
+ (:artist "Tortoise" :album "TNT" :genre "Indie"
+  :label "Thrill Jockey" :year 1998 :art "tnt.jpg")
+ (:artist "Wet Leg" :album "Wet Leg" :genre "Indie"
+  :label "Domino" :year 2022 :art "wet-leg.jpg")
+ (:artist "Youth Lagoon" :album "Heaven is a Junkyard" :genre "Indie"
+  :label "Fat Possum" :year 2023 :art "junkyard.jpg")
+ (:artist "Yves Tumor" :album "Praise A Lord Who Chews But Which Does Not Consume" :genre "Indie"
+  :label "Warp" :year 2023 :art "praise-a-lord.jpg")
 )
