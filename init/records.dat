@@ -20,6 +20,8 @@
   :label "Mute Records" :year 2020 :art "illusion.jpg")
  (:artist "Dialog" :album "Dialog" :genre "Ambient"
   :label "Astral Industries" :year 2022 :art "dialog.jpg")
+ (:artist "Donato Dozzy" :album "Magda" :genre "Ambient"
+  :label "Spazio Disponibile" :year 2024 :art "magda.jpg")
  (:artist "Downstairs J" :album "Basement etc" :genre "Ambient"
   :label "Incienso" :year 2021 :art "basement-etc.jpg")
  (:artist "Future Sound of London" :album "Lifeforms" :genre "Ambient"
@@ -36,6 +38,8 @@
   :label "Bigamo" :year 2022 :art "metamorphose.jpg")
  (:artist "Jeremiah Chiu & Marta Sofia Honer" :album "Recordings from the Aland Islands" :genre "Ambient"
   :label "International Anthem" :year 2022 :art "aland-islands.jpg")
+ (:artist "Jeremiah Chiu, Marta Sofia Honer & Ariel Kalma" :album "The Closest Thing to Silence" :genre "Ambient"
+  :label "International Anthem" :year 2024 :art "closest-thing.jpg")
  (:artist "Jonah Sharp & Mixmaster Morris" :album "Quiet Logic" :genre "Ambient"
   :label "WRWTFWW Records" :year 1998 :art "quiet-logic.jpg")
  (:artist "Rod Modell" :album "Ghost Lights" :genre "Ambient"
@@ -89,12 +93,14 @@
   :label "Peak Oil" :year 2018 :art "topdown-dialectic-1.jpg")
  (:artist "Topdown Dialectic" :album "Vol 2" :genre "Dub"
   :label "Peak Oil" :year 2019 :art "topdown-dialectic-2.jpg")
+ (:artist "VC-118A" :album "Waves of Change" :genre "Dub"
+  :label "Delsin" :year 2023 :art "waves-of-change.jpg")
  (:artist "Vladislav Delay" :album "Multila" :genre "Dub"
   :label "Keplar" :year 2000 :art "multila.jpg")
  (:artist "Vladislav Delay" :album "Whistleblower" :genre "Dub"
   :label "Keplar" :year 2007 :art "whistleblower.jpg")
  (:artist "Voices from the Lake" :album "Voices from the Lake" :genre "Dub"
-  :label "Prologue" :year 2012 :art "voices-from-the-lake.jpg")
+  :label "Spazio Disponibile" :year 2012 :art "voices-from-the-lake.jpg")
  (:artist "Vril" :album "Anima Mundi" :genre "Dub"
   :label "Delsin" :year 2017 :art "anima-mundi.jpg")
  (:artist "Vril" :album "Animist" :genre "Dub"
@@ -102,7 +108,9 @@
  (:artist "Vril & Rodhad" :album "Out of Place Artefacts" :genre "Dub"
   :label "WSNWG" :year 2020 :art "out-of-place-1.jpg")
  (:artist "Vril & Rodhad" :album "Out of Place Artefacts II" :genre "Dub"
- :label "WSNWG" :year 2022 :art "out-of-place-2.jpg")
+  :label "WSNWG" :year 2022 :art "out-of-place-2.jpg")
+ (:artist "Yagya" :album "Sleepygirls" :genre "Dub"
+  :label "Delsin" :year 2014 :art "sleepygirls.jpg")
  ;; Experimental
  (:artist "Amon Tobin" :album "Bricolage" :genre "Experimental"
   :label "Ninja Tune" :year 1997 :art "bricolage.jpg")
@@ -258,6 +266,10 @@
   :label "R&S Records" :year 2018 :art "firewood.jpg")
  (:artist "Djrum" :album "Hard to Say / Tournesol" :genre "Techno"
   :label "R&S Records" :year 2019 :art "hard-to-say.jpg")
+ (:artist "DJ Healer" :album "Nothing 2 Loose" :genre "Techno"
+  :label "All Possible Worlds" :year 2018 :art "nothing-2-loose.jpg")
+ (:artist "DJ Metatron" :album "Loops of Infinity" :genre "Techno"
+  :label "All Possible Worlds" :year 2020 :art "loops-of-infinity.jpg")
  (:artist "Drexciya" :album "Neptune's Lair" :genre "Techno"
   :label "Tresor" :year 1999 :art "neptune.jpg")
  (:artist "Drexciya" :album "Harnessed the Storm" :genre "Techno"
@@ -302,6 +314,8 @@
   :label "Appian Sounds" :year 2020 :art "aura-fossil.jpg")
  (:artist "HVL" :album "Vessel" :genre "Techno"
   :label "System Revival" :year 2021 :art "vessel.jpg")
+ (:artist "HVL" :album "Resolve" :genre "Techno"
+  :label "System Revival" :year 2022 :art "resolve.png")
  (:artist "JakoJako" :album "Lux" :genre "Techno"
   :label "Leisure System" :year 2021 :art "lux.jpg")
  (:artist "JakoJako & Rodhad" :album "In Vere" :genre "Techno"
