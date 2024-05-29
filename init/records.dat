@@ -42,6 +42,8 @@
   :label "International Anthem" :year 2024 :art "closest-thing.jpg")
  (:artist "Jonah Sharp & Mixmaster Morris" :album "Quiet Logic" :genre "Ambient"
   :label "WRWTFWW Records" :year 1998 :art "quiet-logic.jpg")
+ (:artist "Photay with Carlos Nino" :album "An Offering" :genre "Ambient"
+  :label "International Anthem" :year 2021 :art "offering.jpg")
  (:artist "Rod Modell" :album "Ghost Lights" :genre "Ambient"
   :label "Astral Industries" :year 2023 :art "ghost-lights.jpg")
  (:artist "Rod Modell & Taka Noda" :album "Glow World" :genre "Ambient"
@@ -73,6 +75,8 @@
   :label "Astral Industries" :year 2018 :art "immersions.jpg")
  (:artist "Deepchord" :album "Functional Designs" :genre "Dub"
   :label "Soma" :year 2022 :art "functional.jpg")
+ (:artist "Eden Aurelius" :album "Plateau" :genre "Dub"
+  :label "co:clear" :year 2024 :art "plateau.jpg")
  (:artist "Forest Drive West" :album "Dualism" :genre "Dub"
   :label "Livity Sound" :year 2021 :art "dualism.jpg")
  (:artist "Forest Drive West" :album "Recursion" :genre "Dub"
@@ -93,8 +97,6 @@
   :label "Peak Oil" :year 2018 :art "topdown-dialectic-1.jpg")
  (:artist "Topdown Dialectic" :album "Vol 2" :genre "Dub"
   :label "Peak Oil" :year 2019 :art "topdown-dialectic-2.jpg")
- (:artist "VC-118A" :album "Waves of Change" :genre "Dub"
-  :label "Delsin" :year 2023 :art "waves-of-change.jpg")
  (:artist "Vladislav Delay" :album "Multila" :genre "Dub"
   :label "Keplar" :year 2000 :art "multila.jpg")
  (:artist "Vladislav Delay" :album "Whistleblower" :genre "Dub"
@@ -332,6 +334,8 @@
   :label "Stroboscopic Artefacts" :year 2017 :art "hyper-opal.jpg")
  (:artist "Kangding Ray" :album "Ultrachroma" :genre "Techno"
   :label "Ara Records" :year 2022 :art "ultrachroma.jpg")
+ (:artist "Kangding Ray" :album "Polar EP" :genre "Techno"
+  :label "Spazio Disponibile" :year 2024 :art "polar-ep.jpg")
  (:artist "Karenn" :album "Music Sounds Better with Shoe" :genre "Techno"
   :label "Voam" :year 2020 :art "better-with-shoe.jpg")
  (:artist "Kessler" :album "Ambivalent" :genre "Techno"
@@ -396,6 +400,8 @@
   :label "Ostgut Ton" :year 2020 :art "1972.jpg")
  (:artist "Underworld" :album "dubnobasswithmyheadman" :genre "Techno"
   :label "Universal" :year 1994 :art "dubnobasswithmyheadman.jpg")
+ (:artist "VC-118A" :album "Waves of Change" :genre "Techno"
+  :label "Delsin" :year 2023 :art "waves-of-change.jpg")
  (:artist "Various Artists" :album "Tresor 30" :genre "Techno"
   :label "Tresor" :year 2021 :art "tresor-30.png")
  (:artist "Wata Igarashi & Voiski" :album "9719" :genre "Techno"
@@ -413,6 +419,8 @@
   :label "Def Jux" :year 2001 :art "labor.jpg")
  (:artist "A Tribe Called Quest" :album "The Low End Theory" :genre "Hip Hop"
   :label "Jive" :year 1991 :art "low-end.jpg")
+ (:artist "A Tribe Called Quest" :album "Midnight Marauders" :genre "Hip Hop"
+  :label "Jive" :year 1993 :art "marauders.jpg")
  (:artist "Bibio" :album "Ambivalence Avenue" :genre "Hip Hop"
   :label "Warp" :year 2009 :art "ambivalence.jpg")
  (:artist "Deltron 3030" :album "Deltron 3030" :genre "Hip Hop"
@@ -427,18 +435,20 @@
   :label "Ruffhouse Records" :year 1996 :art "the-score.jpg")
  (:artist "Ghostface Killah" :album "Fishscale" :genre "Hip Hop"
   :label "Def Jam Recordings" :year 2006 :art "fishscale.jpg")
- (:artist "Gorillaz" :album "Demon Days" :genre "Hip Hop"
-  :label "Virgin" :year 2005 :art "demon-days.jpg")
  (:artist "J Dilla" :album "Donuts" :genre "Hip Hop"
   :label "Stones Throw" :year 2006 :art "donuts.jpg")
  (:artist "JID" :album "Forever Story" :genre "Hip Hop"
   :label "Dreamville" :year 2022 :art "forever-story.jpg")
  (:artist "Kendrick Lamar" :album "good kid, m.A.A.d City" :genre "Hip Hop"
   :label "Top Dawg Entertainment" :year 2012 :art "good-kid.jpg")
+ (:artist "Madvillain" :album "Madvillainy" :genre "Hip Hop"
+  :label "Stones Throw" :year 2004 :art "madvillainy.jpg")
  (:artist "MF Doom" :album "Operation: Doomsday" :genre "Hip Hop"
   :label "Metal Face" :year 1999 :art "doomsday.jpg")
  (:artist "Mr Dibbs" :album "Primitive Tracks" :genre "Hip Hop"
   :label "Cease and Desist" :year 2000 :art "primitive.jpg")
+ (:artist "Outkast" :album "Atliens" :genre "Hip Hop"
+  :label "LaFace Records" :year 1996 :art "atliens.jpg")
  (:artist "Outkast" :album "Aquemini" :genre "Hip Hop"
   :label "LaFace Records" :year 1998 :art "aquemini.jpg")
  (:artist "Teebs" :album "Ardour" :genre "Hip Hop"
@@ -468,6 +478,8 @@
   :label "Impulse!" :year 1962 :art "coltrane-village.jpg")
  (:artist "Kamasi Washington" :album "Harmony of Difference" :genre "Jazz"
   :label "Young Turks" :year 2017 :art "harmony.jpg")
+ (:artist "Kamasi Washington" :album "Fearless Movement" :genre "Jazz"
+  :label "Young Turks" :year 2024 :art "fearless-movement.jpg")
  (:artist "Kokoroko" :album "Kokoroko" :genre "Jazz"
   :label "Brownswood Recordings" :year 2019 :art "kokoroko.jpg")
  (:artist "Lee Morgan" :album "The Sidewinder" :genre "Jazz"
@@ -564,6 +576,10 @@
   :label "ANTI-" :year 2020 :art "shore.jpg")
  (:artist "Florist" :album "Emily Alone" :genre "Indie"
   :label "Double Double Whammy" :year 2019 :art "emily-alone.jpg")
+ (:artist "Frank Ocean" :album "Blonde" :genre "Indie"
+  :label "Boys Don't Cry" :year 2016 :art "blonde.jpg")
+ (:artist "Gorillaz" :album "Demon Days" :genre "Indie"
+  :label "Virgin" :year 2005 :art "demon-days.jpg")
  (:artist "Interpol" :album "Turn on the Bright Lights" :genre "Indie"
   :label "Matador" :year 2002 :art "bright-lights.jpg")
  (:artist "Iron & Wine" :album "Woman King" :genre "Indie"
