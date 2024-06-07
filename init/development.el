@@ -23,7 +23,7 @@
 
 (use-package corfu
   :init
-  (corfu-global-mode))
+  (global-corfu-mode))
 
 ;;; enhance project with project-x
 

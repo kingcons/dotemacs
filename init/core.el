@@ -1,7 +1,7 @@
 ;;; use which-key in case you get lost
 
-;; (use-package which-key
-;;   :config (which-key-mode))
+(use-package which-key
+  :config (which-key-mode))
 
 ;;; use marginalia to ease learning
 
