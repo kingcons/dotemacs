@@ -44,6 +44,7 @@
 ;; Use a clean, minimal mode-line
 
 (use-package mood-line
+  :config (require 'mood-line-segment-vc)
   :init (mood-line-mode))
 
 ;; Use a nice font
