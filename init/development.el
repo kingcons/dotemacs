@@ -5,6 +5,7 @@
 ;;; If collaborating with others, conform to their standards.
 
 (use-package editorconfig
+  :delight
   :config
   (editorconfig-mode 1))
 

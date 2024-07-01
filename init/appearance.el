@@ -41,11 +41,9 @@
 
 (bsb/init-color-scheme)
 
-;; Use a clean, minimal mode-line
+;; Make sure we can hide minor modes where desirable
 
-(use-package mood-line
-  :config (require 'mood-line-segment-vc)
-  :init (mood-line-mode))
+(use-package delight)
 
 ;; Use a nice font
 (defun bsb/font-available-p (font-name)

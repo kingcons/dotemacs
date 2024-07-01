@@ -1,6 +1,7 @@
 ;;; First things first, edit structurally with paredit.
 
 (use-package paredit
+  :delight
   :hook ((emacs-lisp-mode
           lisp-mode
           lisp-interaction-mode
