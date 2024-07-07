@@ -277,7 +277,7 @@
  (:artist "Drexciya" :album "Harnessed the Storm" :genre "Techno"
   :label "Tresor" :year 2002 :art "harnessed.jpg")
  (:artist "Floating Points" :album "J&W Beat" :genre "Techno"
-  :label "Planet Mu" :year :art "jw-beat.jpg")
+  :label "Planet Mu" :year 2009 :art "jw-beat.jpg")
  (:artist "Floating Points" :album "Shadows" :genre "Techno"
   :label "Eglo Records" :year 2011 :art "shadows.jpg")
  (:artist "Floating Points" :album "Elaenia" :genre "Techno"

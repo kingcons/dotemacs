@@ -32,7 +32,7 @@
   :after project
   :ensure nil
   :config
-  (setq project-x-save-interval 600)
+  (setq project-x-save-interval 300)
   (project-x-mode 1))
 
 ;; TODO: Maybe add formatting tools, wsbutler, flymake, etc?

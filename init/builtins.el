@@ -35,6 +35,7 @@
 (add-hook 'text-mode-hook #'visual-line-mode) ; And soft wrap for prose
 (setq require-final-newline t) ; Always end files with newlines
 (setq sentence-end-double-space nil) ; I separate with a single space
+(setq tab-always-indent 'complete) ; Avoid relying on M-Tab for completion
 
 ;; Narrowers gonna narrow
 (put 'narrow-to-region 'disabled nil)
