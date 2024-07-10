@@ -26,6 +26,19 @@
   :init
   (global-corfu-mode))
 
+;;; use tempel for the repetitive stuff
+
+(use-package tempel
+  :bind (("M-+" . tempel-complete)
+         ("M-*" . tempel-insert))
+  :init
+  (setq tempel-path (bsb/init-file "templates" "dat"))
+  (defun tempel-setup-capf ()
+    (setq-local completion-at-point-functions
+                (cons #'tempel-expand
+                      completion-at-point-functions)))
+  (add-hook 'prog-mode-hook #'tempel-setup-capf))
+
 ;;; enhance project with project-x
 
 (use-package project-x
