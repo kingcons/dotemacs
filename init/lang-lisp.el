@@ -3,9 +3,10 @@
 (use-package paredit
   :delight
   :hook ((emacs-lisp-mode
+          geiser-mode
           lisp-mode
           lisp-interaction-mode
-          geiser-mode) . enable-paredit-mode))
+          slime-repl-mode) . enable-paredit-mode))
 
 ;;; Use slime for a delightful common lisp experience
 

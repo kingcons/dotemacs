@@ -8,3 +8,4 @@ At some point, I'll do a nice org-mode writeup but not yet.
 
 * Emacs: 28.1 or later.
 * OS: Linux with guix preferred, gracefully falls back to use-package otherwise.
+* Apps: git, fortune, pass, vlc and imagemagick for emms, rtorrent for torrents

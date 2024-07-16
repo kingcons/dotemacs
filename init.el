@@ -56,6 +56,7 @@
                  "lang-lua"
                  "lang-ocaml"
                  "lang-ruby"
+                 "music"
                  "norns"
                  "torrents"
                  "votd")))
