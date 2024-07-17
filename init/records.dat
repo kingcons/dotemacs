@@ -13,10 +13,10 @@
   :label "Incienso" :year 2023 :art "orbs.jpg")
  (:artist "Aphex Twin" :album "Selected Ambient Works" :genre "Ambient"
   :label "Warp" :year 1992 :art "saw8592.jpg")
+ (:artist "Aphex Twin" :album "Selected Ambient Works Vol II" :genre "Ambient"
+  :label "Warp" :year 1994 :art "sawii.jpg")
  (:artist "Boards of Canada" :album "Geogaddi" :genre "Ambient"
   :label "Warp" :year 2002 :art "geogaddi.jpg")
- (:artist "Convextion" :album "2845" :genre "Ambient"
-  :label "Mojuba Records" :year 2016 :art "2845.jpg")
  (:artist "Daniel Avery + Alessandro Cortini" :album "Illusion of Time" :genre "Ambient"
   :label "Mute Records" :year 2020 :art "illusion.jpg")
  (:artist "Dialog" :album "Dialog" :genre "Ambient"
@@ -49,8 +49,6 @@
   :label "Astral Industries" :year 2023 :art "ghost-lights.jpg")
  (:artist "Rod Modell & Taka Noda" :album "Glow World" :genre "Ambient"
   :label "Silentes" :year 2023 :art "glow-world.jpg")
- (:artist "Sam McQueen" :album "Dreams in Sepia" :genre "Ambient"
-  :label "Mojuba Records" :year 2020 :art "dreams-in-sepia.jpg")
  (:artist "Skee Mask" :album "ISS006" :genre "Ambient"
   :label "Ilian Tape" :year 2020 :art "iss006.png")
  (:artist "Sky H1" :album "Azure" :genre "Ambient"
@@ -68,6 +66,8 @@
  ;; Dub
  (:artist "Andy Stott" :album "Luxury Problems" :genre "Dub"
   :label "Modern Love" :year 2012 :art "luxury.jpg")
+ (:artist "Andy Stott" :album "It Should Be Us" :genre "Dub"
+  :label "Modern Love" :year 2019 :art "should-be-us.jpg")
  (:artist "Deepchord" :album "Lanterns" :genre "Dub"
   :label "Astral Industries" :year 2014 :art "lanterns.jpg")
  (:artist "Deepchord" :album "Auratones" :genre "Dub"
@@ -90,8 +90,6 @@
   :label "Mille Plateaux" :year 1996 :art "biokinetics.jpg")
  (:artist "Purelink" :album "Signs" :genre "Dub"
   :label "Peak Oil" :year 2023 :art "signs.jpg")
- (:artist "Tammo Hesselink" :album "Beam" :genre "Dub"
-  :label "Nous'klaer" :year 2023 :art "beam.jpg")
  (:artist "Topdown Dialectic" :album "S/T 2013" :genre "Dub"
   :label "Peak Oil" :year 2013 :art "topdown-dialectic-st.jpg")
  (:artist "Topdown Dialectic" :album "Vol 1" :genre "Dub"
@@ -257,12 +255,18 @@
   :label "Ghostly" :year 2011 :art "galactic.jpg")
  (:artist "Com Truise" :album "Iteration" :genre "Techno"
   :label "Ghostly" :year 2017 :art "iteration.jpg")
+ (:artist "Convextion" :album "2845" :genre "Techno"
+  :label "Mojuba Records" :year 2016 :art "2845.jpg")
+ (:artist "Convextion" :album "R-CNVX2" :genre "Techno"
+  :label "Mojuba Records" :year 2024 :art "r-cnvx2.jpg")
  (:artist "Daniel Avery" :album "Drone Logic" :genre "Techno"
   :label "Phantasy Sound" :year 2013 :art "drone.jpg")
  (:artist "Daniel Avery" :album "Song for Alpha" :genre "Techno"
   :label "Phantasy Sound" :year 2018 :art "alpha.jpg")
  (:artist "Daniel Avery" :album "Ultra Truth" :genre "Techno"
   :label "Phantasy Sound" :year 2022 :art "ultra.jpg")
+ (:artist "Deft" :album "Two Years" :genre "Techno"
+  :label "Hooversound Recordings" :year 2024 :art "two-years.jpg")
  (:artist "Djrum" :album "Broken Glass Arch" :genre "Techno"
   :label "R&S Records" :year 2017 :art "glass-arch.jpg")
  (:artist "Djrum" :album "Portrait with Firewood" :genre "Techno"
@@ -367,6 +371,8 @@
   :label "NovaMute" :year 1993 :art "sheet-one.jpg")
  (:artist "Prodigy" :album "The Fat of the Land" :genre "Techno"
   :label "XL Recordings" :year 1997 :art "fat-of-the-land.jpg")
+ (:artist "Sam McQueen" :album "Dreams in Sepia" :genre "Techno"
+  :label "Mojuba Records" :year 2020 :art "dreams-in-sepia.jpg")
  (:artist "Sandwell District" :album "Feed-Forward" :genre "Techno"
   :label "The Point of Departure" :year 2010 :art "feed-forward.jpg")
  (:artist "Shawn Rudiman" :album "Conduit" :genre "Techno"
@@ -381,6 +387,8 @@
   :label "Ilian Tape" :year 2017 :art "compro.jpg")
  (:artist "Skee Mask" :album "Pool" :genre "Techno"
   :label "Ilian Tape" :year 2021 :art "pool.jpg")
+ (:artist "Skee Mask" :album "Resort" :genre "Techno"
+  :label "Ilian Tape" :year 2024 :art "resort.jpg")
  (:artist "Skee Mask" :album "ISS007" :genre "Techno"
   :label "Ilian Tape" :year 2020 :art "iss007.jpg")
  (:artist "Special Request" :album "Soul Music" :genre "Techno"
@@ -391,6 +399,8 @@
   :label "Ilian Tape" :year 2019 :art "upsurge.jpg")
  (:artist "Surgeon" :album "Crash Recoil" :genre "Techno"
   :label "Tresor" :year 2023 :art "crash-recoil.jpg")
+ (:artist "Tammo Hesselink" :album "Beam" :genre "Techno"
+  :label "Nous'klaer" :year 2023 :art "beam.jpg")
  (:artist "The Field" :album "Looping State of Mind" :genre "Techno"
   :label "Kompakt" :year 2011 :art "looping-state.jpg")
  (:artist "Thom Yorke + Four Tet + Burial" :album "Ego / Mirror" :genre "Techno"
@@ -436,12 +446,16 @@
   :label "Ruffhouse Records" :year 1996 :art "the-score.jpg")
  (:artist "Ghostface Killah" :album "Fishscale" :genre "Hip Hop"
   :label "Def Jam Recordings" :year 2006 :art "fishscale.jpg")
+ (:artist "GZA" :album "Liquid Swords" :genre "Hip Hop"
+  :label "Geffen Records" :year 1995 :art "liquid-swords.jpg")
  (:artist "J Dilla" :album "Donuts" :genre "Hip Hop"
   :label "Stones Throw" :year 2006 :art "donuts.jpg")
  (:artist "JID" :album "Forever Story" :genre "Hip Hop"
   :label "Dreamville" :year 2022 :art "forever-story.jpg")
  (:artist "Kendrick Lamar" :album "good kid, m.A.A.d City" :genre "Hip Hop"
   :label "Top Dawg Entertainment" :year 2012 :art "good-kid.jpg")
+ (:artist "Kendrick Lamar" :album "To Pimp a Butterfly" :genre "Hip Hop"
+  :label "Top Dawg Entertainment" :year 2015 :art "tpab.jpg")
  (:artist "Madvillain" :album "Madvillainy" :genre "Hip Hop"
   :label "Stones Throw" :year 2004 :art "madvillainy.jpg")
  (:artist "MF Doom" :album "Operation: Doomsday" :genre "Hip Hop"
@@ -549,6 +563,8 @@
   :label "Mom + Pop" :year 2018 :art "prom-queen.png")
  (:artist "Beach Bunny" :album "Emotional Creature" :genre "Indie"
   :label "Mom + Pop" :year 2022 :art "emotional.jpg")
+ (:artist "Bloc Party" :album "Silent Alarm" :genre "Indie"
+  :label "Wichita" :year 2005 :art "silent-alarm.jpg")
  (:artist "boygenius" :album "The Record" :genre "Indie"
   :label "Interscope" :year 2023 :art "the-record.jpg")
  (:artist "Broken Social Scene" :album "You Forgot it in People" :genre "Indie"
@@ -579,8 +595,10 @@
   :label "Double Double Whammy" :year 2019 :art "emily-alone.jpg")
  (:artist "Frank Ocean" :album "Blonde" :genre "Indie"
   :label "Boys Don't Cry" :year 2016 :art "blonde.jpg")
+ (:artist "Gorillaz" :album "Gorillaz" :genre "Indie"
+  :label "Parlophone" :year 2001 :art "gorillaz.jpg")
  (:artist "Gorillaz" :album "Demon Days" :genre "Indie"
-  :label "Virgin" :year 2005 :art "demon-days.jpg")
+  :label "Parlophone" :year 2005 :art "demon-days.jpg")
  (:artist "Interpol" :album "Turn on the Bright Lights" :genre "Indie"
   :label "Matador" :year 2002 :art "bright-lights.jpg")
  (:artist "Iron & Wine" :album "Woman King" :genre "Indie"
