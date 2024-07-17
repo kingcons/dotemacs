@@ -703,6 +703,8 @@
   :label "Brainfeeder" :year 2011 :art "the-golden-age.jpg")
  (:artist "Thundercat" :album "It Is What It Is" :genre "Indie"
   :label "Brainfeeder" :year 2020 :art "it-is-what-it-is.jpg")
+ (:artist "Tortoise" :album "Millions Now Living Will Never Die" :genre "Indie"
+  :label "Thrill Jockey" :year 1996 :art "millions-now-living.jpg")
  (:artist "Tortoise" :album "TNT" :genre "Indie"
   :label "Thrill Jockey" :year 1998 :art "tnt.jpg")
  (:artist "Wet Leg" :album "Wet Leg" :genre "Indie"

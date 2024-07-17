@@ -20,6 +20,16 @@
 ;; But not in org-mode
 (add-hook 'org-mode-hook (lambda () (display-line-numbers-mode 0)))
 
+;; Use a simple mode line
+
+(defvar bsb/mode-line-format
+  '("   "
+    mode-line-buffer-identification "   " mode-line-position
+    (vc-mode vc-mode) "   " mode-line-modes mode-line-misc-info
+    "   "))
+
+(setq-default mode-line-format bsb/mode-line-format)
+
 ;; Use nice themes
 
 (use-package zenburn-theme)
