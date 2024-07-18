@@ -18,7 +18,9 @@
   (emms-cache 1)
   (emms-mode-line-enable)
   (add-hook 'emms-player-started-hook #'emms-last-played-update-current)
-  (global-set-key (kbd "M-p") 'emms-playlist-mode-go)
+  ; NOTE: If this binding doesn't work, frob Gnome/Mutter with:
+  ; gsettings set org.gnome.mutter.keybindings switch-monitor "[]"
+  (global-set-key (kbd "s-p") 'emms-playlist-mode-go)
   (setq emms-player-list '(emms-player-vlc)
         emms-info-functions '(emms-info-native)
         emms-mode-line-mode-line-function #'bsb/emms-mode-line-blurb

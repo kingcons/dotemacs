@@ -466,6 +466,8 @@
   :label "LaFace Records" :year 1996 :art "atliens.jpg")
  (:artist "Outkast" :album "Aquemini" :genre "Hip Hop"
   :label "LaFace Records" :year 1998 :art "aquemini.jpg")
+ (:artist "Run the Jewels" :album "RTJ 2" :genre "Hip Hop"
+  :label "Mass Appeal" :year 2014 :art "rtj2.jpg")
  (:artist "Teebs" :album "Ardour" :genre "Hip Hop"
   :label "Brainfeeder" :year 2010 :art "ardour.png")
  (:artist "Teebs" :album "Anicca" :genre "Hip Hop"
@@ -679,8 +681,6 @@
   :label "Tiger Style" :year 2001 :art "one-day.jpg")
  (:artist "The Beths" :album "Future Me Hates Me" :genre "Indie"
   :label "Carpark Records" :year 2018 :art "future-me-hates-me.jpg")
- (:artist "The Long Winters" :album "Ultimatum" :genre "Indie"
-  :label "Barsuk Records" :year 2005 :art "ultimatum.jpg")
  (:artist "The National" :album "Boxer" :genre "Indie"
   :label "Beggas Banquet" :year 2007 :art "boxer.jpg")
  (:artist "The National" :album "High Violet" :genre "Indie"

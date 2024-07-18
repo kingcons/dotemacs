@@ -16,7 +16,7 @@ At some point, I'll do a nice org-mode writeup but not yet.
 |:-------:|:------------:|
 | Super-t | Run Torrents |
 | Super-e | Run  Mu4e    |
-| Meta-p  | Run  EMMS    |
+| Super-p | Run  EMMS    |
 | Super-l | IRC Libera   |
 | Super-i | IRC Twitch   |
 | Super-m | 'gimme-music |
