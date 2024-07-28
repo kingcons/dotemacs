@@ -47,7 +47,9 @@
   (mgl-pax-hijack-slime-doc-keys)
   (global-set-key (kbd "s-.") 'mgl-pax-document))
 
-(use-package mgl-try)
+(use-package mgl-try
+  :ensure nil
+  :load-path bsb/site-lisp)
 
 ;;; And geiser for mischievous scheming
 
