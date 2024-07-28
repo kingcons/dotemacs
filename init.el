@@ -26,13 +26,13 @@
 
 (setq use-package-always-ensure (not bsb/guix-system-p))
 
-;; Add site-lisp to the load-path for any vendored in dependencies
-(add-to-list 'load-path (expand-file-name "site-lisp/" user-emacs-directory))
-
-;; Add some basic utils for loading the other config files and track where
-;; the config root is since I use chemacs and will reset user-emacs-directory
+;; Add some basic utils for loading the other config files and track
+;; where the config root is since I sometimes reset user-emacs-directory
 (defvar bsb/config-dir
   user-emacs-directory)
+
+(defvar bsb/site-lisp
+  (expand-file-name "site-lisp/" bsb/config-dir))
 
 (defun bsb/init-file (file-name &optional extension)
   (when (null extension)

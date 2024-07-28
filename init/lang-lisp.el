@@ -41,6 +41,8 @@
 ;;; Add Gabor's Pax documentation and Try testing helpers
 
 (use-package mgl-pax
+  :ensure nil
+  :load-path bsb/site-lisp
   :config
   (mgl-pax-hijack-slime-doc-keys)
   (global-set-key (kbd "s-.") 'mgl-pax-document))

@@ -44,6 +44,7 @@
 (use-package project-x
   :after project
   :ensure nil
+  :load-path bsb/site-lisp
   :config
   (setq project-x-save-interval 300)
   (project-x-mode 1))
