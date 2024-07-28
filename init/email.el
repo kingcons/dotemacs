@@ -50,18 +50,18 @@
                                (mu4e-sent-folder . ,(concat folder "/Sent Mail"))
                                (mu4e-trash-folder . ,(concat folder "/Trash"))))))
 
-(unless (eq system-type 'darwin)
-  (use-package mu4e
-    :ensure nil
-    ;; KLUDGE: This can be removed when I use emacs28 from apt.
-    :load-path "/usr/share/emacs/site-lisp/mu4e/"
-    :bind (("s-e" . mu4e))
-    :config
-    (setq mu4e-context-policy 'pick-first
-          mu4e-compose-context-policy 'ask-if-none
-          mu4e-get-mail-command "mbsync -a"
-          mu4e-change-filenames-when-moving t)
-    (setq mu4e-contexts `(,(bsb/make-context "calendly" "b.butler@calendly.com" "/calendly[Gmail]")
-                          ,(bsb/make-context "britton" "britton.s.butler@gmail.com" "/britton[Gmail]")
-                          ,(bsb/make-context "redline" "redline6561@gmail.com" "/redline[Gmail]")
-                          ,(bsb/make-context "kingcons" "brit@kingcons.io" "/kingcons")))))
+(use-package mu4e
+  :ensure nil
+  :if (eq system-type 'darwin)
+  ;; KLUDGE: This can be removed when I use emacs28 from apt.
+  :load-path "/usr/share/emacs/site-lisp/mu4e/"
+  :bind (("s-e" . mu4e))
+  :config
+  (setq mu4e-context-policy 'pick-first
+        mu4e-compose-context-policy 'ask-if-none
+        mu4e-get-mail-command "mbsync -a"
+        mu4e-change-filenames-when-moving t)
+  (setq mu4e-contexts `(,(bsb/make-context "calendly" "b.butler@calendly.com" "/calendly[Gmail]")
+                        ,(bsb/make-context "britton" "britton.s.butler@gmail.com" "/britton[Gmail]")
+                        ,(bsb/make-context "redline" "redline6561@gmail.com" "/redline[Gmail]")
+                        ,(bsb/make-context "kingcons" "brit@kingcons.io" "/kingcons"))))
