@@ -8,11 +8,10 @@
   (require 'emms-mode-line)
   (require 'emms-info-native)
   (require 'emms-last-played)
-  ; TODO: Under consideration
-  ; (require 'emms-playlist-limit)
   (emms-history-load)
   ; To eval on first run only. Expect some lag.
   ; Takes about ~11m for 3600 flacs: 300 tracks/min.
+  ; Worth running an explicit (emms-cache-save) after just to be sure.
   ; (emms-add-directory-tree "~/Music/")
   ; TODO: Boy would it be nice if EMMS synced when new dirs are added.
   (emms-cache 1)
@@ -20,7 +19,7 @@
   (add-hook 'emms-player-started-hook #'emms-last-played-update-current)
   ; NOTE: If this binding doesn't work, frob Gnome/Mutter with:
   ; gsettings set org.gnome.mutter.keybindings switch-monitor "[]"
-  (global-set-key (kbd "s-p") 'emms-playlist-mode-go)
+  (global-set-key (kbd "s-p") 'emms-smart-browse)
   (setq emms-player-list '(emms-player-vlc)
         emms-info-functions '(emms-info-native)
         emms-mode-line-mode-line-function #'bsb/emms-mode-line-blurb
@@ -41,3 +40,12 @@
          (artist (bsb/truncate-string (emms-track-get track 'info-artist) desc-limit))
          (title (bsb/truncate-string (emms-track-get track 'info-title) desc-limit)))
     (format bsb/emms-mode-line-format artist title)))
+
+(defun bsb/gimme-music ()
+  (interactive)
+  (emms-browse-by-album)
+  (let ((count (count-lines (point-min) (point-max))))
+    (goto-line (random count))
+    (emms-browser-add-tracks-and-play)))
+
+(global-set-key (kbd "s-m") 'bsb/gimme-music)

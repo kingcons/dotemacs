@@ -55,10 +55,5 @@
   (interactive)
   (bsb/choose-record :genre "Techno"))
 
-(defun bsb/gimme-music ()
-  (interactive)
-  (bsb/show-random-album bsb/vinyl-collection))
-
 (global-set-key (kbd "s-g") 'bsb/gimme-genre)
 (global-set-key (kbd "s-n") 'bsb/gimme-techno)
-(global-set-key (kbd "s-m") 'bsb/gimme-music)
