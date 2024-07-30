@@ -26,6 +26,6 @@
 ;; add elfeed since rss and atom are still great
 
 (use-package elfeed
-  :bind (("s-r" . elfeed))
+  :bind (("s-f" . elfeed))
   :config
   (setq elfeed-feeds bsb/blogroll))

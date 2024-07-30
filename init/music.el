@@ -46,6 +46,7 @@
   (emms-browse-by-album)
   (let ((count (count-lines (point-min) (point-max))))
     (goto-line (random count))
-    (emms-browser-add-tracks-and-play)))
+    (emms-browser-add-tracks))
+  (emms-playlist-mode-go))
 
-(global-set-key (kbd "s-m") 'bsb/gimme-music)
+(global-set-key (kbd "s-r") 'bsb/gimme-music)
