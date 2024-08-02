@@ -45,12 +45,15 @@
   :load-path bsb/site-lisp
   :config
   (mgl-pax-hijack-slime-doc-keys)
+  ;; TODO: Write an eww-browse-url function? Need to modify pax.
   (setq mgl-pax-browser-function 'w3m-browse-url)
-  (slime-bind-keys slime-parent-map nil '(("C-." mgl-pax-document))))
+  (slime-bind-keys slime-editing-map nil '(([(control ?.)] mgl-pax-document))))
 
 (use-package mgl-try
   :ensure nil
-  :load-path bsb/site-lisp)
+  :load-path bsb/site-lisp
+  :config
+  (slime-bind-keys slime-editing-map nil '(([(control ?c) t] mgl-try-try))))
 
 ;;; And geiser for mischievous scheming
 
