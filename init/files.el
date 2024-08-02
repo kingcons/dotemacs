@@ -2,7 +2,6 @@
 
 (use-package dired
   :ensure nil
-  :hook (dired-mode . hl-line-mode)
   :init (setq dired-kill-when-opening-new-dired-buffer t
               dired-recursive-copies 'always
               dired-recursive-deletes 'always))

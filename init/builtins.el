@@ -26,6 +26,9 @@
 ;; Shut the bell up
 (setq ring-bell-function 'ignore)
 
+;; Always show what line I'm on
+(global-hl-line-mode t)
+
 ;; Assorted formatting improvements
 (setq-default indent-tabs-mode nil) ; Spaces, not tabs
 (setq-default tab-width 4) ; When tabs do appear, take less space
@@ -58,6 +61,4 @@ This seems like it ought to exist already, someone has probably done it better."
 
 (use-package ibuffer
   :bind ("C-x C-b" . ibuffer)
-  :hook (ibuffer-mode . hl-line-mode))
-
-;; TODO: Consider project.el tweaks, tab-mode, etc.
+  :hook (ibuffer-mode . ibuffer-auto-mode))
