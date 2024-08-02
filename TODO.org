@@ -1,0 +1,3 @@
+* TODO Create the world's first fortune file for Halt and Catch Fire.
+* TODO Create the world's first fortune file for Alpha Centauri.
+* TODO Upstream my little hacks for mgl-try?
