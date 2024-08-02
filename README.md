@@ -22,3 +22,19 @@ At some point, I'll do a nice org-mode writeup but not yet.
 | Super-l | IRC Libera   |
 | Super-i | IRC Twitch   |
 | C-c f   | Show Fortune |
+
+### Slime extensions
+
+[gabor]: https://quotenil.com/
+
+I happen to use some lovely emacs extensions for lisp hacking from
+[Gabor Melis][gabor], namely for his Pax and Try packages.
+
+They extend `slime-editing-map` as follows:
+
+| Binding |     Behavior     |
+|:-------:|:----------------:|
+|   C-.   | mgl-pax-document |
+|  C-c t  | mgl-try          |
+
+I.e. Showing docs and running tests.

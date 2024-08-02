@@ -49,11 +49,18 @@
   (setq mgl-pax-browser-function 'w3m-browse-url)
   (slime-bind-keys slime-editing-map nil '(([(control ?.)] mgl-pax-document))))
 
+(defun bsb/mgl-try-help ()
+  (interactive)
+  (which-key-show-keymap 'mgl-try-mode-map))
+
 (use-package mgl-try
   :ensure nil
   :load-path bsb/site-lisp
+  :bind (:map mgl-try-mode-map
+              ("q" . bury-buffer)
+              ("?" . bsb/mgl-try-help))
   :config
-  (slime-bind-keys slime-editing-map nil '(([(control ?c) t] mgl-try-try))))
+  (slime-bind-keys slime-editing-map nil '(([(control ?c) t] mgl-try))))
 
 ;;; And geiser for mischievous scheming
 
