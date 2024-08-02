@@ -45,7 +45,8 @@
   :load-path bsb/site-lisp
   :config
   (mgl-pax-hijack-slime-doc-keys)
-  (global-set-key (kbd "s-.") 'mgl-pax-document))
+  (setq mgl-pax-browser-function 'w3m-browse-url)
+  (slime-bind-keys slime-parent-map nil '(("C-." mgl-pax-document))))
 
 (use-package mgl-try
   :ensure nil

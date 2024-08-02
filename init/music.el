@@ -6,6 +6,7 @@
   (require 'emms-browser)
   (require 'emms-history)
   (require 'emms-mode-line)
+  (require 'emms-tag-editor)
   (require 'emms-info-native)
   (require 'emms-last-played)
   (emms-history-load)
