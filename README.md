@@ -8,7 +8,7 @@ At some point, I'll do a nice org-mode writeup but not yet.
 
 * Emacs: 28.1 or later.
 * OS: Linux with guix preferred, gracefully falls back to use-package otherwise.
-* Apps: git, fortune, pass, w3m for pax, vlc + imagemagick + flac for emms, rtorrent + flood for torrents
+* Apps: git, fortune, pass, vlc + imagemagick + flac for emms, rtorrent + flood for torrents
 
 ### Global Bindings
 
