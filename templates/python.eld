@@ -1,5 +1,3 @@
-;; -*- mode: Lisp-Data -*-
-
 python-base-mode
 
 (__contains__ "def __contains__(self, el):" n> p n> "pass")
@@ -47,11 +45,7 @@ python-base-mode
 (method "def " p "(self" p "):" n> q)
 (method_docstring "def " p "(self" p "):" n> "\"\"\"" p "\"\"\"" n> q)
 (not_impl "raise NotImplementedError")
-(np "import numpy as np" n> q)
 (parse_args "def parse_arguments():" n> "parser = argparse.ArgumentParser(description='" p "')" n> p n> "return parser.parse_args()")
-(pd "import pandas as pd" n> q)
-(repl "import code; code.interact(local=locals())")
-(tf "import tensorflow as tf" n> q)
 (tr & "import " p "; " p ".set_trace()" q)
 (parser "parser = argparse.ArgumentParser(description='" p "')" n> q)
 (pass "pass")
@@ -68,6 +62,7 @@ python-base-mode
       n> p " = property(**" p "())")
 (reg p " = re.compile(r\"" p "\")")
 (__repr__ "def __repr__(self):" n> q)
+(repl "import code; code.interact(local=locals())")
 (return "return " q)
 (script "#!/usr/bin/env python" n n> "def main():" n> "pass" n n> "if __name__ == '__main__':" n> "main()")
 (self "self." q)
@@ -86,7 +81,6 @@ python-base-mode
 (try "try:" n> p n> "except " p ":" n> q)
 (tryelse "try:" n> p n> "except " p ":" n> p n> "else:" n> q)
 (__unicode__ "def __unicode__(self):" n> q)
-(utf-8_encoding "# -*- coding: utf-8 -*-")
 (while "while " p ":" n> q)
 (with "with " p p ":" n> q)
 (with_statement "from __future__ import with_statement"))

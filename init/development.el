@@ -32,7 +32,7 @@
   :bind (("M-+" . tempel-complete)
          ("M-*" . tempel-insert))
   :init
-  (setq tempel-path (bsb/init-file "templates" "dat"))
+  (setq tempel-path (expand-file-name "templates/*.eld" bsb/config-dir))
   (defun tempel-setup-capf ()
     (setq-local completion-at-point-functions
                 (cons #'tempel-expand

@@ -64,6 +64,4 @@
 ;;   (setq consult-narrow-key "<")
 ;;   (setq consult-project-root-function #'bsb/find-project-root))
 
-;;; NOTE: Moving asdf config to .profile should fix solargraph path.
-;;; Could alternately adopt exec-path-from-shell but would rather avoid it.
-;;; Note that Mac OS may not source .profile on login for graphical apps.
+;;; Consider visual-fill-column-mode and writeroom-mode.
