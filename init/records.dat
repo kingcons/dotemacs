@@ -243,6 +243,8 @@
   :label "Ostgut Ton" :year 2021 :art "barker-2.jpg")
  (:artist "Ben Klock" :album "Before One" :genre "Techno"
   :label "Ostgut Ton" :year 2009 :art "before-one.jpg")
+ (:artist "Blawan" :album "Wet Will Always Dry" :genre "Techno"
+  :label "Ternesc" :year 2018 :art "wet-will-always-dry.jpg")
  (:artist "Burial" :album "Burial" :genre "Techno"
   :label "Hyperdub" :year 2006 :art "burial.png")
  (:artist "Burial" :album "Untrue" :genre "Techno"
@@ -509,6 +511,8 @@
   :label "Columbia" :year 1959 :art "kind-of-blue.jpg")
  (:artist "Nala Sinephro" :album "Space 1.8" :genre "Jazz"
   :label "Warp" :year 2021 :art "space-18.jpg")
+ (:artist "Nala Sinephro" :album "Endlessness" :genre "Jazz"
+  :label "Warp" :year 2024 :art "endlessness.jpg")
  (:artist "Resavoir" :album "Resavoir" :genre "Jazz"
   :label "International Anthem" :year 2019 :art "resavoir.jpg")
  (:artist "Sam Wilkes" :album "WILKES" :genre "Jazz"
