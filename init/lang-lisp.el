@@ -41,7 +41,6 @@
 ;;; Add Gabor's Pax documentation and Try testing helpers
 
 (use-package mgl-pax
-  :ensure nil
   :load-path bsb/site-lisp
   :config
   (mgl-pax-hijack-slime-doc-keys)
@@ -53,7 +52,6 @@
   (which-key-show-keymap 'mgl-try-mode-map))
 
 (use-package mgl-try
-  :ensure nil
   :load-path bsb/site-lisp
   :bind (:map mgl-try-mode-map
               ("q" . bury-buffer)
