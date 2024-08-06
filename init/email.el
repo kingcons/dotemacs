@@ -25,6 +25,15 @@
            :port 6697
            :nick "kingcons"))
 
+(defun bsb/go-town ()
+  ;; TODO: Consider automating the connection via autossh or similar?
+  ;; Relies on a LocalForward rule in ~/.ssh/config for town
+  (interactive)
+  (async-shell-command "ssh -N town" "*ssh-tilde-town*")
+  (erc-tls :server "localhost"
+           :port 6697
+           :nick "kingcons"))
+
 (defun bsb/go-twitch ()
   (interactive)
   (erc-tls :server "irc.chat.twitch.tv"
