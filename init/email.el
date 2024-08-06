@@ -32,7 +32,8 @@
   (async-shell-command "ssh -N town" "*ssh-tilde-town*")
   (erc-tls :server "localhost"
            :port 6697
-           :nick "kingcons"))
+           :nick "kingcons"
+           :password (password-store-get "irc/tildetown")))
 
 (defun bsb/go-twitch ()
   (interactive)
