@@ -61,6 +61,8 @@
   :label "Island Records" :year 1991 :art "ultraworld.jpg")
  (:artist "Tycho" :album "Dive" :genre "Ambient"
   :label "Ghostly" :year 2011 :art "dive.jpg")
+ (:artist "Waveform Transmission" :album "V 3.0-3.9" :genre "Ambient"
+  :label "Astral Industries" :year 2020 :art "v30-39.jpg")
  (:artist "Yu Su" :album "Roll With The Punches" :genre "Ambient"
   :label "Second Circle" :year 2019 :art "punches.jpg")
  ;; Dub

@@ -1,0 +1,42 @@
+IMAPAccount britton.s.butler
+Host imap.gmail.com
+User britton.s.butler@gmail.com
+PassCmd "pass gmail/britton.s.butler"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore britton-remote
+Account britton.s.butler
+
+MaildirStore britton-local
+Subfolders Verbatim
+Path ~/.Mail/britton
+Inbox ~/.Mail/britton/inbox
+
+Channel britton
+Master :britton-remote:
+Slave :britton-local:
+Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/Starred" "[Gmail]/All Mail" "[Gmail]/Trash"
+Create Both
+SyncState *
+
+IMAPAccount kingcons
+Host imap.migadu.com
+User brit@kingcons.io
+PassCmd "pass kingcons.io/brit"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore kingcons-remote
+Account kingcons
+
+MaildirStore kingcons-local
+Subfolders Verbatim
+Path ~/.Mail/kingcons
+Inbox ~/.Mail/kingcons/inbox
+
+Channel kingcons
+Master :kingcons-remote:
+Slave :kingcons-local:
+Create Both
+SyncState *

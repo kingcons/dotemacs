@@ -8,7 +8,7 @@ At some point, I'll do a nice org-mode writeup but not yet.
 
 * Emacs: 28.1 or later.
 * OS: Linux with guix preferred, gracefully falls back to use-package otherwise.
-* Apps: git, fortune, pass, vlc + imagemagick + flac for emms, rtorrent + flood for torrents
+* Apps: git, fortune, pass, vlc + imagemagick + flac for emms, isync + mu4e for email, rtorrent + flood for torrents
 
 ### Global Bindings
 
@@ -38,3 +38,17 @@ They extend `slime-editing-map` as follows:
 |  C-c t  | mgl-try          |
 
 I.e. Showing docs and running tests.
+
+### Email
+
+Well, email is _complicated_.
+
+At least isync and mu4e must be installed and you'll probably want to frob the load-path for mu4e.
+
+Then run an initial:
+
+```
+mbsync -a -c ~/.emacs.d/.mbsyncrc
+mu init -m .Mail/
+mu index
+```
