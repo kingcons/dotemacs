@@ -63,8 +63,12 @@
 (use-package mu4e
   :unless (eq system-type 'darwin)
   :load-path "/usr/share/emacs/site-lisp/elpa/mu4e-1.10.8/"
-  :bind (("s-e" . mu4e))
   :config
+  (defun bsb/go-email ()
+    (interactive)
+    (bsb/with-full-screen 'mu4e))
+  (global-set-key (kbd "s-e") 'bsb/go-email)
+  (advice-add 'mu4e--stop :after #'bsb/restore-windows)
   (setq mu4e-context-policy 'pick-first
         mu4e-compose-context-policy 'ask-if-none
         mu4e-get-mail-command (format "mbsync -a -c %s"

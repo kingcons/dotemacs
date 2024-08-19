@@ -14,13 +14,13 @@ At some point, I'll do a nice org-mode writeup but not yet.
 
 | Binding |   Behavior   |
 |:-------:|:------------:|
-| Super-t | Run Torrents |
 | Super-e | Run  Mu4e    |
-| Super-f | Run elfeed   |
 | Super-p | Run  EMMS    |
 | Super-r | Random Album |
-| Super-l | IRC Libera   |
+| Super-t | Run Torrents |
+| Super-l | IRC ~.town   |
 | Super-i | IRC Twitch   |
+| Super-f | Run elfeed   |
 | C-c f   | Show Fortune |
 
 ### Slime extensions

@@ -18,9 +18,10 @@
   (emms-cache 1)
   (emms-mode-line-enable)
   (add-hook 'emms-player-started-hook #'emms-last-played-update-current)
+  (add-hook 'emms-browser-hide-display-hook 'bsb/restore-windows)
   ; NOTE: If this binding doesn't work, frob Gnome/Mutter with:
   ; gsettings set org.gnome.mutter.keybindings switch-monitor "[]"
-  (global-set-key (kbd "s-p") 'emms-smart-browse)
+  (global-set-key (kbd "s-p") 'bsb/go-playlist)
   (setq emms-player-list '(emms-player-vlc)
         emms-info-functions '(emms-info-native)
         emms-mode-line-mode-line-function #'bsb/emms-mode-line-blurb
@@ -42,12 +43,14 @@
          (title (bsb/truncate-string (emms-track-get track 'info-title) desc-limit)))
     (format bsb/emms-mode-line-format artist title)))
 
-(defun bsb/gimme-music ()
+(defun bsb/go-playlist ()
   (interactive)
-  (emms-browse-by-album)
-  (let ((count (count-lines (point-min) (point-max))))
-    (goto-line (random count))
-    (emms-browser-add-tracks))
-  (emms-playlist-mode-go))
+  (bsb/with-full-screen 'emms-smart-browse))
 
-(global-set-key (kbd "s-r") 'bsb/gimme-music)
+(defun bsb/random-album ()
+  (interactive)
+  (bsb/with-full-screen 'emms-browse-by-album)
+  (let ((count (count-lines (point-min) (point-max))))
+    (goto-line (random count))))
+
+(global-set-key (kbd "s-r") 'bsb/random-album)

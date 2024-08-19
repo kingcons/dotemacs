@@ -1,3 +1,7 @@
 * TODO Create the world's first fortune file for Halt and Catch Fire.
 * TODO Create the world's first fortune file for Alpha Centauri.
 * TODO Upstream my little hacks for mgl-try?
+* TODO Fix EMMS playlist loading to include album art.
+** This seems related to emms-browser-insert-cover and emms-browser-format-line and emms-source-playlist-unparse-native
+* TODO Add a dedicated playlist loader for EMMS?
+** Just let bind emms-source-file-default-dir and run add-playlist?
