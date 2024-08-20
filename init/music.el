@@ -50,7 +50,7 @@
 (defun bsb/emms-load-playlist (file)
   (interactive
    (let ((playlist-dir (expand-file-name "playlists/" bsb/config-dir)))
-     (list (read-file-name "Pkaylist file: " playlist-dir))))
+     (list (read-file-name "Playlist file: " playlist-dir))))
   (emms-source-add 'emms-source-playlist file))
 
 (defun bsb/random-album ()
