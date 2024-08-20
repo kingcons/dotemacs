@@ -47,11 +47,35 @@
          (title (bsb/truncate-string (emms-track-get track 'info-title) desc-limit)))
     (format bsb/emms-mode-line-format artist title)))
 
+(defun bsb/album-header-for-track ()
+  "Generates propertized cover image for the EMMS track at point."
+  (let* ((track (emms-playlist-track-at (point)))
+         (path (emms-track-get track 'name))
+         (year (emms-track-get-year track))
+         (album (emms-track-get track 'info-album))
+         (cover (emms-browser-get-cover-from-path path))
+         (cover-str (emms-browser-make-cover cover))
+         (substring (format "(%s) %s" year album)))
+    (add-text-properties 0 (length substring)
+                         '(face emms-browser-album-face) substring)
+    (format "%s %s\n" cover-str substring)))
+
 (defun bsb/emms-load-playlist (file)
   (interactive
    (let ((playlist-dir (expand-file-name "playlists/" bsb/config-dir)))
      (list (read-file-name "Playlist file: " playlist-dir))))
-  (emms-source-add 'emms-source-playlist file))
+  (emms-source-add 'emms-source-playlist file)
+  (with-current-emms-playlist
+    (save-excursion
+      (goto-char (point-min))
+      (let* ((initial-track (emms-playlist-track-at (point)))
+             (current-album (emms-track-get initial-track 'info-album)))
+        (insert (bsb/album-header-for-track))
+        (while (zerop (forward-line))
+          (let ((track (emms-playlist-track-at (point))))
+            (unless (string= current-album (emms-track-get track 'info-album))
+              (setq current-album (emms-track-get track 'info-album))
+              (insert (bsb/album-header-for-track)))))))))
 
 (defun bsb/random-album ()
   (interactive)
