@@ -64,10 +64,8 @@
   :unless (eq system-type 'darwin)
   :load-path "/usr/share/emacs/site-lisp/elpa/mu4e-1.10.8/"
   :config
-  (defun bsb/go-email ()
-    (interactive)
-    (bsb/with-full-screen 'mu4e))
-  (global-set-key (kbd "s-e") 'bsb/go-email)
+  (global-set-key (kbd "s-e") 'mu4e)
+  (advice-add 'mu4e--start :before #'bsb/store-windows)
   (advice-add 'mu4e--stop :after #'bsb/restore-windows)
   (setq mu4e-context-policy 'pick-first
         mu4e-compose-context-policy 'ask-if-none

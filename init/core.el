@@ -1,16 +1,10 @@
 ;;; add a helper for context switching
 
-(defun bsb/with-full-screen (command)
-  "Run command full screen. It is suggested to use hooks
-  in whatever modes might take advantage of this, like mu4e or emms,
-  to restore from this register on quitting."
-  (progn
-    (window-configuration-to-register :bsb-fullscreen)
-    (delete-other-windows)
-    (funcall command)))
+(defun bsb/store-windows (&rest args)
+  (window-configuration-to-register :bsb-fullscreen)
+  (delete-other-windows))
 
-(defun bsb/restore-windows ()
-  (message "Restoring windows")
+(defun bsb/restore-windows (&rest args)
   (jump-to-register :bsb-fullscreen))
 
 ;;; use which-key in case you get lost
